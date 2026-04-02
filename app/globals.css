@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+  --font-source-sans: 'Source Sans 3', system-ui, sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  color: #0f1f3d;
+  font-family: var(--font-source-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant);
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-white px-6 py-3 font-body font-semibold text-sm tracking-wide uppercase hover:bg-gold-dark transition-colors duration-200;
+  }
+  .btn-navy {
+    @apply bg-navy text-white px-6 py-3 font-body font-semibold text-sm tracking-wide uppercase hover:bg-navy-light transition-colors duration-200;
+  }
+  .btn-outline {
+    @apply border border-gold text-gold px-6 py-3 font-body font-semibold text-sm tracking-wide uppercase hover:bg-gold hover:text-white transition-colors duration-200;
+  }
+  .category-tag {
+    @apply inline-block bg-gold/10 text-gold text-xs font-semibold uppercase tracking-widest px-3 py-1;
+  }
+}
