@@ -8,6 +8,7 @@ import TrouvCTA from '@/components/blog/TrouvCTA';
 import BlogCard from '@/components/blog/BlogCard';
 import ArticleRenderer from '@/components/blog/ArticleRenderer';
 import Image from 'next/image';
+import { articleCoverAbsoluteUrl, articleCoverSrc } from '@/lib/article-cover';
 
 export const dynamic = 'force-dynamic';
 
@@ -26,6 +27,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!article) return {};
 
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://chauffeursinlondon.com';
+  const ogImage = articleCoverAbsoluteUrl(
+    { slug: article.slug, cover_image_url: article.cover_image_url },
+    appUrl,
+  );
 
   return {
     title: article.meta_title || article.title,
@@ -37,7 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: article.meta_title || article.title,
       description: article.meta_description || '',
       url: `${appUrl}/blog/${article.slug}`,
-      images: article.cover_image_url ? [{ url: article.cover_image_url }] : [],
+      images: [{ url: ogImage }],
       type: 'article',
     },
   };
@@ -66,6 +71,8 @@ export default async function ArticlePage({ params }: PageProps) {
 
   const readTime = estimateReadTime(article.content);
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://chauffeursinlondon.com';
+  const heroSrc = articleCoverSrc(article);
+  const heroAbsolute = articleCoverAbsoluteUrl(article, appUrl);
 
   const publishedDate = article.published_at
     ? new Date(article.published_at).toLocaleDateString('en-GB', {
@@ -81,7 +88,7 @@ export default async function ArticlePage({ params }: PageProps) {
     '@type': 'Article',
     headline: article.meta_title || article.title,
     description: article.meta_description || article.excerpt || '',
-    image: article.cover_image_url || '',
+    image: heroAbsolute,
     author: {
       '@type': 'Organization',
       name: 'Chauffeurs in London',
@@ -126,17 +133,15 @@ export default async function ArticlePage({ params }: PageProps) {
           </header>
 
           {/* Cover image */}
-          {article.cover_image_url && (
-            <div className="relative w-full h-64 sm:h-80 mb-10 overflow-hidden">
-              <Image
-                src={article.cover_image_url}
-                alt={article.title}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          )}
+          <div className="relative w-full h-64 sm:h-80 mb-10 overflow-hidden bg-navy/5">
+            <Image
+              src={heroSrc}
+              alt={article.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
 
           {/* Article body */}
           <ArticleRenderer content={article.content} />

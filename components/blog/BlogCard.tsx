@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Article, estimateReadTime } from '@/lib/supabase';
+import { articleCoverSrc } from '@/lib/article-cover';
 
 interface BlogCardProps {
   article: Article;
@@ -16,24 +17,19 @@ export default function BlogCard({ article }: BlogCardProps) {
       })
     : '';
 
+  const coverSrc = articleCoverSrc(article);
+
   return (
     <article className="group bg-white border border-gray-100 hover:border-gold/30 transition-colors duration-200 overflow-hidden">
-      {/* Cover image */}
-      {article.cover_image_url ? (
-        <div className="relative w-full h-52 overflow-hidden">
-          <Image
-            src={article.cover_image_url}
-            alt={article.title}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
-        </div>
-      ) : (
-        <div className="w-full h-52 bg-navy/5 flex items-center justify-center">
-          <span className="text-4xl">🚗</span>
-        </div>
-      )}
+      <div className="relative w-full h-52 overflow-hidden bg-navy/5">
+        <Image
+          src={coverSrc}
+          alt={article.title}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
 
       <div className="p-6">
         {/* Category + read time */}
