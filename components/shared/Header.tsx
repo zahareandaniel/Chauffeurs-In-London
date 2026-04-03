@@ -2,80 +2,83 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { SITE } from '@/lib/site-config';
 
-const CATEGORIES = ['Airport Transfers', 'Corporate', 'Wedding', 'Events', 'Tips'];
+const NAV = [
+  { href: '/blog', label: 'Journal' },
+  { href: '/chauffeur-services', label: 'Chauffeur services' },
+  { href: '/featured', label: 'Featured operators' },
+  { href: '/guides', label: 'Guides' },
+  { href: '/about', label: 'Editorial standards' },
+  { href: '/get-featured', label: 'Request a feature' },
+  { href: '/contact', label: 'Contact' },
+];
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-navy shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-display text-xl font-semibold text-white tracking-wide">
-              Chauffeurs in London
+    <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur-md">
+      <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex h-14 items-center justify-between sm:h-16">
+          <Link
+            href="/"
+            className="group focus-ring rounded-sm"
+            aria-label={`${SITE.name} home`}
+          >
+            <span className="font-display text-lg font-medium tracking-tight text-ink sm:text-xl">
+              {SITE.name}
+            </span>
+            <span className="mt-0.5 block text-[0.6rem] font-body font-medium uppercase tracking-[0.18em] text-ink-subtle sm:text-[0.65rem]">
+              Editorial
             </span>
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-6">
-            <Link
-              href="/"
-              className="text-white/80 hover:text-white text-sm font-body font-medium transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/blog"
-              className="text-white/80 hover:text-white text-sm font-body font-medium transition-colors"
-            >
-              Blog
-            </Link>
-            <a
-              href="https://trouv.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold text-xs ml-2"
-            >
-              Book Trouv →
-            </a>
+          <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
+            {NAV.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-ink-muted transition-colors hover:text-ink"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
-          {/* Mobile menu button */}
           <button
-            className="md:hidden text-white p-2"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+            type="button"
+            className="lg:hidden flex h-10 w-10 items-center justify-center rounded border border-line text-ink focus-ring"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? 'Close menu' : 'Open menu'}
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+              {open ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 8h16M4 16h16" />
               )}
             </svg>
           </button>
         </div>
 
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10 space-y-2">
-            <Link href="/" className="block text-white/80 hover:text-white px-2 py-2 text-sm font-body">
-              Home
-            </Link>
-            <Link href="/blog" className="block text-white/80 hover:text-white px-2 py-2 text-sm font-body">
-              Blog
-            </Link>
-            <a
-              href="https://trouv.co.uk"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block btn-gold text-center mt-3"
-            >
-              Book Trouv →
-            </a>
+        {open && (
+          <div id="mobile-nav" className="lg:hidden border-t border-line py-4">
+            <ul className="flex flex-col gap-1">
+              {NAV.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="block rounded px-2 py-3 text-sm font-medium text-ink hover:bg-paper-warm"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
       </div>

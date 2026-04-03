@@ -1,35 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
-  --font-source-sans: 'Source Sans 3', system-ui, sans-serif;
+  --font-newsreader: 'Newsreader', Georgia, serif;
+  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
 }
 
 body {
-  background-color: #f8f6f0;
-  color: #1a2e1a;
-  font-family: var(--font-source-sans);
+  background-color: #fafafa;
+  color: #0a0a0a;
+  font-family: var(--font-dm-sans);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-cormorant);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-newsreader);
 }
 
 @layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center border border-ink bg-ink px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-ink-muted;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center border border-line bg-transparent px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:border-ink hover:bg-paper-warm;
+  }
+  .editorial-label {
+    @apply text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink-subtle;
+  }
+  .divider-fine {
+    @apply h-px w-full bg-line;
+  }
+  .link-underline {
+    @apply text-ink underline decoration-line underline-offset-[5px] decoration-1 transition-colors hover:decoration-ink-muted;
+  }
+  .card-editorial {
+    @apply border border-line bg-white transition-shadow hover:shadow-[0_1px_0_rgba(0,0,0,0.06),0_12px_40px_rgba(0,0,0,0.04)];
+  }
+  .badge-muted {
+    @apply inline-block border border-line bg-paper-warm px-2.5 py-1 text-[0.65rem] font-medium uppercase tracking-wider text-ink-muted;
+  }
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+  }
+  /* Admin & legacy */
   .btn-gold {
-    @apply bg-gold text-white px-6 py-3 font-body font-semibold text-sm tracking-wide uppercase hover:bg-gold-dark transition-colors duration-200;
+    @apply bg-gold px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-gold-dark;
   }
   .btn-navy {
-    @apply bg-navy text-white px-6 py-3 font-body font-semibold text-sm tracking-wide uppercase hover:bg-navy-light transition-colors duration-200;
+    @apply bg-navy px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-navy-light;
   }
   .btn-outline {
-    @apply border border-gold text-gold px-6 py-3 font-body font-semibold text-sm tracking-wide uppercase hover:bg-gold hover:text-white transition-colors duration-200;
-  }
-  .category-tag {
-    @apply inline-block bg-gold/10 text-gold text-xs font-semibold uppercase tracking-widest px-3 py-1;
+    @apply border border-gold px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-gold transition-colors duration-200 hover:bg-gold hover:text-white;
   }
 }

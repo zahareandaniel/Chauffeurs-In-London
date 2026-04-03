@@ -21,6 +21,14 @@ module.exports = {
     if (path === '/') return { loc: path, priority: 1.0, changefreq: 'daily' };
     if (path === '/blog') return { loc: path, priority: 0.9, changefreq: 'daily' };
     if (path.startsWith('/blog/')) return { loc: path, priority: 0.8, changefreq: 'weekly' };
+    if (
+      ['/guides', '/featured', '/chauffeur-services', '/about', '/get-featured', '/contact'].includes(
+        path,
+      )
+    )
+      return { loc: path, priority: 0.85, changefreq: 'weekly' };
+    if (path.startsWith('/featured/'))
+      return { loc: path, priority: 0.75, changefreq: 'monthly' };
     return { loc: path, priority: config.priority, changefreq: config.changefreq };
   },
 };

@@ -4,16 +4,18 @@ import Footer from '@/components/shared/Footer';
 import BlogCard from '@/components/blog/BlogCard';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { JOURNAL_CATEGORIES } from '@/lib/guide-hubs';
+import EditorsPicksSection from '@/components/editorial/EditorsPicksSection';
+import { getEditorsPicks } from '@/lib/editor-picks';
 
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Blog — Chauffeur Guides & Tips for London',
+  title: 'Journal',
   description:
-    'Browse expert guides on chauffeur services, airport transfers, corporate travel and private hire in London.',
+    'Guides and analysis on London chauffeurs, airport transfers, executive travel, and events — written as editorial, not filler.',
 };
 
-const CATEGORIES = ['All', 'Airport Transfers', 'Corporate', 'Wedding', 'Events', 'Tips'];
 const PAGE_SIZE = 10;
 
 export default async function BlogPage({
@@ -39,6 +41,7 @@ export default async function BlogPage({
 
   const { data: articles, count } = await query;
   const totalPages = Math.ceil((count || 0) / PAGE_SIZE);
+  const editorsPicks = activeCategory !== 'All' ? getEditorsPicks() : null;
 
   const buildHref = (p: number) => {
     const params = new URLSearchParams();
@@ -51,31 +54,25 @@ export default async function BlogPage({
   return (
     <>
       <Header />
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Page title */}
-        <div className="mb-10">
-          <h1 className="font-display text-navy text-4xl sm:text-5xl font-semibold mb-2">
-            Chauffeur Guides
-          </h1>
-          <p className="text-navy/60 text-base">
-            Expert advice on London&apos;s premium chauffeur services.
-          </p>
-        </div>
+      <main className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <p className="editorial-label">Archive</p>
+        <h1 className="font-display mt-4 text-display-xl font-medium text-ink">Journal</h1>
+        <p className="mt-6 max-w-2xl text-base text-ink-muted">
+          Long-form pieces on how London chauffeur and executive ground transport actually works —
+          airports, corporate programmes, occasions, and industry context.
+        </p>
 
-        {/* Category filter */}
-        <div className="flex flex-wrap gap-2 mb-10">
-          {CATEGORIES.map((cat) => (
+        <div className="mt-12 flex flex-wrap gap-2 border-b border-line pb-8">
+          {JOURNAL_CATEGORIES.map((cat) => (
             <Link
               key={cat}
               href={
-                cat === 'All'
-                  ? '/blog'
-                  : `/blog?category=${encodeURIComponent(cat)}`
+                cat === 'All' ? '/blog' : `/blog?category=${encodeURIComponent(cat)}`
               }
-              className={`px-4 py-2 text-sm font-semibold font-body border transition-colors ${
+              className={`border px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] transition-colors ${
                 activeCategory === cat
-                  ? 'bg-navy text-white border-navy'
-                  : 'bg-white text-navy/60 border-gray-200 hover:border-gold hover:text-gold'
+                  ? 'border-ink bg-ink text-paper'
+                  : 'border-line bg-white text-ink-muted hover:border-ink hover:text-ink'
               }`}
             >
               {cat}
@@ -83,44 +80,48 @@ export default async function BlogPage({
           ))}
         </div>
 
-        {/* Articles grid */}
+        {editorsPicks && (
+          <div className="mt-12 border border-line bg-paper-warm p-8 lg:p-10">
+            <EditorsPicksSection picks={editorsPicks} />
+          </div>
+        )}
+
         {articles && articles.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {articles.map((article) => (
               <BlogCard key={article.id} article={article} />
             ))}
           </div>
         ) : (
-          <div className="text-center py-20 text-navy/40">
-            <p className="font-display text-2xl mb-2">No articles found</p>
-            <p className="text-sm">Try a different category.</p>
+          <div className="mt-20 text-center">
+            <p className="font-display text-2xl text-ink">Nothing in this filter yet</p>
+            <p className="mt-2 text-sm text-ink-muted">Try another category or clear filters.</p>
           </div>
         )}
 
-        {/* Pagination */}
         {totalPages > 1 && (
-          <div className="flex justify-center gap-2 mt-12">
+          <div className="mt-16 flex flex-wrap justify-center gap-2">
             {page > 1 && (
-              <Link href={buildHref(page - 1)} className="btn-outline py-2 px-4 text-xs">
-                ← Previous
+              <Link href={buildHref(page - 1)} className="btn-secondary py-2 text-[0.65rem]">
+                Previous
               </Link>
             )}
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => (
               <Link
                 key={p}
                 href={buildHref(p)}
-                className={`py-2 px-4 text-xs font-semibold border transition-colors ${
+                className={`min-w-[2.5rem] border px-3 py-2 text-center text-xs font-semibold ${
                   p === page
-                    ? 'bg-navy text-white border-navy'
-                    : 'bg-white text-navy border-gray-200 hover:border-gold'
+                    ? 'border-ink bg-ink text-paper'
+                    : 'border-line bg-white text-ink-muted hover:border-ink'
                 }`}
               >
                 {p}
               </Link>
             ))}
             {page < totalPages && (
-              <Link href={buildHref(page + 1)} className="btn-outline py-2 px-4 text-xs">
-                Next →
+              <Link href={buildHref(page + 1)} className="btn-secondary py-2 text-[0.65rem]">
+                Next
               </Link>
             )}
           </div>

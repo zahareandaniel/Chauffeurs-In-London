@@ -5,9 +5,11 @@ import { articleCoverSrc } from '@/lib/article-cover';
 
 interface BlogCardProps {
   article: Article;
+  /** Larger typography for homepage lead */
+  featured?: boolean;
 }
 
-export default function BlogCard({ article }: BlogCardProps) {
+export default function BlogCard({ article, featured }: BlogCardProps) {
   const readTime = estimateReadTime(article.content);
   const date = article.published_at
     ? new Date(article.published_at).toLocaleDateString('en-GB', {
@@ -20,46 +22,43 @@ export default function BlogCard({ article }: BlogCardProps) {
   const coverSrc = articleCoverSrc(article);
 
   return (
-    <article className="group bg-white border border-gray-100 hover:border-gold/30 transition-colors duration-200 overflow-hidden">
-      <div className="relative w-full h-52 overflow-hidden bg-navy/5">
+    <article
+      className={`group card-editorial flex flex-col overflow-hidden bg-white ${featured ? '' : ''}`}
+    >
+      <Link href={`/blog/${article.slug}`} className="relative aspect-[16/10] w-full overflow-hidden bg-paper-warm">
         <Image
           src={coverSrc}
           alt={article.title}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-cover transition duration-700 group-hover:scale-[1.02]"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-      </div>
+      </Link>
 
-      <div className="p-6">
-        {/* Category + read time */}
-        <div className="flex items-center justify-between mb-3">
-          {article.category && (
-            <span className="category-tag">{article.category}</span>
-          )}
-          <span className="text-xs text-navy/40 font-body ml-auto">{readTime} min read</span>
+      <div className="flex flex-1 flex-col p-6 sm:p-8">
+        <div className="flex items-center justify-between gap-3 text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-ink-subtle">
+          {article.category ? <span>{article.category}</span> : <span>Journal</span>}
+          <span>{readTime} min</span>
         </div>
-
-        {/* Title */}
-        <h2 className="font-display text-navy text-xl font-semibold leading-snug mb-2 group-hover:text-gold transition-colors">
+        <h2
+          className={`font-display mt-4 font-medium tracking-tight text-ink group-hover:opacity-70 ${
+            featured ? 'text-2xl sm:text-[1.75rem] leading-snug' : 'text-xl leading-snug'
+          }`}
+        >
           <Link href={`/blog/${article.slug}`}>{article.title}</Link>
         </h2>
-
-        {/* Excerpt */}
         {article.excerpt && (
-          <p className="text-navy/60 text-sm leading-relaxed mb-4 line-clamp-3">
-            {article.excerpt}
-          </p>
+          <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-ink-muted">{article.excerpt}</p>
         )}
-
-        {/* Footer */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <span className="text-xs text-navy/40 font-body">{date}</span>
+        <div className="mt-auto flex items-center justify-between border-t border-line pt-6">
+          <time className="text-xs text-ink-subtle" dateTime={article.published_at ?? undefined}>
+            {date}
+          </time>
           <Link
             href={`/blog/${article.slug}`}
-            className="text-gold text-sm font-semibold font-body hover:underline"
+            className="text-xs font-semibold uppercase tracking-[0.12em] text-ink"
           >
-            Read more →
+            Read →
           </Link>
         </div>
       </div>
