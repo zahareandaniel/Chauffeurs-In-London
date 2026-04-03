@@ -3,8 +3,10 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
-import { getCompanyBySlug, getFeaturedCompanies } from '@/lib/featured-companies';
+import { getCompanyBySlug, getFeaturedCompanies, TROUV_SLUG } from '@/lib/featured-companies';
 import { siteUrl } from '@/lib/site-config';
+import RecommendedChauffeurServices from '@/components/editorial/RecommendedChauffeurServices';
+import { getConversionRecommendations } from '@/lib/market-operators';
 
 type Props = { params: { slug: string } };
 
@@ -17,7 +19,7 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!company) return {};
   const base = siteUrl().replace(/\/$/, '');
   return {
-    title: `${company.name} — featured operator profile`,
+    title: `${company.name}, featured operator profile`,
     description: company.editorialSummary,
     alternates: { canonical: `${base}/featured/${company.slug}` },
     openGraph: {
@@ -34,11 +36,15 @@ export default function CompanyProfilePage({ params }: Props) {
   if (!company) notFound();
 
   const isSample = company.badges.some((b) => b.toLowerCase().includes('sample'));
+  const recommended = getConversionRecommendations({
+    omitTrouv: company.slug === TROUV_SLUG,
+    seed: `featured-${company.slug}`,
+  });
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `${company.name} — featured chauffeur operator (editorial)`,
+    headline: `${company.name}, featured chauffeur operator (editorial)`,
     description: company.editorialSummary,
     author: { '@type': 'Organization', name: 'Chauffeurs in London' },
   };
@@ -159,11 +165,40 @@ export default function CompanyProfilePage({ params }: Props) {
                     Apply for a profile
                   </Link>
                 </div>
+                <div>
+                  <p className="editorial-label">Related editorial</p>
+                  <ul className="mt-3 space-y-2 text-sm text-ink-muted">
+                    <li>
+                      <Link href="/guides/chauffeur-service-types-london" className="link-underline text-ink">
+                        Chauffeur service types in London
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/comparisons/uber-vs-chauffeur-london" className="link-underline text-ink">
+                        Uber vs chauffeur in London
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/companies" className="link-underline text-ink">
+                        Recognised market operators
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/methodology" className="link-underline text-ink">
+                        How companies are selected
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
                 <p className="text-xs leading-relaxed text-ink-subtle">{company.methodologyNote}</p>
               </div>
             </aside>
           </div>
         </article>
+
+        <div className="max-w-content mx-auto">
+          <RecommendedChauffeurServices rows={recommended} />
+        </div>
       </main>
       <Footer />
     </>

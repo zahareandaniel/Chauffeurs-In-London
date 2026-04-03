@@ -14,7 +14,7 @@ export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Journal',
   description:
-    'Guides and analysis on London chauffeurs, airport transfers, executive travel, and events — edited as long-form journalism, not SEO filler.',
+    'Guides and analysis on London chauffeurs, airport transfers, executive travel, and events, edited as long-form journalism, not SEO filler.',
 };
 
 const PAGE_SIZE = 10;
@@ -61,7 +61,7 @@ export default async function BlogPage({
           <p className="editorial-label">Archive</p>
           <h1 className="font-display mt-5 text-display-xl font-medium text-ink">Journal</h1>
           <p className="mt-6 text-base leading-relaxed text-ink-muted">
-            Essays and guides on how premium ground transport in London actually works — written for
+            Essays and guides on how premium ground transport in London actually works, written for
             readers who brief boards, not for bots.
           </p>
         </header>

@@ -6,9 +6,9 @@ import GetFeaturedForm from '@/components/forms/GetFeaturedForm';
 import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Get featured',
+  title: 'Request editorial consideration',
   description:
-    'Apply for editorial consideration on Chauffeurs in London — selective chauffeur operator profiles, no pay-to-list.',
+    'Apply for editorial consideration on Chauffeurs in London. Selective operator profiles, no pay-to-list, no pricing on page.',
 };
 
 const STEPS = [
@@ -34,6 +34,21 @@ const CRITERIA = [
   'No requirement for exclusive editorial rights',
 ];
 
+const BENEFITS = [
+  {
+    title: 'Visibility',
+    body: 'A long-form profile sits alongside serious guides, not buried in an undifferentiated grid. Readers arrive from journal pieces and hub pages, not from generic search landings alone.',
+  },
+  {
+    title: 'Positioning',
+    body: 'Your offer is explained in the same typographic system as the rest of the desk: methodology notes, limitations, and structure that signal you understand executive buyers.',
+  },
+  {
+    title: 'Editorial exposure',
+    body: 'When a guide needs a concrete example, featured operators can be named in context. That is editorial discretion, not a guaranteed mention on every URL.',
+  },
+];
+
 export default function GetFeaturedPage() {
   return (
     <>
@@ -45,13 +60,17 @@ export default function GetFeaturedPage() {
               <div className="lg:col-span-7">
                 <p className="editorial-label">Operator programme</p>
                 <h1 className="font-display mt-8 text-display-xl font-medium text-ink">
-                  Get featured on {SITE.name}
+                  Request to be featured on {SITE.name}
                 </h1>
                 <p className="mt-8 max-w-readable text-lg leading-relaxed text-ink-muted">
-                  This is not a directory checkout. Editorial profiles are long, structured, and
-                  written so your brand survives contact with a demanding reader. We show sample
-                  entries beside live partners so the frame stays honest — the same margins,
-                  badges, and methodology notes for everyone on the grid.
+                  This is not a directory checkout. Features are selective, edited, and published so a
+                  demanding reader can trust what they see. We show sample entries beside live partners
+                  so the frame stays honest: the same margins, badges, and methodology notes for
+                  everyone on the grid.
+                </p>
+                <p className="mt-6 max-w-readable text-sm leading-relaxed text-ink-muted">
+                  There is no pricing here and no “buy a listing” path. If the fit is wrong, we simply
+                  do not proceed.
                 </p>
               </div>
               <div className="lg:col-span-5">
@@ -72,6 +91,27 @@ export default function GetFeaturedPage() {
         </section>
 
         <section className="border-b border-line bg-surface px-4 py-section sm:px-6 lg:px-8">
+          <div className="max-w-content mx-auto">
+            <p className="editorial-label">Why operators ask</p>
+            <h2 className="font-display mt-4 text-display-lg font-medium text-ink">
+              What a feature can offer
+            </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-muted">
+              Stated plainly, without sales language: inclusion means showing up where buyers already
+              read serious transport guidance.
+            </p>
+            <ul className="mt-14 grid gap-10 md:grid-cols-3">
+              {BENEFITS.map((b) => (
+                <li key={b.title} className="border-t-2 border-ink/15 pt-8">
+                  <h3 className="font-display text-lg font-medium text-ink">{b.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-muted">{b.body}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="border-b border-line bg-paper px-4 py-section sm:px-6 lg:px-8">
           <div className="max-w-content mx-auto">
             <p className="editorial-label">Process</p>
             <h2 className="font-display mt-4 text-display-lg font-medium text-ink">
@@ -101,10 +141,15 @@ export default function GetFeaturedPage() {
                 read it carefully; if volume is high, silence may simply mean timing.
               </p>
               <p className="mt-6 text-sm text-ink-muted">
-                Read the public methodology first:{' '}
+                Read{' '}
+                <Link href="/methodology" className="font-semibold text-ink underline underline-offset-2">
+                  how companies are selected
+                </Link>{' '}
+                and{' '}
                 <Link href="/about" className="font-semibold text-ink underline underline-offset-2">
-                  editorial standards →
-                </Link>
+                  editorial standards
+                </Link>{' '}
+                before you apply.
               </p>
               <div className="mt-10 border border-line bg-paper-warm p-6">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-ink-subtle">
@@ -112,7 +157,7 @@ export default function GetFeaturedPage() {
                 </p>
                 <p className="mt-3 text-sm text-ink-muted">
                   Profiles are not sold. We may reference operators elsewhere on the site when guides
-                  need a concrete example — always with the same disclosure language.
+                  need a concrete example, always with the same disclosure language.
                 </p>
               </div>
             </div>

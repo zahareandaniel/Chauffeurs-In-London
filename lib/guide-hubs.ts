@@ -1,5 +1,5 @@
 /**
- * Content hubs — crawlable IA for airport, city, and editorial series.
+ * Content hubs: crawlable IA for airport, city, and editorial series.
  * Links align with existing article slugs from seed content.
  */
 
@@ -28,7 +28,7 @@ export const GUIDE_HUBS: ContentHub[] = [
         href: '/blog/gatwick-airport-transfers-london',
       },
       {
-        label: 'London City Airport — business traveller notes',
+        label: 'London City Airport: business traveller notes',
         href: '/blog/london-city-airport-transfers',
       },
       {
@@ -36,7 +36,7 @@ export const GUIDE_HUBS: ContentHub[] = [
         href: '/chauffeur-services',
       },
       {
-        label: 'Trouv Chauffeurs — editorial profile',
+        label: 'Trouv Chauffeurs: editorial profile',
         href: '/featured/trouv',
       },
     ],
@@ -48,15 +48,19 @@ export const GUIDE_HUBS: ContentHub[] = [
       'How the London market works: standards, expectations, and how to shortlist operators with care.',
     links: [
       {
-        label: 'Chauffeur service in London — featured shortlist',
+        label: 'Chauffeur service types in London (market shapes)',
+        href: '/guides/chauffeur-service-types-london',
+      },
+      {
+        label: 'Chauffeur service in London: featured shortlist',
         href: '/chauffeur-services',
       },
       {
-        label: 'Chauffeur services in London — 2025 overview',
+        label: 'Chauffeur services in London: 2025 overview',
         href: '/blog/best-chauffeur-services-london-2025',
       },
       {
-        label: 'Corporate chauffeur hire — what to expect',
+        label: 'Corporate chauffeur hire: what to expect',
         href: '/blog/corporate-chauffeur-hire-london',
       },
       {
@@ -85,18 +89,30 @@ export const GUIDE_HUBS: ContentHub[] = [
     id: 'industry',
     title: 'Industry & comparisons',
     description:
-      'Editorial comparisons and frameworks — written for readers who need clarity, not slogans.',
+      'Editorial comparisons and frameworks written for readers who need clarity, not slogans.',
     links: [
+      {
+        label: 'Uber vs chauffeur in London',
+        href: '/comparisons/uber-vs-chauffeur-london',
+      },
+      {
+        label: 'Recognised market operators',
+        href: '/companies',
+      },
+      {
+        label: 'How companies are selected',
+        href: '/methodology',
+      },
       {
         label: 'Featured operators (editorial desk)',
         href: '/featured',
       },
       {
-        label: 'Chauffeur services — compare shortlist',
+        label: 'Chauffeur services: compare shortlist',
         href: '/chauffeur-services',
       },
       {
-        label: 'Trouv Chauffeurs — profile',
+        label: 'Trouv Chauffeurs: profile',
         href: '/featured/trouv',
       },
       {

@@ -1,6 +1,6 @@
 import { SITE } from './site-config';
 
-/** Primary IA — keep in sync across header, footer, and mobile. */
+/** Primary IA: keep in sync across header, footer, and mobile. */
 export const PRIMARY_NAV = [
   { href: '/blog', label: 'Journal' },
   { href: '/topics', label: 'Topics' },
@@ -13,6 +13,7 @@ export const PRIMARY_NAV = [
 ] as const;
 
 export const PLATFORM_LINKS = [
+  { href: '/methodology', label: 'How companies are selected' },
   { href: '/about', label: 'Editorial standards' },
   { href: '/get-featured', label: 'Request a feature' },
   { href: '/contact', label: 'Contact the desk' },

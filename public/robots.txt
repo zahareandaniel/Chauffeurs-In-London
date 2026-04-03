@@ -1,5 +1,10 @@
+# *
 User-agent: *
 Allow: /
 Disallow: /admin
 
+# Host
+Host: https://chauffeursinlondon.com
+
+# Sitemaps
 Sitemap: https://chauffeursinlondon.com/sitemap.xml

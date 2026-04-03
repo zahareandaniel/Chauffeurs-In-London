@@ -1,4 +1,4 @@
-/** Site identity — editorial platform, not operator marketing. */
+/** Site identity: editorial platform, not operator marketing. */
 export const SITE = {
   name: 'Chauffeurs in London',
   descriptor: 'An editorial guide to premium ground transport in London',

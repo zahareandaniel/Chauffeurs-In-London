@@ -1,6 +1,6 @@
 /**
  * Curated operator profiles for the featured programme.
- * Editorial only — not sold as directory placement.
+ * Editorial only, not sold as directory placement.
  */
 
 export type CompanySpecialism = { title: string; body: string };
@@ -23,7 +23,7 @@ export type FeaturedCompany = {
   methodologyNote: string;
 };
 
-/** Sample / placeholder entries — same card chrome as live features; badge marks status only. */
+/** Sample / placeholder entries: same card chrome as live features; badge marks status only. */
 export function isEditorialSampleCompany(c: FeaturedCompany): boolean {
   return c.badges.some((b) => b.toLowerCase().includes('sample'));
 }
@@ -47,7 +47,7 @@ const companies: FeaturedCompany[] = [
       'Structured around confirmed pricing disciplines, flight-aware pickups, and consistently presented drivers across London’s main airports. Where readers need an operator that scales from single transfers to multi-day programmes, Trouv Chauffeurs is one of the few we cite by name alongside broader market guidance.',
     websiteUrl: 'https://www.trouv.co.uk',
     overview:
-      'Trouv Chauffeurs operates as a premium private hire desk serving London’s airports, business districts, and event venues. The offer sits firmly in the executive segment: larger saloons and MPVs, meet-and-greet in arrivals, and planning support when itineraries move — the sort of operational maturity we expect before naming an operator in guidance aimed at finance, legal, and events audiences.',
+      'Trouv Chauffeurs operates as a premium private hire desk serving London’s airports, business districts, and event venues. The offer sits firmly in the executive segment: larger saloons and MPVs, meet-and-greet in arrivals, and planning support when itineraries move. That is the sort of operational maturity we expect before naming an operator in guidance aimed at finance, legal, and events audiences.',
     locationsCovered: [
       'Greater London & Home Counties access',
       'Heathrow, Gatwick, Stansted, Luton & London City',
@@ -76,7 +76,7 @@ const companies: FeaturedCompany[] = [
     editorialNotes:
       'We reference Trouv Chauffeurs in airport and corporate guides when a concrete example helps readers move from advice to action. A profile here is not a rating of every future journey; readers should still confirm licensing, insurance, and terms for their own brief.',
     whyTheyStandOut: [
-      'Operational framing aligned with how executive buyers actually book — clarity on scope, timing, and vehicle class',
+      'Operational framing aligned with how executive buyers actually book: clarity on scope, timing, and vehicle class',
       'Breadth across London’s airport system without narrowing to a single hub',
       'Willingness to sit alongside other operators in our shortlist rather than demanding exclusive placement',
     ],
@@ -87,14 +87,14 @@ const companies: FeaturedCompany[] = [
     slug: 'meridian-chauffeur-group',
     name: 'Meridian Chauffeur Group',
     location: 'Central & West London',
-    tagline: 'West End–weighted executive moves and City liaison work — sample profile structure.',
+    tagline: 'West End–weighted executive moves and City liaison work (sample profile structure).',
     serviceFocus: ['City-to-airport', 'Mayfair & Kensington', 'Financial district'],
     badges: ['Editorial sample', 'Layout example'],
     editorialSummary:
       'Placeholder illustrating how we present an operator with a west-central bias. Replace with a vetted partner when onboarding.',
     websiteUrl: null,
     overview:
-      'Editorial sample only. A live entry here would summarise verifiable service scope, fleet positioning, and how the operator handles communications — written in the same neutral register as any other feature.',
+      'Editorial sample only. A live entry here would summarise verifiable service scope, fleet positioning, and how the operator handles communications, in the same neutral register as any other feature.',
     locationsCovered: ['Mayfair', 'Kensington', 'City of London'],
     airportExpertise: ['Heathrow emphasis', 'London City first-wave'],
     specialisms: [
@@ -108,20 +108,20 @@ const companies: FeaturedCompany[] = [
     whyTheyStandOut: [
       'Shows how airport expertise fields differ between operators on the same grid',
     ],
-    methodologyNote: 'Fictional — not a booking recommendation.',
+    methodologyNote: 'Fictional, not a booking recommendation.',
   },
   {
     slug: 'crestline-executive',
     name: 'Crestline Executive',
     location: 'London & South East',
-    tagline: 'Group MPV-led operations with Stansted & Luton strength — sample entry.',
+    tagline: 'Group MPV-led operations with Stansted & Luton strength (sample entry).',
     serviceFocus: ['Group MPV', 'Roadshow support', 'Stansted & Luton'],
     badges: ['Editorial sample'],
     editorialSummary:
       'Placeholder contrasting vehicle mix with Heathrow-centric operators. Swap for a verified partner when ready.',
     websiteUrl: null,
     overview:
-      'Editorial sample. Live copy would stress factual differentiators — fleet composition, coverage map, and ideal client profile — without superlatives.',
+      'Editorial sample. Live copy would stress factual differentiators: fleet composition, coverage map, and ideal client profile, without superlatives.',
     locationsCovered: ['London', 'Cambridge corridor', 'South East M25'],
     airportExpertise: ['Stansted & Luton', 'Group airport runs'],
     specialisms: [
@@ -138,7 +138,7 @@ const companies: FeaturedCompany[] = [
     slug: 'harbour-rowe-mobility',
     name: 'Harbour & Rowe Mobility',
     location: 'Canary Wharf & East London',
-    tagline: 'Docklands and Excel-adjacent work — sample operator profile.',
+    tagline: 'Docklands and Excel-adjacent work (sample operator profile).',
     serviceFocus: ['London City Airport', 'Excel London', 'Corporate east corridor'],
     badges: ['Editorial sample'],
     editorialSummary:
@@ -162,11 +162,11 @@ const companies: FeaturedCompany[] = [
     slug: 'albemarle-private-drivers',
     name: 'Albemarle Private Drivers',
     location: 'Belgravia & Knightsbridge',
-    tagline: 'Ultra-local prestige moves — sample contrast to airport-first operators.',
+    tagline: 'Ultra-local prestige moves (sample contrast to airport-first operators).',
     serviceFocus: ['Hotel & residence collections', 'Evening economy', 'Discreet doorwork'],
     badges: ['Editorial sample'],
     editorialSummary:
-      'Sample entry for ultra-central, residential-heavy chauffeur positioning — useful when readers compare “airport-first” vs “last-mile polish.”',
+      'Sample entry for ultra-central, residential-heavy chauffeur positioning, useful when readers compare “airport-first” vs “last-mile polish.”',
     websiteUrl: null,
     overview:
       'Editorial sample. A real profile would document how far in advance the desk books, minimum hire rules, and realistic coverage boundaries.',
@@ -192,5 +192,5 @@ export function getCompanyBySlug(slug: string): FeaturedCompany | undefined {
   return companies.find((c) => c.slug === slug);
 }
 
-/** Trouv slug — single source for picks & article modules */
+/** Trouv slug: single source for picks & article modules */
 export const TROUV_SLUG = 'trouv' as const;

@@ -5,6 +5,7 @@ import BlogCard from '@/components/blog/BlogCard';
 import FeaturedCompanyCard from '@/components/editorial/FeaturedCompanyCard';
 import EditorsPicksSection from '@/components/editorial/EditorsPicksSection';
 import CategoryRail from '@/components/editorial/CategoryRail';
+import RecognisedMarketOperatorsHome from '@/components/editorial/RecognisedMarketOperatorsHome';
 import Link from 'next/link';
 import { SITE } from '@/lib/site-config';
 import { getFeaturedCompanies } from '@/lib/featured-companies';
@@ -45,7 +46,7 @@ export default async function HomePage() {
                   The independent desk for London chauffeurs
                 </h1>
                 <p className="mt-8 max-w-readable text-lg leading-relaxed text-ink-muted sm:text-xl">
-                  Long-form guides on airports, corporate programmes, and occasions — written so
+                  Long-form guides on airports, corporate programmes, and occasions, written so
                   readers can decide with confidence. Operator features sit on the same template
                   and the same standards: curated, never cluttered.
                 </p>
@@ -79,10 +80,10 @@ export default async function HomePage() {
                     </li>
                   </ul>
                   <blockquote className="mt-8 border-l-2 border-ink pl-4 font-display text-lg font-medium leading-snug text-ink">
-                    “Serious transport deserves serious prose — and operators deserve a platform that
+                    “Serious transport deserves serious prose, and operators deserve a platform that
                     doesn’t look like a coupon site.”
                   </blockquote>
-                  <p className="mt-3 text-xs text-ink-subtle">Editorial charter — {SITE.name}</p>
+                  <p className="mt-3 text-xs text-ink-subtle">Editorial charter · {SITE.name}</p>
                 </div>
               </aside>
             </div>
@@ -90,6 +91,8 @@ export default async function HomePage() {
         </section>
 
         <CategoryRail />
+
+        <RecognisedMarketOperatorsHome />
 
         <section className="border-b border-line bg-paper-warm px-4 py-section sm:px-6 lg:px-8">
           <div className="max-w-content mx-auto grid gap-12 lg:grid-cols-12 lg:items-start">
@@ -106,7 +109,7 @@ export default async function HomePage() {
                 that tell you nothing about how a desk actually behaves when a flight is late.
               </p>
               <p>
-                We publish {SITE.name} as a counterweight: slow, explicit, and visually quiet —
+                We publish {SITE.name} as a counterweight: slow, explicit, and visually quiet,
                 closer to a travel quarterly than a lead-gen microsite. Featured companies receive
                 the same typography and methodology notes as everyone else; selectivity is the
                 signal, not neon buttons.
@@ -114,6 +117,9 @@ export default async function HomePage() {
               <div className="flex flex-wrap gap-4 pt-2">
                 <Link href="/about" className="link-underline text-sm font-semibold">
                   Editorial standards →
+                </Link>
+                <Link href="/methodology" className="link-underline text-sm font-semibold">
+                  Selection methodology →
                 </Link>
                 <Link href="/guides" className="link-underline text-sm font-semibold">
                   Guides index →
@@ -138,8 +144,8 @@ export default async function HomePage() {
                   Featured operators
                 </h2>
                 <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-muted">
-                  Full editorial profiles: overview, airports, specialisms, and methodology —
-                  identical structure for live partners and sample entries so the frame stays honest.
+                  Full editorial profiles: overview, airports, specialisms, and methodology. Identical
+                  structure for live partners and sample entries so the frame stays honest.
                 </p>
               </div>
               <Link href="/featured" className="btn-secondary shrink-0 self-start sm:self-auto">
@@ -162,7 +168,7 @@ export default async function HomePage() {
                   <p className="editorial-label">Latest</p>
                   <h2 className="font-display mt-3 text-display-lg font-medium text-ink">The journal</h2>
                   <p className="mt-3 max-w-lg text-sm text-ink-muted">
-                    New and recent guides — each edited for structure, internal linking, and clarity.
+                    New and recent guides, each edited for structure, internal linking, and clarity.
                   </p>
                 </div>
                 <Link href="/blog" className="link-underline text-sm font-semibold">
@@ -195,7 +201,7 @@ export default async function HomePage() {
             <p className="editorial-label">Navigation</p>
             <h2 className="font-display mt-3 text-display-lg font-medium text-ink">Guide hubs</h2>
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-muted">
-              Topic clusters that tie articles together for readers and crawlers — always
+              Topic clusters that tie articles together for readers and crawlers: always
               editorial-first, never doorway pages.
             </p>
             <div className="mt-14 grid gap-8 md:grid-cols-2">
@@ -234,12 +240,12 @@ export default async function HomePage() {
           <div className="max-w-content mx-auto text-center">
             <p className="editorial-label text-paper/45">Partnership</p>
             <h2 className="font-display mx-auto mt-6 max-w-xl text-display-lg font-medium text-paper">
-              Inclusion is visible — never silent, never desperate
+              Inclusion is visible: never silent, never desperate
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-paper/65">
               We built the visual system so a feature feels like a magazine profile: restrained type,
               generous space, and copy you can send to a board without embarrassment. If that bar
-              matches your brand, the desk accepts applications — not everyone is listed, and the
+              matches your brand, the desk accepts applications. Not everyone is listed, and the
               page explains why.
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">

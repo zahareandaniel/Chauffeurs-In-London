@@ -1,5 +1,5 @@
 /**
- * Single source for journal categories — filters, footer, topics page, and SEO copy.
+ * Single source for journal categories, filters, footer, topics page, and SEO copy.
  * `category` values must match Supabase `articles.category`.
  */
 
@@ -16,7 +16,7 @@ export const JOURNAL_TOPICS: JournalTopic[] = [
   {
     category: 'Airport Transfers',
     guideSectionId: 'airport-transfers',
-    dek: 'Heathrow, Gatwick, City, Stansted, Luton — timing, terminals, and what a professional transfer should include.',
+    dek: 'Heathrow, Gatwick, City, Stansted, Luton: timing, terminals, and what a professional transfer should include.',
   },
   {
     category: 'Corporate',
@@ -26,7 +26,7 @@ export const JOURNAL_TOPICS: JournalTopic[] = [
   {
     category: 'Wedding',
     guideSectionId: 'events-occasions',
-    dek: 'Cars as part of the day’s choreography — briefings, patience, and presentation for fixed-time venues.',
+    dek: 'Cars as part of the day’s choreography: briefings, patience, and presentation for fixed-time venues.',
   },
   {
     category: 'Events',

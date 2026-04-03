@@ -25,6 +25,13 @@ export default function AboutPage() {
             London. We are not a regulator, broker, or paid directory. What we are is selective about
             voice, structure, and who we profile.
           </p>
+          <p className="mt-6 text-base leading-relaxed text-ink-muted">
+            For the selection framework in one place, see{' '}
+            <Link href="/methodology" className="font-medium text-ink underline underline-offset-2">
+              how companies are selected
+            </Link>
+            .
+          </p>
 
           <div className="mt-16 space-y-12 text-sm leading-[1.85] text-ink-muted sm:text-base">
             <section>
@@ -32,7 +39,7 @@ export default function AboutPage() {
               <p className="mt-4">
                 Long-form guides (airports, corporate travel, events, market context), comparison
                 pieces where they help readers decide, and occasional operator features written to the
-                same standard as the rest of the desk — fact-led tone, clear limitations, no
+                same standard as the rest of the desk: fact-led tone, clear limitations, and no
                 guarantee language.
               </p>
             </section>
@@ -67,8 +74,7 @@ export default function AboutPage() {
                 <Link href="/featured/trouv" className="text-ink underline underline-offset-2">
                   Trouv Chauffeurs
                 </Link>{' '}
-                — or others on the shortlist — where a concrete example helps readers act on the
-                topic. That does not convert this site into a single-brand funnel: featured operators
+                or others on the shortlist when a concrete example helps readers act on the topic. That does not convert this site into a single-brand funnel: featured operators
                 are assessed under the criteria above, not sponsorship tiers, and we do not sell
                 placement.
               </p>
@@ -96,7 +102,7 @@ export default function AboutPage() {
                 <div>
                   <dt className="font-medium text-ink">Is a feature an endorsement?</dt>
                   <dd className="mt-2 text-ink-muted">
-                    It is an editorial assessment based on public information and desk research — not
+                    It is an editorial assessment based on public information and desk research, not
                     a guarantee of service quality on every journey.
                   </dd>
                 </div>

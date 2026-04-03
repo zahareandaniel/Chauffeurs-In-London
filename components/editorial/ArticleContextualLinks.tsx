@@ -11,7 +11,7 @@ const profile = (anchor: ReactNode) => (
 type Props = { category: string | null };
 
 /**
- * Contextual internal links for SEO — always alongside medium-neutral shortlist links.
+ * Contextual internal links for SEO, always alongside medium-neutral shortlist links.
  * Trouv profile is one destination among many on /chauffeur-services; copy stays non-exclusive.
  */
 export default function ArticleContextualLinks({ category }: Props) {
@@ -22,7 +22,7 @@ export default function ArticleContextualLinks({ category }: Props) {
       <div className="max-w-measure rounded-sm border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
         <p>
           When you need an {profile(<>airport chauffeur service</>)} with disciplined meet-and-greet,
-          use the same criteria this guide describes — then compare several desks on our{' '}
+          use the same criteria this guide describes. Then compare several desks on our{' '}
           <Link href="/chauffeur-services" className="link-underline font-medium text-ink">
             chauffeur company shortlist
           </Link>
@@ -37,7 +37,7 @@ export default function ArticleContextualLinks({ category }: Props) {
       <div className="max-w-measure rounded-sm border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
         <p>
           Corporate buyers shortlisting {profile(<>chauffeur service London</>)} operators should read
-          full profiles — coverage, escalation, presentation — not landing blurbs alone. For an
+          full profiles on coverage, escalation, and presentation, not landing blurbs alone. For an
           airport-heavy reference desk, see {profile(<>Trouv Chauffeurs</>)}; then{' '}
           <Link href="/chauffeur-services" className="link-underline font-medium text-ink">
             view available chauffeur companies
@@ -53,9 +53,9 @@ export default function ArticleContextualLinks({ category }: Props) {
       <div className="max-w-measure rounded-sm border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
         <p>
           Occasion runs deserve the same briefing discipline as airports. Many readers {profile(<>book a chauffeur</>)}{' '}
-          via our rotating shortlist —{' '}
+          via our rotating shortlist.{' '}
           <Link href="/chauffeur-services" className="link-underline font-medium text-ink">
-            explore chauffeur services
+            Explore chauffeur services
           </Link>{' '}
           to line up vehicles before you speak to venues or photographers.
         </p>
@@ -71,7 +71,7 @@ export default function ArticleContextualLinks({ category }: Props) {
           featured operator directory
         </Link>
         . For desks with strong London airport coverage, the profile for {profile(<>Trouv Chauffeurs</>)} is
-        cited here only as one option among several — never an exclusive recommendation.
+        cited here only as one option among several, never an exclusive recommendation.
       </p>
     </div>
   );

@@ -18,7 +18,7 @@ export default function EditorsPicksSection({
             Recommended chauffeur services
           </h2>
           <p className="mt-3 max-w-xl text-sm text-ink-muted">
-            Operators we profile to the same layout and editorial standard. Order rotates — no fixed
+            Operators we profile to the same layout and editorial standard. Order rotates, with no fixed
             ranking on this desk.
           </p>
         </div>

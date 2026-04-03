@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { JOURNAL_TOPICS } from '@/lib/journal-taxonomy';
 
-/** Homepage + cross-links — editorial topic strips */
+/** Homepage + cross-links: editorial topic strips */
 export default function CategoryRail() {
   return (
     <div className="border-y border-line bg-surface">

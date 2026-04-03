@@ -26,15 +26,23 @@ module.exports = {
         '/guides',
         '/topics',
         '/featured',
+        '/companies',
         '/chauffeur-services',
         '/about',
+        '/methodology',
         '/get-featured',
         '/contact',
+        '/guides/chauffeur-service-types-london',
+        '/comparisons/uber-vs-chauffeur-london',
       ].includes(path)
     )
       return { loc: path, priority: 0.85, changefreq: 'weekly' };
     if (path.startsWith('/featured/'))
       return { loc: path, priority: 0.75, changefreq: 'monthly' };
+    if (path.startsWith('/companies/'))
+      return { loc: path, priority: 0.75, changefreq: 'monthly' };
+    if (path.startsWith('/comparisons/'))
+      return { loc: path, priority: 0.8, changefreq: 'monthly' };
     return { loc: path, priority: config.priority, changefreq: config.changefreq };
   },
 };

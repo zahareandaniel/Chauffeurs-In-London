@@ -56,6 +56,11 @@ export default function Footer() {
                   Chauffeur shortlist
                 </Link>
               </li>
+              <li>
+                <Link href="/companies" className="transition-colors hover:text-ink">
+                  Recognised market operators
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -77,7 +82,7 @@ export default function Footer() {
 
         <div className="mt-8 space-y-4">
           <p className="text-[0.7rem] leading-relaxed text-ink-subtle max-w-3xl">
-            Part of London&apos;s wider private-hire editorial ecosystem — platform voice first,
+            Part of London&apos;s wider private-hire editorial ecosystem: platform voice first,
             operator credits second. No page on this site should read like a single-brand brochure.
           </p>
           <div className="flex flex-col gap-3 text-xs text-ink-subtle sm:flex-row sm:items-center sm:justify-between">

@@ -19,7 +19,7 @@ export default async function EditArticlePage({ params }: { params: { id: string
     <div className="min-h-screen bg-cream">
       <div className="bg-navy px-6 py-4 flex items-center justify-between">
         <span className="font-display text-white text-lg font-semibold">
-          Chauffeurs in London — Admin
+          Chauffeurs in London · Admin
         </span>
         <Link href="/admin/articles" className="text-white/60 text-sm hover:text-white">
           ← Back to articles

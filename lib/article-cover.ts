@@ -1,6 +1,6 @@
 /**
  * Cover resolution: DB `cover_image_url` → else per-slug AI art in /images/blog/ai → else Mercedes stock photos.
- * AI artwork is generated (no real vehicle branding); stock photos CC BY-SA 4.0 — see mercedes-*.jpg comment below.
+ * AI artwork is generated (no real vehicle branding); stock photos CC BY-SA 4.0, see mercedes-*.jpg comment below.
  */
 
 /** One AI hero image per seeded article slug (JPEGs in `public/images/blog/ai/`). */

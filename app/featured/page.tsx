@@ -8,7 +8,7 @@ import { getFeaturedCompanies, TROUV_SLUG } from '@/lib/featured-companies';
 export const metadata: Metadata = {
   title: 'Featured operators',
   description:
-    'Editorial profiles of selected London chauffeur operators. Inclusion is curated against published standards — not sold as directory placement.',
+    'Editorial profiles of selected London chauffeur operators. Inclusion is curated against published standards, not sold as directory placement.',
 };
 
 export default function FeaturedPage() {
@@ -41,11 +41,15 @@ export default function FeaturedPage() {
               sit on identical templates to sample entries.
             </p>
             <p>
-              For methodology and how to request consideration, see{' '}
+              For how we select companies, read{' '}
+              <Link href="/methodology" className="font-medium text-ink underline underline-offset-2">
+                the methodology page
+              </Link>
+              . Standards, independence, and how to request consideration also live on{' '}
               <Link href="/about" className="font-medium text-ink underline underline-offset-2">
                 editorial standards
-              </Link>{' '}
-              and{' '}
+              </Link>
+              , alongside{' '}
               <Link href="/get-featured" className="font-medium text-ink underline underline-offset-2">
                 request a feature
               </Link>

@@ -7,7 +7,7 @@ import { GUIDE_HUBS } from '@/lib/guide-hubs';
 export const metadata: Metadata = {
   title: 'Guides index',
   description:
-    'Editorial hubs for Heathrow, Gatwick, London City, corporate travel, weddings, and chauffeur industry context — structured for readers and search.',
+    'Editorial hubs for Heathrow, Gatwick, London City, corporate travel, weddings, and chauffeur industry context, structured for readers and search.',
 };
 
 export default function GuidesIndexPage() {

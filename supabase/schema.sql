@@ -1,4 +1,4 @@
--- ChauffeursinLondon — Supabase Schema
+-- Chauffeurs in London: Supabase schema
 -- Run this in your Supabase SQL editor
 
 create table if not exists articles (
@@ -8,7 +8,7 @@ create table if not exists articles (
   excerpt text,
   content text not null,
   cover_image_url text,
-  category text,               -- 'Airport Transfers' | 'Corporate' | 'Wedding' | 'Events' | 'Tips'
+  category text,              -- 'Airport Transfers' | 'Corporate' | 'Wedding' | 'Events' | 'Tips'
   meta_title text,
   meta_description text,
   focus_keyword text,

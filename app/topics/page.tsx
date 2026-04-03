@@ -8,7 +8,7 @@ import { SITE } from '@/lib/site-config';
 export const metadata: Metadata = {
   title: 'Topics',
   description:
-    'Editorial topics covering London chauffeurs: airports, corporate travel, weddings, events, and industry analysis — curated by the Chauffeurs in London desk.',
+    'Editorial topics covering London chauffeurs: airports, corporate travel, weddings, events, and industry analysis, curated by the Chauffeurs in London desk.',
 };
 
 export default function TopicsPage() {

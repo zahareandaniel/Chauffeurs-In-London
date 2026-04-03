@@ -5,7 +5,7 @@ import { getTopicByCategory } from '@/lib/journal-taxonomy';
 type Props = {
   category: string | null;
   readTime: number;
-  /** Article slug — excludes current post from related hub links */
+  /** Article slug; excludes current post from related hub links */
   articleSlug: string;
 };
 
@@ -70,7 +70,12 @@ export default function ArticleAside({ category, readTime, articleSlug }: Props)
       <div className="mt-6 border border-line bg-surface p-6">
         <p className="editorial-label">Operators</p>
         <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-          Compare editorial profiles on equal terms — shortlist updated on a rotating basis.
+          Compare editorial profiles on equal terms. The shortlist updates on a rotating basis. For
+          market context without rankings, see{' '}
+          <Link href="/companies" className="font-medium text-ink underline underline-offset-2">
+            recognised operators
+          </Link>
+          .
         </p>
         <Link href="/chauffeur-services" className="btn-secondary mt-4 w-full text-center text-[0.65rem]">
           View chauffeur services

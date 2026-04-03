@@ -26,7 +26,7 @@ const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
 // Public client (read-only for published articles)
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-// Admin client — only used server-side
+// Admin client, only used server-side
 export const getAdminClient = () => {
   const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
   return createClient(supabaseUrl, serviceRoleKey, {

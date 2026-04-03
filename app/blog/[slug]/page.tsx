@@ -11,6 +11,7 @@ import ArticleAside from '@/components/editorial/ArticleAside';
 import { showArticleContextualLinks } from '@/lib/editor-picks';
 import BlogCard from '@/components/blog/BlogCard';
 import ArticleRenderer from '@/components/blog/ArticleRenderer';
+import RecognisedProvidersArticle from '@/components/editorial/RecognisedProvidersArticle';
 import Image from 'next/image';
 import { articleCoverAbsoluteUrl, articleCoverSrc } from '@/lib/article-cover';
 import { siteUrl } from '@/lib/site-config';
@@ -179,7 +180,7 @@ export default async function ArticlePage({ params }: PageProps) {
             <span aria-hidden>·</span>
             <span>{readTime} min read</span>
             <span aria-hidden>·</span>
-            <span className="text-ink-muted">Chauffeurs in London — editorial</span>
+            <span className="text-ink-muted">Chauffeurs in London · editorial</span>
           </div>
         </header>
 
@@ -191,6 +192,10 @@ export default async function ArticlePage({ params }: PageProps) {
           <div className="min-w-0">
             <div className="max-w-readable">
               <ArticleRenderer content={article.content} />
+            </div>
+
+            <div className="mt-12 max-w-readable">
+              <RecognisedProvidersArticle />
             </div>
 
             {showArticleContextualLinks(article.category) && (
@@ -213,7 +218,7 @@ export default async function ArticlePage({ params }: PageProps) {
               Further reading · {article.category}
             </h2>
             <p className="mt-2 max-w-2xl text-sm text-ink-muted">
-              Same topic, different angles — cross-linked for readers building a briefing pack.
+              Same topic, different angles, cross-linked for readers building a briefing pack.
             </p>
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((rel) => (

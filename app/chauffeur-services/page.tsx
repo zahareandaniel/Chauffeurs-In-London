@@ -7,9 +7,9 @@ import { TROUV_SLUG } from '@/lib/featured-companies';
 import { getEditorsPicks } from '@/lib/editor-picks';
 
 export const metadata: Metadata = {
-  title: 'Chauffeur services in London — featured shortlist',
+  title: 'Chauffeur services in London · featured shortlist',
   description:
-    'Editorial shortlist of London chauffeur and private-hire operators. Compare profiles on equal terms — no paid ranking.',
+    'Editorial shortlist of London chauffeur and private-hire operators. Compare profiles on equal terms, with no paid ranking.',
 };
 
 export default function ChauffeurServicesPage() {
@@ -32,7 +32,7 @@ export default function ChauffeurServicesPage() {
                 airport chauffeur service
               </Link>{' '}
               with structured meet-and-greet, or a desk that handles executive itineraries end to end,
-              work through the shortlist below — then open each full profile before you book.
+              work through the shortlist below, then open each full profile before you book.
             </p>
             <p>
               For background reading first, see our journal on{' '}

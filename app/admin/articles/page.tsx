@@ -28,7 +28,7 @@ export default async function AdminArticlesPage({
       {/* Admin header */}
       <div className="bg-navy px-6 py-4 flex items-center justify-between">
         <span className="font-display text-white text-lg font-semibold">
-          Chauffeurs in London — Admin
+          Chauffeurs in London · Admin
         </span>
         <Link href="/" className="text-white/60 text-sm hover:text-white">
           ← View site

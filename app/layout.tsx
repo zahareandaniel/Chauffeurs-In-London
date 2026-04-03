@@ -4,7 +4,7 @@ import { SITE, siteUrl } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: {
-    default: `${SITE.name} — Editorial guide to London chauffeurs`,
+    default: `${SITE.name} · Editorial guide to London chauffeurs`,
     template: `%s · ${SITE.name}`,
   },
   description:

@@ -26,7 +26,7 @@ function getIsoWeek(d: Date): number {
   return Math.ceil(((+t - +y) / 86400000 + 1) / 7);
 }
 
-/** Subset for article “recommended services” block — always Trouv + three others, rotated. */
+/** Subset for article “recommended services” block: always Trouv + three others, rotated. */
 export function getRecommendedForArticle(): FeaturedCompany[] {
   const rotated = getEditorsPicks();
   const trouv = rotated.find((c) => c.slug === TROUV_SLUG)!;
@@ -38,7 +38,7 @@ export function getRecommendedForArticle(): FeaturedCompany[] {
   return [...merged.slice(o), ...merged.slice(0, o)];
 }
 
-/** Whether to add contextual internal links (SEO) toward Trouv’s profile — skip only if off-topic. */
+/** Whether to add contextual internal links (SEO) toward Trouv’s profile; skip only if off-topic. */
 export function showArticleContextualLinks(category: string | null): boolean {
   if (!category) return true;
   const c = category.toLowerCase();

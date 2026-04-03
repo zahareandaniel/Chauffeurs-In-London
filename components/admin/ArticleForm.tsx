@@ -197,7 +197,7 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
             onChange={handleChange}
             className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm bg-white"
           >
-            <option value="">— Select —</option>
+            <option value="">Select category</option>
             {CATEGORIES.map((c) => (
               <option key={c} value={c}>{c}</option>
             ))}

@@ -5,7 +5,8 @@ import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Reach the editorial desk for Chauffeurs in London — reader notes, corrections, and operator inquiries.',
+  description:
+    'Reach the editorial desk for Chauffeurs in London: reader notes, corrections, and operator inquiries.',
 };
 
 export default function ContactPage() {
