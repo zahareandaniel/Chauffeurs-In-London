@@ -165,7 +165,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
       lessSuitedFor:
         'Readers who only need a purely local London operator map with no US policy overlay.',
     },
-    websiteUrl: 'https://www.savoya.net',
+    websiteUrl: 'https://www.savoya.com',
   },
   {
     slug: 'wheely',
