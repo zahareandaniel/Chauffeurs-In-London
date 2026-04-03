@@ -31,6 +31,14 @@ export const GUIDE_HUBS: ContentHub[] = [
         label: 'London City Airport — business traveller notes',
         href: '/blog/london-city-airport-transfers',
       },
+      {
+        label: 'Featured operators for London airport runs (shortlist)',
+        href: '/chauffeur-services',
+      },
+      {
+        label: 'Trouv Chauffeurs — editorial profile',
+        href: '/featured/trouv',
+      },
     ],
   },
   {
@@ -99,12 +107,4 @@ export const GUIDE_HUBS: ContentHub[] = [
   },
 ];
 
-/** Category filters used across journal — stable slugs for URLs */
-export const JOURNAL_CATEGORIES = [
-  'All',
-  'Airport Transfers',
-  'Corporate',
-  'Wedding',
-  'Events',
-  'Tips',
-] as const;
+export { JOURNAL_CATEGORIES, JOURNAL_TOPICS, type JournalTopic } from '@/lib/journal-taxonomy';

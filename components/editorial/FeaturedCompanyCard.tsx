@@ -5,7 +5,11 @@ export default function FeaturedCompanyCard({ company }: { company: FeaturedComp
   const isSample = company.badges.some((b) => b.toLowerCase().includes('sample'));
 
   return (
-    <article className="card-editorial flex flex-col border border-line bg-white p-8 lg:p-10">
+    <article className="card-editorial relative flex flex-col overflow-hidden border border-line bg-surface p-8 lg:p-10">
+      <div
+        className="pointer-events-none absolute left-0 right-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-ink/20 to-transparent"
+        aria-hidden
+      />
       <div className="flex flex-wrap gap-2">
         {company.badges.map((b) => (
           <span key={b} className="badge-muted">

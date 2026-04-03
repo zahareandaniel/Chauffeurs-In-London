@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,6 +7,10 @@
 :root {
   --font-newsreader: 'Newsreader', Georgia, serif;
   --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,13 +30,13 @@ h6 {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center border border-ink bg-ink px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-ink-muted;
+    @apply inline-flex items-center justify-center border border-ink bg-ink px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-white transition-colors hover:bg-ink-muted;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center border border-line bg-transparent px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-ink transition-colors hover:border-ink hover:bg-paper-warm;
+    @apply inline-flex items-center justify-center border border-line bg-surface px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-ink transition-colors hover:border-ink hover:bg-paper-warm;
   }
   .editorial-label {
-    @apply text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-ink-subtle;
+    @apply text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-ink-subtle;
   }
   .divider-fine {
     @apply h-px w-full bg-line;
@@ -41,7 +45,7 @@ h6 {
     @apply text-ink underline decoration-line underline-offset-[5px] decoration-1 transition-colors hover:decoration-ink-muted;
   }
   .card-editorial {
-    @apply border border-line bg-white transition-shadow hover:shadow-[0_1px_0_rgba(0,0,0,0.06),0_12px_40px_rgba(0,0,0,0.04)];
+    @apply border border-line bg-surface shadow-[0_1px_0_rgba(0,0,0,0.04)] transition-all duration-300 hover:border-hairline hover:shadow-editorial;
   }
   .badge-muted {
     @apply inline-block border border-line bg-paper-warm px-2.5 py-1 text-[0.65rem] font-medium uppercase tracking-wider text-ink-muted;
@@ -49,7 +53,15 @@ h6 {
   .focus-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
   }
-  /* Admin & legacy */
+  .hero-grid {
+    background-image:
+      linear-gradient(to right, rgba(10, 10, 10, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(10, 10, 10, 0.04) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  .prose-article {
+    @apply prose prose-lg max-w-readable prose-headings:font-display prose-headings:font-medium;
+  }
   .btn-gold {
     @apply bg-gold px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-gold-dark;
   }

@@ -22,9 +22,7 @@ export default function BlogCard({ article, featured }: BlogCardProps) {
   const coverSrc = articleCoverSrc(article);
 
   return (
-    <article
-      className={`group card-editorial flex flex-col overflow-hidden bg-white ${featured ? '' : ''}`}
-    >
+    <article className="group card-editorial flex flex-col overflow-hidden bg-surface">
       <Link href={`/blog/${article.slug}`} className="relative aspect-[16/10] w-full overflow-hidden bg-paper-warm">
         <Image
           src={coverSrc}

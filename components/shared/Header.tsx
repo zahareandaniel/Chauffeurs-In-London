@@ -3,43 +3,30 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { SITE } from '@/lib/site-config';
-
-const NAV = [
-  { href: '/blog', label: 'Journal' },
-  { href: '/chauffeur-services', label: 'Chauffeur services' },
-  { href: '/featured', label: 'Featured operators' },
-  { href: '/guides', label: 'Guides' },
-  { href: '/about', label: 'Editorial standards' },
-  { href: '/get-featured', label: 'Request a feature' },
-  { href: '/contact', label: 'Contact' },
-];
+import { PRIMARY_NAV } from '@/lib/site-navigation';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-line/80 bg-paper/92 backdrop-blur-md">
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-14 items-center justify-between sm:h-16">
-          <Link
-            href="/"
-            className="group focus-ring rounded-sm"
-            aria-label={`${SITE.name} home`}
-          >
-            <span className="font-display text-lg font-medium tracking-tight text-ink sm:text-xl">
+        <div className="flex h-[3.75rem] items-center justify-between">
+          <Link href="/" className="group focus-ring rounded-sm shrink-0" aria-label={`${SITE.name} home`}>
+            <span className="font-display text-lg font-semibold tracking-tight text-ink sm:text-xl">
               {SITE.name}
             </span>
-            <span className="mt-0.5 block text-[0.6rem] font-body font-medium uppercase tracking-[0.18em] text-ink-subtle sm:text-[0.65rem]">
-              Editorial
+            <span className="mt-0.5 block text-[0.6rem] font-body font-semibold uppercase tracking-[0.2em] text-ink-subtle">
+              Editorial desk
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
-            {NAV.map((item) => (
+          <nav className="hidden xl:flex items-center gap-6 2xl:gap-8" aria-label="Primary">
+            {PRIMARY_NAV.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-ink-muted transition-colors hover:text-ink"
+                className="text-[0.8rem] font-semibold text-ink-muted transition-colors hover:text-ink"
               >
                 {item.label}
               </Link>
@@ -48,7 +35,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="lg:hidden flex h-10 w-10 items-center justify-center rounded border border-line text-ink focus-ring"
+            className="xl:hidden flex h-10 w-10 items-center justify-center rounded border border-line bg-surface text-ink focus-ring"
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
@@ -65,13 +52,13 @@ export default function Header() {
         </div>
 
         {open && (
-          <div id="mobile-nav" className="lg:hidden border-t border-line py-4">
-            <ul className="flex flex-col gap-1">
-              {NAV.map((item) => (
+          <div id="mobile-nav" className="xl:hidden border-t border-line py-4 max-h-[min(70vh,520px)] overflow-y-auto">
+            <ul className="flex flex-col gap-0.5">
+              {PRIMARY_NAV.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="block rounded px-2 py-3 text-sm font-medium text-ink hover:bg-paper-warm"
+                    className="block rounded-md px-3 py-3 text-sm font-semibold text-ink hover:bg-paper-warm"
                     onClick={() => setOpen(false)}
                   >
                     {item.label}

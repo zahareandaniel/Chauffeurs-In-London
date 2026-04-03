@@ -5,6 +5,7 @@ import BlogCard from '@/components/blog/BlogCard';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { JOURNAL_CATEGORIES } from '@/lib/guide-hubs';
+import { getTopicByCategory } from '@/lib/journal-taxonomy';
 import EditorsPicksSection from '@/components/editorial/EditorsPicksSection';
 import { getEditorsPicks } from '@/lib/editor-picks';
 
@@ -13,7 +14,7 @@ export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
   title: 'Journal',
   description:
-    'Guides and analysis on London chauffeurs, airport transfers, executive travel, and events — written as editorial, not filler.',
+    'Guides and analysis on London chauffeurs, airport transfers, executive travel, and events — edited as long-form journalism, not SEO filler.',
 };
 
 const PAGE_SIZE = 10;
@@ -41,6 +42,7 @@ export default async function BlogPage({
 
   const { data: articles, count } = await query;
   const totalPages = Math.ceil((count || 0) / PAGE_SIZE);
+  const topicMeta = activeCategory !== 'All' ? getTopicByCategory(activeCategory) : undefined;
   const editorsPicks = activeCategory !== 'All' ? getEditorsPicks() : null;
 
   const buildHref = (p: number) => {
@@ -55,29 +57,43 @@ export default async function BlogPage({
     <>
       <Header />
       <main className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <p className="editorial-label">Archive</p>
-        <h1 className="font-display mt-4 text-display-xl font-medium text-ink">Journal</h1>
-        <p className="mt-6 max-w-2xl text-base text-ink-muted">
-          Long-form pieces on how London chauffeur and executive ground transport actually works —
-          airports, corporate programmes, occasions, and industry context.
-        </p>
+        <header className="max-w-3xl">
+          <p className="editorial-label">Archive</p>
+          <h1 className="font-display mt-5 text-display-xl font-medium text-ink">Journal</h1>
+          <p className="mt-6 text-base leading-relaxed text-ink-muted">
+            Essays and guides on how premium ground transport in London actually works — written for
+            readers who brief boards, not for bots.
+          </p>
+        </header>
 
-        <div className="mt-12 flex flex-wrap gap-2 border-b border-line pb-8">
-          {JOURNAL_CATEGORIES.map((cat) => (
+        <div className="mt-12 border border-line bg-surface p-4 sm:p-6">
+          <p className="editorial-label mb-4">Filter by topic</p>
+          <div className="flex flex-wrap gap-2">
+            {JOURNAL_CATEGORIES.map((cat) => (
+              <Link
+                key={cat}
+                href={cat === 'All' ? '/blog' : `/blog?category=${encodeURIComponent(cat)}`}
+                className={`border px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] transition-colors ${
+                  activeCategory === cat
+                    ? 'border-ink bg-ink text-paper'
+                    : 'border-line bg-paper text-ink-muted hover:border-ink hover:text-ink'
+                }`}
+              >
+                {cat}
+              </Link>
+            ))}
             <Link
-              key={cat}
-              href={
-                cat === 'All' ? '/blog' : `/blog?category=${encodeURIComponent(cat)}`
-              }
-              className={`border px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] transition-colors ${
-                activeCategory === cat
-                  ? 'border-ink bg-ink text-paper'
-                  : 'border-line bg-white text-ink-muted hover:border-ink hover:text-ink'
-              }`}
+              href="/topics"
+              className="border border-dashed border-ink/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-ink-muted hover:border-ink hover:text-ink"
             >
-              {cat}
+              Topic index
             </Link>
-          ))}
+          </div>
+          {topicMeta && (
+            <p className="mt-6 max-w-3xl border-t border-line pt-6 text-sm leading-relaxed text-ink-muted">
+              <strong className="font-medium text-ink">{topicMeta.category}.</strong> {topicMeta.dek}
+            </p>
+          )}
         </div>
 
         {editorsPicks && (
@@ -94,8 +110,14 @@ export default async function BlogPage({
           </div>
         ) : (
           <div className="mt-20 text-center">
-            <p className="font-display text-2xl text-ink">Nothing in this filter yet</p>
-            <p className="mt-2 text-sm text-ink-muted">Try another category or clear filters.</p>
+            <p className="font-display text-2xl text-ink">No pieces in this filter</p>
+            <p className="mt-2 text-sm text-ink-muted">
+              Clear the topic filter or try another from the{' '}
+              <Link href="/topics" className="underline underline-offset-2">
+                topics page
+              </Link>
+              .
+            </p>
           </div>
         )}
 
@@ -113,7 +135,7 @@ export default async function BlogPage({
                 className={`min-w-[2.5rem] border px-3 py-2 text-center text-xs font-semibold ${
                   p === page
                     ? 'border-ink bg-ink text-paper'
-                    : 'border-line bg-white text-ink-muted hover:border-ink'
+                    : 'border-line bg-surface text-ink-muted hover:border-ink'
                 }`}
               >
                 {p}

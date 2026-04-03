@@ -7,6 +7,7 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import ArticleEndmatter from '@/components/editorial/ArticleEndmatter';
 import ArticleContextualLinks from '@/components/editorial/ArticleContextualLinks';
+import ArticleAside from '@/components/editorial/ArticleAside';
 import { showArticleContextualLinks } from '@/lib/editor-picks';
 import BlogCard from '@/components/blog/BlogCard';
 import ArticleRenderer from '@/components/blog/ArticleRenderer';
@@ -136,7 +137,7 @@ export default async function ArticlePage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
 
-      <main className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <article className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
         <nav className="text-xs text-ink-subtle" aria-label="Breadcrumb">
           <ol className="flex flex-wrap gap-x-2 gap-y-1">
             <li>
@@ -164,57 +165,56 @@ export default async function ArticlePage({ params }: PageProps) {
               </>
             )}
             <li aria-hidden>/</li>
-            <li className="max-w-[12rem] truncate text-ink sm:max-w-none">{article.title}</li>
+            <li className="max-w-[14rem] truncate text-ink sm:max-w-none">{article.title}</li>
           </ol>
         </nav>
 
-        <article className="mt-10">
-          <header className="max-w-measure">
-            {article.category && (
-              <span className="badge-muted">{article.category}</span>
+        <header className="mt-10 max-w-readable xl:max-w-none">
+          {article.category && <span className="badge-muted">{article.category}</span>}
+          <h1 className="font-display mt-6 text-display-lg font-medium leading-[1.12] text-ink lg:text-[2.35rem]">
+            {article.title}
+          </h1>
+          <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-subtle">
+            {publishedDate && <time dateTime={article.published_at ?? undefined}>{publishedDate}</time>}
+            <span aria-hidden>·</span>
+            <span>{readTime} min read</span>
+            <span aria-hidden>·</span>
+            <span className="text-ink-muted">Chauffeurs in London — editorial</span>
+          </div>
+        </header>
+
+        <div className="relative mt-12 aspect-[21/9] max-h-[26rem] w-full overflow-hidden bg-paper-warm sm:aspect-[2/1]">
+          <Image src={heroSrc} alt={article.title} fill className="object-cover" priority />
+        </div>
+
+        <div className="mt-14 grid gap-12 xl:grid-cols-[minmax(0,1fr)_16.5rem] xl:gap-14 2xl:grid-cols-[minmax(0,1fr)_17.5rem] 2xl:gap-16">
+          <div className="min-w-0">
+            <div className="max-w-readable">
+              <ArticleRenderer content={article.content} />
+            </div>
+
+            {showArticleContextualLinks(article.category) && (
+              <div className="mt-12 max-w-readable">
+                <ArticleContextualLinks category={article.category} />
+              </div>
             )}
-            <h1 className="font-display mt-6 text-display-lg font-medium leading-tight text-ink sm:text-[2.25rem]">
-              {article.title}
-            </h1>
-            <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-subtle">
-              {publishedDate && <time dateTime={article.published_at ?? undefined}>{publishedDate}</time>}
-              <span aria-hidden>·</span>
-              <span>{readTime} min read</span>
-              <span aria-hidden>·</span>
-              <span>Editorial desk</span>
+
+            <div className="max-w-readable">
+              <ArticleEndmatter currentSlug={article.slug} />
             </div>
-          </header>
-
-          <div className="relative mt-12 aspect-[21/9] max-h-[28rem] w-full overflow-hidden bg-paper-warm sm:aspect-[2/1]">
-            <Image
-              src={heroSrc}
-              alt={article.title}
-              fill
-              className="object-cover"
-              priority
-            />
           </div>
 
-          <div className="mt-14 max-w-measure">
-            <ArticleRenderer content={article.content} />
-          </div>
-
-          {showArticleContextualLinks(article.category) && (
-            <div className="mt-12 max-w-measure">
-              <ArticleContextualLinks category={article.category} />
-            </div>
-          )}
-
-          <div className="max-w-measure">
-            <ArticleEndmatter currentSlug={article.slug} />
-          </div>
-        </article>
+          <ArticleAside category={article.category} readTime={readTime} articleSlug={article.slug} />
+        </div>
 
         {related && related.length > 0 && (
           <section className="mt-24 border-t border-line pt-16" aria-labelledby="related-heading">
             <h2 id="related-heading" className="font-display text-2xl font-medium text-ink">
-              Related in {article.category}
+              Further reading · {article.category}
             </h2>
+            <p className="mt-2 max-w-2xl text-sm text-ink-muted">
+              Same topic, different angles — cross-linked for readers building a briefing pack.
+            </p>
             <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((rel) => (
                 <BlogCard key={rel.id} article={rel} />
@@ -222,7 +222,7 @@ export default async function ArticlePage({ params }: PageProps) {
             </div>
           </section>
         )}
-      </main>
+      </article>
       <Footer />
     </>
   );

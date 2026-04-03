@@ -46,7 +46,7 @@ export default function ArticleEndmatter({ currentSlug }: Props) {
           {recommended.map((c) => (
             <li
               key={c.slug}
-              className="flex flex-col border border-line bg-white p-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
+              className="flex flex-col border border-line bg-surface p-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
             >
               <div>
                 <Link
@@ -82,6 +82,12 @@ export default function ArticleEndmatter({ currentSlug }: Props) {
         <div className="mt-8 flex flex-wrap items-center gap-4">
           <Link href="/chauffeur-services" className="btn-primary text-[0.65rem]">
             Find a chauffeur for your journey
+          </Link>
+          <Link
+            href="/chauffeur-services"
+            className="text-sm font-medium text-ink underline underline-offset-4"
+          >
+            Explore chauffeur services
           </Link>
           <Link href="/featured" className="text-sm font-medium text-ink underline underline-offset-4">
             View all featured profiles

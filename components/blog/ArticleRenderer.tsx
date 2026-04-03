@@ -10,12 +10,12 @@ interface ArticleRendererProps {
 export default function ArticleRenderer({ content }: ArticleRendererProps) {
   return (
     <div
-      className="prose prose-lg max-w-measure prose-headings:font-display prose-headings:font-medium
-      prose-p:text-ink-muted prose-p:leading-[1.75]
+      className="prose prose-lg max-w-readable prose-headings:font-display prose-headings:font-medium
+      prose-p:text-ink-muted prose-p:leading-[1.78]
       prose-a:text-ink prose-a:font-medium
       prose-strong:text-ink prose-strong:font-semibold
       prose-li:text-ink-muted
-      prose-blockquote:border-l-ink/20 prose-blockquote:bg-paper-warm/50 prose-blockquote:py-1 prose-blockquote:not-italic
+      prose-blockquote:border-l-ink/25 prose-blockquote:bg-paper-warm prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic
       prose-code:text-ink prose-code:bg-paper-warm prose-code:px-1 prose-code:py-0.5 prose-code:text-sm
       prose-img:rounded-none prose-hr:border-line
     "
