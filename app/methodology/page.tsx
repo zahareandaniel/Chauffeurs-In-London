@@ -89,6 +89,16 @@ export default function MethodologyPage() {
               <h2 className="font-display text-xl font-medium text-ink">Further reading</h2>
               <ul className="mt-6 space-y-3">
                 <li>
+                  <Link href="/guides" className="link-underline font-medium text-ink">
+                    Guides index
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/companies" className="link-underline font-medium text-ink">
+                    Companies index
+                  </Link>
+                </li>
+                <li>
                   <Link href="/guides/chauffeur-service-types-london" className="link-underline font-medium text-ink">
                     Chauffeur service types in London
                   </Link>
@@ -99,7 +109,7 @@ export default function MethodologyPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="link-underline font-medium text-ink">
+                  <Link href="/editorial-standards" className="link-underline font-medium text-ink">
                     Broader editorial standards
                   </Link>
                 </li>

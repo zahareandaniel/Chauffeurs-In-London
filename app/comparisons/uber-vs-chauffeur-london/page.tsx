@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
-import RecommendedChauffeurServices from '@/components/editorial/RecommendedChauffeurServices';
-import { getConversionRecommendations } from '@/lib/market-operators';
+import RelatedLinks from '@/components/editorial/RelatedLinks';
 
 export const metadata: Metadata = {
   title: 'Uber vs chauffeur in London',
@@ -12,13 +11,11 @@ export const metadata: Metadata = {
 };
 
 export default function UberVsChauffeurLondonPage() {
-  const recommended = getConversionRecommendations({ seed: 'uber-vs-chauffeur' });
-
   return (
     <>
       <Header />
       <main className="px-4 py-section sm:px-6 lg:px-8">
-        <article className="max-w-measure mx-auto">
+        <article className="max-w-editorial mx-auto">
           <nav className="text-xs text-ink-subtle" aria-label="Breadcrumb">
             <ol className="flex flex-wrap gap-x-2 gap-y-1">
               <li>
@@ -28,8 +25,8 @@ export default function UberVsChauffeurLondonPage() {
               </li>
               <li aria-hidden>/</li>
               <li>
-                <Link href="/guides" className="hover:text-ink">
-                  Guides
+                <Link href="/comparisons" className="hover:text-ink">
+                  Comparisons
                 </Link>
               </li>
               <li aria-hidden>/</li>
@@ -52,7 +49,7 @@ export default function UberVsChauffeurLondonPage() {
             <section>
               <h2 className="font-display text-xl font-medium text-ink">1. Introduction</h2>
               <p className="mt-4">
-                <Link href="/companies/uber" className="font-medium text-ink underline underline-offset-2">
+                <Link href="/companies/uber-executive" className="font-medium text-ink underline underline-offset-2">
                   Uber
                 </Link>{' '}
                 stands in here as the familiar marketplace model: matching, tiers, and supply that
@@ -64,7 +61,7 @@ export default function UberVsChauffeurLondonPage() {
                 this site, usually means a booked, accountable car with norms around dress,
                 meet-and-greet, and how long the driver will hold. A concrete editorial example of that
                 desk-led shape is{' '}
-                <Link href="/featured/trouv" className="font-medium text-ink underline underline-offset-2">
+                <Link href="/companies/trouv-chauffeurs" className="font-medium text-ink underline underline-offset-2">
                   Trouv Chauffeurs
                 </Link>
                 ; names such as{' '}
@@ -168,26 +165,48 @@ export default function UberVsChauffeurLondonPage() {
                 apps remain efficient. Your procurement should name the job before it names the brand.
               </p>
               <p className="mt-4">
-                Go deeper on shapes of supply in{' '}
+                Explore recognised chauffeur operators in London in the{' '}
+                <Link href="/companies" className="font-medium text-ink underline underline-offset-2">
+                  company index
+                </Link>
+                . For shapes of supply, continue with{' '}
                 <Link
                   href="/guides/chauffeur-service-types-london"
                   className="font-medium text-ink underline underline-offset-2"
                 >
                   chauffeur service types in London
-                </Link>
-                , and read airport-specific framing in{' '}
+                </Link>{' '}
+                and{' '}
                 <Link
-                  href="/blog/heathrow-airport-transfers-complete-guide"
+                  href="/guides/professional-chauffeur-standards"
                   className="font-medium text-ink underline underline-offset-2"
                 >
-                  our Heathrow journal guide
+                  professional chauffeur standards
                 </Link>
                 .
               </p>
             </section>
           </div>
 
-          <RecommendedChauffeurServices rows={recommended} />
+          <RelatedLinks
+            links={[
+              {
+                href: '/comparisons/wheely-vs-chauffeur-london',
+                label: 'Wheely vs chauffeur in London',
+                description: 'Premium app tiers against desk-led service.',
+              },
+              {
+                href: '/companies/blacklane',
+                label: 'Blacklane, market context',
+                description: 'Global platform chauffeur positioning.',
+              },
+              {
+                href: '/companies/uber-executive',
+                label: 'Uber, market context',
+                description: 'App marketplace structure in London.',
+              },
+            ]}
+          />
         </article>
       </main>
       <Footer />

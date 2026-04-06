@@ -3,7 +3,7 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import FeaturedCompanyCard from '@/components/editorial/FeaturedCompanyCard';
 import Link from 'next/link';
-import { getFeaturedCompanies, TROUV_SLUG } from '@/lib/featured-companies';
+import { getFeaturedCompanies } from '@/lib/featured-companies';
 
 export const metadata: Metadata = {
   title: 'Featured operators',
@@ -36,7 +36,7 @@ export default function FeaturedPage() {
                 chauffeur services in London
               </Link>
               . Every company, including{' '}
-              <Link href={`/featured/${TROUV_SLUG}`} className="font-medium text-ink underline underline-offset-2">
+              <Link href="/companies/trouv-chauffeurs" className="font-medium text-ink underline underline-offset-2">
                 Trouv Chauffeurs
               </Link>
               , is profiled to the same depth and layout rules.
@@ -47,7 +47,7 @@ export default function FeaturedPage() {
                 the methodology page
               </Link>
               . Standards, independence, and how to request consideration also live on{' '}
-              <Link href="/about" className="font-medium text-ink underline underline-offset-2">
+              <Link href="/editorial-standards" className="font-medium text-ink underline underline-offset-2">
                 editorial standards
               </Link>
               , alongside{' '}

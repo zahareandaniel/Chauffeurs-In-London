@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
 import Link from 'next/link';
-import { TROUV_SLUG } from '@/lib/featured-companies';
+const TROUV_PROFILE = '/companies/trouv-chauffeurs';
 
 const profile = (anchor: ReactNode) => (
-  <Link href={`/featured/${TROUV_SLUG}`} className="link-underline font-medium text-ink">
+  <Link href={TROUV_PROFILE} className="link-underline font-medium text-ink">
     {anchor}
   </Link>
 );
@@ -19,7 +19,7 @@ export default function ArticleContextualLinks({ category }: Props) {
 
   if (cat.includes('airport')) {
     return (
-      <div className="max-w-measure rounded-sm border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
+      <div className="max-w-measure border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
         <p>
           When you need an {profile(<>airport chauffeur service</>)} with disciplined meet-and-greet,
           use the same criteria this guide describes. Then compare several desks on our{' '}
@@ -34,7 +34,7 @@ export default function ArticleContextualLinks({ category }: Props) {
 
   if (cat.includes('corporate')) {
     return (
-      <div className="max-w-measure rounded-sm border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
+      <div className="max-w-measure border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
         <p>
           Corporate buyers shortlisting {profile(<>chauffeur service London</>)} operators should read
           full profiles on coverage, escalation, and presentation, not landing blurbs alone. For an
@@ -50,7 +50,7 @@ export default function ArticleContextualLinks({ category }: Props) {
 
   if (cat.includes('wedding') || cat.includes('event')) {
     return (
-      <div className="max-w-measure rounded-sm border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
+      <div className="max-w-measure border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
         <p>
           Occasion runs deserve the same briefing discipline as airports. Many readers {profile(<>book a chauffeur</>)}{' '}
           via our rotating shortlist.{' '}
@@ -64,7 +64,7 @@ export default function ArticleContextualLinks({ category }: Props) {
   }
 
   return (
-    <div className="max-w-measure rounded-sm border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
+    <div className="max-w-measure border border-line bg-paper-warm px-5 py-4 text-sm leading-relaxed text-ink-muted">
       <p>
         To act on this piece, open our{' '}
         <Link href="/chauffeur-services" className="link-underline font-medium text-ink">

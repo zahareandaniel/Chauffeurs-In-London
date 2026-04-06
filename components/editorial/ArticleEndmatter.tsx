@@ -62,7 +62,7 @@ export default function ArticleEndmatter({ currentSlug }: Props) {
             selection methodology
           </Link>
           . Broader policy sits on the{' '}
-          <Link href="/about" className="font-medium text-ink underline underline-offset-2">
+          <Link href="/editorial-standards" className="font-medium text-ink underline underline-offset-2">
             standards page
           </Link>
           .

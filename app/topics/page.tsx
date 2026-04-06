@@ -31,7 +31,7 @@ export default function TopicsPage() {
             {JOURNAL_TOPICS.map((topic) => (
               <article
                 key={topic.category}
-                className="group flex flex-col border border-line bg-surface p-8 transition-shadow hover:shadow-editorial"
+                className="group flex flex-col border border-line bg-surface p-8 transition-colors hover:border-ink/15"
               >
                 <h2 className="font-display text-xl font-medium text-ink">
                   <Link href={`/blog?category=${encodeURIComponent(topic.category)}`} className="hover:opacity-75">

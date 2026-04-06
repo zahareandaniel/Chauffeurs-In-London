@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import FeaturedCompanyCard from '@/components/editorial/FeaturedCompanyCard';
-import { TROUV_SLUG } from '@/lib/featured-companies';
 import { getEditorsPicks } from '@/lib/editor-picks';
 
 export const metadata: Metadata = {
@@ -28,7 +27,7 @@ export default function ChauffeurServicesPage() {
             <p>
               Use this page to compare operators we have profiled under the same editorial template.
               If you need an{' '}
-              <Link href={`/featured/${TROUV_SLUG}`} className="link-underline font-medium text-ink">
+              <Link href="/companies/trouv-chauffeurs" className="link-underline font-medium text-ink">
                 airport chauffeur service
               </Link>{' '}
               with structured meet-and-greet, or a desk that handles executive itineraries end to end,

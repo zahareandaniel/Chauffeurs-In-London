@@ -37,6 +37,7 @@ export default function MarketOperatorPage({ params }: Props) {
   const base = siteUrl().replace(/\/$/, '');
   const recommended = getConversionRecommendations({
     excludeMarketSlug: op.slug,
+    omitTrouv: op.slug === 'trouv-chauffeurs',
     seed: op.slug,
   });
 
@@ -192,21 +193,48 @@ export default function MarketOperatorPage({ params }: Props) {
 
             <aside className="lg:col-span-4 lg:border-l lg:border-line lg:pl-10">
               <div className="sticky top-24 space-y-8">
-                <div className="border border-line bg-surface p-6">
-                  <p className="editorial-label">No outbound link</p>
-                  <p className="mt-3 text-xs leading-relaxed text-ink-subtle">
-                    We keep market context on-platform on purpose. When you need terms, licensing, or
-                    booking paths, use search or your procurement desk to reach the operator directly.
-                    That keeps this site editorial rather than referral-shaped.
-                  </p>
-                </div>
+                {op.officialWebsiteUrl ? (
+                  <div className="border border-line bg-surface p-6">
+                    <p className="editorial-label">Official website</p>
+                    <a
+                      href={op.officialWebsiteUrl}
+                      target="_blank"
+                      rel="noopener"
+                      className="mt-3 block text-sm font-medium text-ink underline underline-offset-4"
+                    >
+                      {op.officialWebsiteUrl.replace(/^https?:\/\/(www\.)?/, '')}
+                    </a>
+                    <p className="mt-3 text-xs leading-relaxed text-ink-subtle">
+                      External link for convenience. Booking, terms, and licensing remain with the
+                      operator.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="border border-line bg-surface p-6">
+                    <p className="editorial-label">On-platform context</p>
+                    <p className="mt-3 text-xs leading-relaxed text-ink-subtle">
+                      We keep this profile on-platform on purpose. For terms, TfL licensing, and
+                      booking paths, reach the operator through your usual verification channels.
+                    </p>
+                  </div>
+                )}
 
                 <div>
                   <p className="editorial-label">Related editorial</p>
                   <ul className="mt-3 space-y-2 text-sm text-ink-muted">
                     <li>
+                      <Link href="/guides/chauffeur-services-london" className="link-underline text-ink">
+                        Chauffeur services in London (guide)
+                      </Link>
+                    </li>
+                    <li>
                       <Link href="/guides/chauffeur-service-types-london" className="link-underline text-ink">
                         Chauffeur service types in London
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/guides/professional-chauffeur-standards" className="link-underline text-ink">
+                        Professional chauffeur standards
                       </Link>
                     </li>
                     <li>
@@ -215,13 +243,8 @@ export default function MarketOperatorPage({ params }: Props) {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/methodology" className="link-underline text-ink">
-                        How companies are selected
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/blog/heathrow-airport-transfers-complete-guide" className="link-underline text-ink">
-                        Heathrow transfers (journal)
+                      <Link href="/comparisons/ride-hailing-vs-executive-chauffeur" className="link-underline text-ink">
+                        Ride-hailing vs executive chauffeur
                       </Link>
                     </li>
                   </ul>

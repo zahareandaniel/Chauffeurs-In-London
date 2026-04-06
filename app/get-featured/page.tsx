@@ -54,7 +54,7 @@ export default function GetFeaturedPage() {
     <>
       <Header />
       <main>
-        <section className="border-b border-line bg-paper hero-grid">
+        <section className="border-b border-line bg-paper">
           <div className="max-w-content mx-auto px-4 py-section sm:px-6 lg:px-8">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
               <div className="lg:col-span-7">
@@ -75,7 +75,7 @@ export default function GetFeaturedPage() {
                 </p>
               </div>
               <div className="lg:col-span-5">
-                <div className="border border-line bg-surface p-8 shadow-editorial">
+                <div className="border border-line bg-surface p-8">
                   <p className="editorial-label">Before you write</p>
                   <ul className="mt-6 space-y-4 text-sm text-ink-muted">
                     {CRITERIA.map((line) => (
@@ -147,7 +147,7 @@ export default function GetFeaturedPage() {
                   how companies are selected
                 </Link>{' '}
                 and{' '}
-                <Link href="/about" className="font-semibold text-ink underline underline-offset-2">
+                <Link href="/editorial-standards" className="font-semibold text-ink underline underline-offset-2">
                   editorial standards
                 </Link>{' '}
                 before you apply.

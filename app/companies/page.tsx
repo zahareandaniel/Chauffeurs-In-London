@@ -57,7 +57,12 @@ export default function CompaniesIndexPage() {
               <Link href="/featured" className="font-medium text-ink underline underline-offset-2">
                 editorial programme
               </Link>
-              . See the featured section for a different layer of depth and methodology.
+              {' '}
+              (deeper layouts than market context alone). For model comparisons, see{' '}
+              <Link href="/comparisons" className="font-medium text-ink underline underline-offset-2">
+                comparisons
+              </Link>
+              .
             </p>
             <p>
               For how models differ (platform, scale, private chauffeur), start with{' '}
@@ -66,6 +71,13 @@ export default function CompaniesIndexPage() {
                 className="font-medium text-ink underline underline-offset-2"
               >
                 chauffeur service types in London
+              </Link>{' '}
+              and{' '}
+              <Link
+                href="/guides/chauffeur-services-london"
+                className="font-medium text-ink underline underline-offset-2"
+              >
+                chauffeur services in London
               </Link>
               .
             </p>

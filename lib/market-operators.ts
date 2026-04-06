@@ -1,7 +1,9 @@
+import { HOMEPAGE_RECOGNISED_OPERATOR_SLUGS } from '@/lib/pillar-content';
+
 /**
  * Recognised market operators: editorial context, not rankings or paid listings.
  * Inbound links stay on-platform via /companies/*; we do not link out from market context pages.
- * (The featured programme may include a single partner official-site link for Trouv only.)
+ * (Trouv carries an official-site link on its company profile by arrangement.)
  */
 
 export type EditorialPerspective = {
@@ -26,6 +28,8 @@ export type MarketOperator = {
   /** Framed as trade-offs / fit, not attacks */
   tradeoffs: string[];
   editorialPerspective: EditorialPerspective;
+  /** Official site in aside when set; most profiles stay on-platform only. */
+  officialWebsiteUrl?: string | null;
 };
 
 const MARKET_OPERATORS: MarketOperator[] = [
@@ -246,7 +250,91 @@ const MARKET_OPERATORS: MarketOperator[] = [
     },
   },
   {
-    slug: 'uber',
+    slug: 'savoya',
+    name: 'Savoya',
+    tagline:
+      'Premium ground transport broker with membership and account-led booking familiar to US corporate travel programmes extending into London.',
+    cardLine:
+      'Account and broker positioning: pre-vetted supply and central coordination rather than retail app matching.',
+    overview:
+      'Savoya is often encountered when US-based travel managers export their preferred ground model into London itineraries. It functions closer to a managed category than to a single London PHV brand: relationships, stated vehicle classes, and billing rails matter as much as any one driver on a given day. In London it competes for mindshare with global platforms and with named local desks depending on how your programme sources supply.',
+    serviceModel:
+      'Membership or account-led booking with central coordination; supply is fulfilled through partner operators rather than a single owned fleet label in every city.',
+    locationsCovered: [
+      'London and other global business centres as described in programme materials',
+      'Airport and intercity legs when booked through the same account structure',
+    ],
+    typicalUseCases: [
+      'Programme travellers who already hold Savoya credentials in North America',
+      'Teams that want one invoice style for ground across multiple cities',
+      'Benchmarking brokered premium transport next to direct operator contracts',
+    ],
+    editorialNotes:
+      'We list Savoya as a recognised participant in the premium brokered segment, not as a substitute for verifying TfL operator particulars on each London leg. Treat vehicle grade and wait rules as questions to confirm for client-facing work.',
+    tradeoffs: [
+      'Broker layers add clarity for finance teams but require clear escalation paths on disruption',
+      "Hyper-local nuance may still route through London partners you haven't met directly",
+    ],
+    editorialPerspective: {
+      strengths: [
+        'Familiar workflow for organisations already standardised on the brand elsewhere',
+        'Useful when procurement wants a single contracted category for premium ground',
+      ],
+      limitations: [
+        'London execution still depends on partners; do not assume identical norms to every other city',
+        'Retail buyers without an existing relationship may find direct operators simpler to compare',
+      ],
+      bestSuitedFor:
+        'Programme-led buyers who value centralised booking governance over ad-hoc comparisons.',
+      commonlyUsedFor: ['Multi-city itineraries under one policy', 'Account-holder airport transfers'],
+      lessSuitedFor: 'One-off retail trips where a local desk is already chosen and contracted.',
+    },
+  },
+  {
+    slug: 'trouv-chauffeurs',
+    name: 'Trouv Chauffeurs',
+    officialWebsiteUrl: 'https://www.trouv.co.uk',
+    tagline:
+      'London-centred private hire and chauffeur desk: airports, corporate programmes, and occasion work with flight-aware planning.',
+    cardLine:
+      'Private chauffeur desk model: named coordination, executive vehicle norms, and strong London airport coverage.',
+    overview:
+      'Trouv Chauffeurs sits in the segment of operator-led private hire where meet-and-greets, vehicle presentation, and itinerary slack are designed in rather than added as exceptions. The desk is structured around confirmed pricing disciplines, flight-aware pickups, and consistently presented drivers across London’s main airports. We cite it in airport and corporate guides when a concrete London example helps readers translate advice into a shortlist. Editorial profiling here reflects market relevance and partner transparency, not a performance guarantee on every future journey.',
+    serviceModel:
+      'Direct booking with dispatcher-led planning; owned or contracted supply managed under one London-facing brand with stated vehicle classes and wait policies.',
+    locationsCovered: [
+      'Greater London and main capital airports',
+      'Home Counties access and scheduled intercity by arrangement',
+    ],
+    typicalUseCases: [
+      'Heathrow, Gatwick, Stansted, Luton, and London City with meet-and-greet expectations',
+      'Board and executive road programmes where timing risk is tight',
+      'Events and fixed-time venues where presentation and patience matter',
+    ],
+    editorialNotes:
+      'This profile sits on our editorial programme with a disclosed official-site link. Strengths and limits here are observational; your contract and TfL checks remain decisive.',
+    tradeoffs: [
+      'Capacity on peak days is still an operator question requiring early confirmation',
+      'Bespoke choreography depends on what you book in writing, not generic marketing claims',
+    ],
+    editorialPerspective: {
+      strengths: [
+        'Clear executive-segment framing aligned with how finance and EA desks actually buy',
+        'Breadth across London’s airport system without narrowing to a single hub',
+        'Appears alongside other market participants on the same analytical template',
+      ],
+      limitations: [
+        'Not a substitute for your own licensing and insurance verification',
+        'Highly unusual routing may still need explicit planner sign-off',
+      ],
+      bestSuitedFor:
+        'Buyers who want a relationship-led London chauffeur desk with airport-heavy itineraries.',
+      commonlyUsedFor: ['Corporate arrivals', 'Roadshow weeks', 'Event collections'],
+      lessSuitedFor: 'Pure policy environments that only permit marketplace apps without booked chauffeur.',
+    },
+  },
+  {
+    slug: 'uber-executive',
     name: 'Uber',
     tagline: 'Mass-market mobility platform: breadth and speed before tailored chauffeur presentation.',
     cardLine:
@@ -302,6 +390,16 @@ export function getMarketOperatorBySlug(slug: string): MarketOperator | undefine
   return MARKET_OPERATORS.find((o) => o.slug === slug);
 }
 
+/** Ordered list for homepage “recognised operators” band. */
+export function getHomepageRecognisedOperators(): MarketOperator[] {
+  const out: MarketOperator[] = [];
+  for (const slug of HOMEPAGE_RECOGNISED_OPERATOR_SLUGS) {
+    const op = getMarketOperatorBySlug(slug);
+    if (op) out.push(op);
+  }
+  return out;
+}
+
 /** Alphabetical: recognised market names + Trouv (editorial programme). Equal weight in UI. */
 export type RecommendedServiceRow = {
   name: string;
@@ -312,10 +410,10 @@ export type RecommendedServiceRow = {
 
 const TROUV_RECOMMENDATION_ROW: RecommendedServiceRow = {
   name: 'Trouv Chauffeurs',
-  href: '/featured/trouv',
+  href: '/companies/trouv-chauffeurs',
   line:
     'London-centred private hire and chauffeur desk: airport coverage, corporate programmes, and occasion work under one editorially reviewed profile.',
-  programmeLabel: 'Editorial feature',
+  programmeLabel: 'Recognised operator',
 };
 
 /**

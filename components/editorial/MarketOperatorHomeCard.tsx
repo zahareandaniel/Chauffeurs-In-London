@@ -4,7 +4,7 @@ import { MarketOperatorMark } from '@/components/editorial/MarketOperatorMark';
 
 export function MarketOperatorHomeCard({ operator }: { operator: MarketOperator }) {
   return (
-    <article className="flex h-full flex-col border border-line bg-surface p-6 transition-shadow hover:shadow-editorial">
+    <article className="flex h-full flex-col border border-line bg-surface p-6 transition-colors hover:border-ink/15">
       <div className="flex items-start gap-4">
         <MarketOperatorMark name={operator.name} />
         <div className="min-w-0 flex-1">

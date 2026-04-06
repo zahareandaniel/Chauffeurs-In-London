@@ -37,7 +37,7 @@ export const GUIDE_HUBS: ContentHub[] = [
       },
       {
         label: 'Trouv Chauffeurs: editorial profile',
-        href: '/featured/trouv',
+        href: '/companies/trouv-chauffeurs',
       },
     ],
   },
@@ -113,11 +113,11 @@ export const GUIDE_HUBS: ContentHub[] = [
       },
       {
         label: 'Trouv Chauffeurs: profile',
-        href: '/featured/trouv',
+        href: '/companies/trouv-chauffeurs',
       },
       {
         label: 'Editorial standards',
-        href: '/about',
+        href: '/editorial-standards',
       },
     ],
   },
