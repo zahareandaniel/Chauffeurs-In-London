@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import type { FeaturedCompany } from '@/lib/featured-companies';
-import { isEditorialSampleCompany } from '@/lib/featured-companies';
 
 export default function EditorsPicksSection({
   picks,
@@ -19,7 +18,7 @@ export default function EditorsPicksSection({
           </h2>
           <p className="mt-3 max-w-xl text-sm text-ink-muted">
             Operators we profile to the same layout and editorial standard. Order rotates, with no fixed
-            ranking on this desk.
+            ranking on this desk. We do not link to their websites; profiles stay on this site.
           </p>
         </div>
         <Link href="/chauffeur-services" className="btn-secondary shrink-0 self-start text-[0.65rem] sm:self-auto">
@@ -54,16 +53,6 @@ export default function EditorsPicksSection({
                 >
                   Profile →
                 </Link>
-                {company.websiteUrl && !isEditorialSampleCompany(company) && (
-                  <a
-                    href={company.websiteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-4 text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted hover:text-ink"
-                  >
-                    Website ↗
-                  </a>
-                )}
               </div>
             </article>
           </li>

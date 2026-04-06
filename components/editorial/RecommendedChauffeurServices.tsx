@@ -17,7 +17,7 @@ export default function RecommendedChauffeurServices({ rows }: Props) {
       <p className="mt-4 max-w-measure text-sm leading-relaxed text-ink-muted">
         A short, rotating mix for readers who want named next steps without a leaderboard. Trouv
         Chauffeurs sits on our editorial programme alongside a few widely referenced market brands.
-        Profiles stay on-site; official websites are linked from each profile where relevant.
+        Everything opens on this site; we do not link out to operator websites from these cards.
       </p>
       <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {rows.map((row) => (

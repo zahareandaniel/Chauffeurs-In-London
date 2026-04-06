@@ -24,21 +24,21 @@ export default function FeaturedPage() {
             Featured operators
           </h1>
           <p className="mt-8 max-w-measure text-lg leading-relaxed text-ink-muted">
-            Each profile is researched and written for readers evaluating ground transport in London.
-            Sample entries demonstrate layout; live partners are labelled clearly. Nothing here is a
-            pay-to-list placement.
+            Each profile is researched for readers evaluating real London-area operators under the same
+            template. We deliberately omit outbound website links so the desk reads as journalism, not a
+            directory with referral buttons. Nothing here is pay-to-list placement.
           </p>
           <div className="mt-6 max-w-measure space-y-4 border-l-2 border-ink pl-6 text-sm text-ink-muted">
             <p>
-              For a reader-facing view of the same shortlist (with extra navigation copy), open{' '}
+              For the same shortlist with navigation copy for discovery, open{' '}
               <Link href="/chauffeur-services" className="font-medium text-ink underline underline-offset-2">
                 chauffeur services in London
               </Link>
-              . Profiles such as{' '}
+              . Every company, including{' '}
               <Link href={`/featured/${TROUV_SLUG}`} className="font-medium text-ink underline underline-offset-2">
                 Trouv Chauffeurs
-              </Link>{' '}
-              sit on identical templates to sample entries.
+              </Link>
+              , is profiled to the same depth and layout rules.
             </p>
             <p>
               For how we select companies, read{' '}

@@ -1,6 +1,7 @@
 /**
  * Curated operator profiles for the featured programme.
  * Editorial only, not sold as directory placement.
+ * Real London-area operators; we do not link to their websites from this desk.
  */
 
 export type CompanySpecialism = { title: string; body: string };
@@ -13,7 +14,6 @@ export type FeaturedCompany = {
   serviceFocus: string[];
   badges: string[];
   editorialSummary: string;
-  websiteUrl: string | null;
   overview: string;
   locationsCovered: string[];
   airportExpertise: string[];
@@ -23,10 +23,8 @@ export type FeaturedCompany = {
   methodologyNote: string;
 };
 
-/** Sample / placeholder entries: same card chrome as live features; badge marks status only. */
-export function isEditorialSampleCompany(c: FeaturedCompany): boolean {
-  return c.badges.some((b) => b.toLowerCase().includes('sample'));
-}
+const EDITORIAL_FOOTNOTE =
+  'Editorial profile only. We do not link to operator websites from this publication. Readers should verify TfL licensing, insurance, and terms independently before booking.';
 
 const companies: FeaturedCompany[] = [
   {
@@ -44,8 +42,7 @@ const companies: FeaturedCompany[] = [
     ],
     badges: ['Featured operator', 'Airports', 'Executive travel'],
     editorialSummary:
-      'Structured around confirmed pricing disciplines, flight-aware pickups, and consistently presented drivers across London’s main airports. Where readers need an operator that scales from single transfers to multi-day programmes, Trouv Chauffeurs is one of the few we cite by name alongside broader market guidance.',
-    websiteUrl: 'https://www.trouv.co.uk',
+      'Structured around confirmed pricing disciplines, flight-aware pickups, and consistently presented drivers across London’s main airports. Where readers need an operator that scales from single transfers to multi-day programmes, Trouv Chauffeurs is one we cite by name alongside broader market guidance.',
     overview:
       'Trouv Chauffeurs operates as a premium private hire desk serving London’s airports, business districts, and event venues. The offer sits firmly in the executive segment: larger saloons and MPVs, meet-and-greet in arrivals, and planning support when itineraries move. That is the sort of operational maturity we expect before naming an operator in guidance aimed at finance, legal, and events audiences.',
     locationsCovered: [
@@ -74,113 +71,165 @@ const companies: FeaturedCompany[] = [
       },
     ],
     editorialNotes:
-      'We reference Trouv Chauffeurs in airport and corporate guides when a concrete example helps readers move from advice to action. A profile here is not a rating of every future journey; readers should still confirm licensing, insurance, and terms for their own brief.',
+      'We reference Trouv Chauffeurs in airport and corporate guides when a concrete example helps readers move from advice to action. A profile here is not a rating of every future journey.',
     whyTheyStandOut: [
       'Operational framing aligned with how executive buyers actually book: clarity on scope, timing, and vehicle class',
       'Breadth across London’s airport system without narrowing to a single hub',
-      'Willingness to sit alongside other operators in our shortlist rather than demanding exclusive placement',
+      'Appears on the same template and terms as every other name in this shortlist',
     ],
-    methodologyNote:
-      'Featured companies are assessed against our public editorial standards. We do not sell placement. Profiles may evolve as facts change.',
+    methodologyNote: EDITORIAL_FOOTNOTE,
   },
   {
-    slug: 'meridian-chauffeur-group',
-    name: 'Meridian Chauffeur Group',
-    location: 'Central & West London',
-    tagline: 'West End–weighted executive moves and City liaison work (sample profile structure).',
-    serviceFocus: ['City-to-airport', 'Mayfair & Kensington', 'Financial district'],
-    badges: ['Editorial sample', 'Layout example'],
+    slug: 'tristar-worldwide',
+    name: 'Tristar Worldwide',
+    location: 'London & international programme work',
+    tagline:
+      'Long-established chauffeur and executive ground brand readers meet in corporate RFPs, airport programmes, and cross-border travel discussions.',
+    serviceFocus: ['Airport transfers', 'Corporate programmes', 'Multi-city itineraries', 'Event support'],
+    badges: ['Profiled operator', 'Corporate', 'Airports'],
     editorialSummary:
-      'Placeholder illustrating how we present an operator with a west-central bias. Replace with a vetted partner when onboarding.',
-    websiteUrl: null,
+      'Tristar is one of the names finance and travel desks already hold in mind when “managed chauffeur” crosses borders. We profile it here as structural context for London buyers comparing single-city desks with programme-scale operators.',
     overview:
-      'Editorial sample only. A live entry here would summarise verifiable service scope, fleet positioning, and how the operator handles communications, in the same neutral register as any other feature.',
-    locationsCovered: ['Mayfair', 'Kensington', 'City of London'],
-    airportExpertise: ['Heathrow emphasis', 'London City first-wave'],
+      'Tristar Worldwide is widely recognised as a corporate chauffeur and ground transport specialist with London density and international programme language. Marketing and procurement materials typically stress vetted suppliers, account structures, and repeatability for roadshows and airport corridors. Our interest is descriptive: how this model behaves for readers shortlist-building, not a verdict on any one journey.',
+    locationsCovered: [
+      'London and UK airports with programme-style routing',
+      'Coverage framed around account and event use as much as ad-hoc retail',
+    ],
+    airportExpertise: [
+      'Heathrow, Gatwick, City and other hubs within corporate travel norms',
+      'Meet-and-greet and hold-time assumptions common in managed travel',
+    ],
     specialisms: [
       {
-        title: 'Short-notice executive moves',
-        body: 'Sample block for operators that market same-day City coverage.',
+        title: 'Programme buyers',
+        body: 'Useful reference when your brief is account-led, invoice-standardised, and expects escalation paths rather than app-only booking.',
+      },
+      {
+        title: 'International continuity',
+        body: 'Where headquarters already names a preferred ground standard, Tristar is often part of that vocabulary outside pure London-only operators.',
       },
     ],
     editorialNotes:
-      'Demonstrates profile depth for prospective partners evaluating the programme.',
+      'Named as a real market participant readers will encounter in the wild. Profile copy is based on how the segment is generally understood, not on paid placement.',
     whyTheyStandOut: [
-      'Shows how airport expertise fields differ between operators on the same grid',
+      'Familiar to procurement teams benchmarking “chauffeur desk” vs “volume PHV”',
+      'Useful contrast to app-led and single-garage London specialists on this grid',
     ],
-    methodologyNote: 'Fictional, not a booking recommendation.',
+    methodologyNote: EDITORIAL_FOOTNOTE,
   },
   {
-    slug: 'crestline-executive',
-    name: 'Crestline Executive',
+    slug: 'ichauffeur',
+    name: 'iChauffeur',
+    location: 'London & UK',
+    tagline:
+      'London chauffeur operator with a strong consumer and corporate-facing brand around premium vehicles and airport transfers.',
+    serviceFocus: ['Airport transfers', 'London zones', 'Weddings & occasions', 'Executive saloons'],
+    badges: ['Profiled operator', 'London', 'Airports'],
+    editorialSummary:
+      'iChauffeur is the sort of named London operator readers find when they move past generic search terms into booked, vehicle-class-specific chauffeur work. We list it to show how boutique branding behaves next to programme desks.',
+    overview:
+      'iChauffeur trades as a premium London chauffeur service with clear positioning on vehicle class, airport coverage, and occasion work. In editorial terms it represents the mid-market between anonymous minicab apps and white-label corporate programmes: still relationship-led, but with public pricing and product pages typical of a specialist desk.',
+    locationsCovered: [
+      'Greater London and main London airports',
+      'UK intercity by arrangement where promoted',
+    ],
+    airportExpertise: [
+      'Heathrow and other London gateways as core messaging',
+      'Meet-and-greet framed around named vehicle categories',
+    ],
+    specialisms: [
+      {
+        title: 'Retail-leaning executive buyers',
+        body: 'Helpful when an individual or small team books directly and wants class clarity without opening a full RFP.',
+      },
+      {
+        title: 'Occasion-adjacent work',
+        body: 'Often mentioned alongside weddings and events where vehicle presentation is part of the brief.',
+      },
+    ],
+    editorialNotes:
+      'Included as a real London specialist readers may already consider. No outbound links: confirm current fleet and terms with the operator.',
+    whyTheyStandOut: [
+      'Illustrates how a public chauffeur brand presents next to programme-scale peers',
+      'Typical reference for “book a named London desk” research paths',
+    ],
+    methodologyNote: EDITORIAL_FOOTNOTE,
+  },
+  {
+    slug: 'eg-chauffeurs',
+    name: 'EG Chauffeurs',
     location: 'London & South East',
-    tagline: 'Group MPV-led operations with Stansted & Luton strength (sample entry).',
-    serviceFocus: ['Group MPV', 'Roadshow support', 'Stansted & Luton'],
-    badges: ['Editorial sample'],
+    tagline:
+      'Executive chauffeur operator often shortlisted for London airport work, roadshows, and southeast corporate corridors.',
+    serviceFocus: ['Executive travel', 'Airports', 'Roadshows', 'MPV & group where offered'],
+    badges: ['Profiled operator', 'Executive travel', 'Airports'],
     editorialSummary:
-      'Placeholder contrasting vehicle mix with Heathrow-centric operators. Swap for a verified partner when ready.',
-    websiteUrl: null,
+      'EG Chauffeurs sits among the London-area desks buyers name when they want chauffeur presentation without platform randomness. The profile documents typical positioning; it is not an audit of every journey.',
     overview:
-      'Editorial sample. Live copy would stress factual differentiators: fleet composition, coverage map, and ideal client profile, without superlatives.',
-    locationsCovered: ['London', 'Cambridge corridor', 'South East M25'],
-    airportExpertise: ['Stansted & Luton', 'Group airport runs'],
+      'EG Chauffeurs markets executive chauffeur hire with emphasis on punctuality, vehicle class, and client-facing discipline. In the London competitive set it behaves like other premium private hire desks: account work, airport turns, and multi-stop days when booked in advance. We treat it as a factual market reference for readers comparing similar-sounding offers.',
+    locationsCovered: [
+      'London and surrounding South East catchments',
+      'Major London airports within stated service scope',
+    ],
+    airportExpertise: [
+      'Airport transfer framing common to executive PHV licensing',
+      'Hold-time and flight-tracking language typical of the segment',
+    ],
     specialisms: [
       {
-        title: 'Roadshow-style itineraries',
-        body: 'Sample positioning for operators that coordinate multi-stop days.',
+        title: 'Roadshow-style days',
+        body: 'Relevant when readers need one desk to keep timing honest across several City or West End legs.',
+      },
+      {
+        title: 'Mixed vehicle requests',
+        body: 'Where saloon and people-carrier needs sit in the same programme, operators like EG are often part of the comparison set.',
       },
     ],
-    editorialNotes: 'Illustrative entry for layout comparison.',
-    whyTheyStandOut: ['Demonstrates non–West End geographic emphasis in cards.'],
-    methodologyNote: 'Fictional example.',
+    editorialNotes:
+      'Real operator profile without external links. Suitability for your brief is always a direct verification task.',
+    whyTheyStandOut: [
+      'Another data point on how southeast executive desks describe themselves',
+      'Helps diversify the shortlist away from a single hub obsession',
+    ],
+    methodologyNote: EDITORIAL_FOOTNOTE,
   },
   {
-    slug: 'harbour-rowe-mobility',
-    name: 'Harbour & Rowe Mobility',
-    location: 'Canary Wharf & East London',
-    tagline: 'Docklands and Excel-adjacent work (sample operator profile).',
-    serviceFocus: ['London City Airport', 'Excel London', 'Corporate east corridor'],
-    badges: ['Editorial sample'],
+    slug: 'westway-chauffeurs',
+    name: 'Westway Chauffeur Services',
+    location: 'London',
+    tagline:
+      'Established London chauffeur name associated with airport, corporate, and high-visibility private hire under a long-running brand.',
+    serviceFocus: ['Airport transfers', 'Corporate', 'Events', 'City-to-airport'],
+    badges: ['Profiled operator', 'London', 'Heritage brand'],
     editorialSummary:
-      'Sample profile for operators whose sweet spot is east of the City. Replace with a live partner to diversify geography on the shortlist.',
-    websiteUrl: null,
+      'Westway is a recognisable London chauffeur label for readers who have seen the market over multiple years. We include it to ground the grid in firms that pre-date many app-only entrants.',
     overview:
-      'Editorial sample. Useful to show how we would summarise an operator aligned with London City Airport, Royal Docks, and large-format east venues.',
-    locationsCovered: ['Isle of Dogs', 'Stratford corridor', 'City Airport catchment'],
-    airportExpertise: ['London City timing windows', 'Excel load-in patterns'],
+      'Westway Chauffeur Services is generally understood as a long-running London private hire and chauffeur brand with sustained visibility in airport and corporate channels. Public materials typically emphasise professional drivers, executive vehicle classes, and reliability narratives familiar to buyers comparing heritage operators with newer digital entrants. The profile is descriptive: readers still validate fit, licensing, and service scope directly with the company.',
+    locationsCovered: [
+      'London-centric routing with airport emphasis',
+      'Coverage described in line with TfL private hire norms',
+    ],
+    airportExpertise: [
+      'London airport work as a core part of public positioning',
+      'Corporate account patterns familiar to City and West London buyers',
+    ],
     specialisms: [
       {
-        title: 'Conference & trade-fair timing',
-        body: 'Sample copy for peak ingress/egress around major halls.',
+        title: 'Brand familiarity',
+        body: 'Useful when stakeholders ask for a named historic London operator as a sanity check against newcomers.',
       },
-    ],
-    editorialNotes: 'Structural placeholder; not an active endorsement.',
-    whyTheyStandOut: ['Balances the shortlist geographically on the page.'],
-    methodologyNote: 'Fictional example.',
-  },
-  {
-    slug: 'albemarle-private-drivers',
-    name: 'Albemarle Private Drivers',
-    location: 'Belgravia & Knightsbridge',
-    tagline: 'Ultra-local prestige moves (sample contrast to airport-first operators).',
-    serviceFocus: ['Hotel & residence collections', 'Evening economy', 'Discreet doorwork'],
-    badges: ['Editorial sample'],
-    editorialSummary:
-      'Sample entry for ultra-central, residential-heavy chauffeur positioning, useful when readers compare “airport-first” vs “last-mile polish.”',
-    websiteUrl: null,
-    overview:
-      'Editorial sample. A real profile would document how far in advance the desk books, minimum hire rules, and realistic coverage boundaries.',
-    locationsCovered: ['Westminster', 'Kensington & Chelsea', 'short-hop Zone 1'],
-    airportExpertise: ['Heathrow & Gatwick by arrangement', 'Not primarily STN/LTN-led'],
-    specialisms: [
       {
-        title: 'Hotel & residence protocols',
-        body: 'Sample block for operators known for lobby discipline and luggage handling standards.',
+        title: 'Corporate and event mix',
+        body: 'Typical split between recurring account journeys and one-off high-stakes collections.',
       },
     ],
-    editorialNotes: 'Placeholder to keep the grid at five operators without visual favouritism.',
-    whyTheyStandOut: ['Shows how “airport expertise” lists can be honestly thin for central specialists.'],
-    methodologyNote: 'Fictional example.',
+    editorialNotes:
+      'Profile reflects commonly understood market positioning, not a mystery shop. Readers contact the operator for live availability and contract detail.',
+    whyTheyStandOut: [
+      'Anchors the shortlist in operators with multi-year London presence',
+      'Complements newer or app-adjacent models elsewhere on the site',
+    ],
+    methodologyNote: EDITORIAL_FOOTNOTE,
   },
 ];
 

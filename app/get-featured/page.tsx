@@ -64,9 +64,9 @@ export default function GetFeaturedPage() {
                 </h1>
                 <p className="mt-8 max-w-readable text-lg leading-relaxed text-ink-muted">
                   This is not a directory checkout. Features are selective, edited, and published so a
-                  demanding reader can trust what they see. We show sample entries beside live partners
-                  so the frame stays honest: the same margins, badges, and methodology notes for
-                  everyone on the grid.
+                  demanding reader can trust what they see. Listed operators share the same margins,
+                  badges, and methodology notes. We do not attach outbound website buttons to profiles,
+                  so the page stays editorial.
                 </p>
                 <p className="mt-6 max-w-readable text-sm leading-relaxed text-ink-muted">
                   There is no pricing here and no “buy a listing” path. If the fit is wrong, we simply

@@ -17,8 +17,8 @@ export default function RecognisedMarketOperatorsHome() {
             <p className="mt-4 text-sm leading-relaxed text-ink-muted">
               Brands readers already encounter in RFPs, travel policy, and everyday London movement.
               These are contextual profiles: how each model tends to behave, not a leaderboard and not
-              affiliate placement. Every card links to an on-platform brief before you leave for an
-              external site. Selection standards for the separate featured programme sit on the{' '}
+              affiliate placement. Every card opens an on-platform brief; we do not send you to
+              operator websites from here. Selection standards for the separate featured programme sit on the{' '}
               <Link href="/methodology" className="font-medium text-ink underline underline-offset-2">
                 methodology page
               </Link>

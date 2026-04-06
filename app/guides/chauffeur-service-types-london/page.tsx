@@ -36,6 +36,10 @@ export default function ChauffeurServiceTypesLondonPage() {
                   Uber
                 </Link>
                 ,{' '}
+                <Link href="/companies/bolt" className="font-medium text-ink underline underline-offset-2">
+                  Bolt
+                </Link>
+                ,{' '}
                 <Link href="/companies/wheely" className="font-medium text-ink underline underline-offset-2">
                   Wheely
                 </Link>
@@ -82,9 +86,13 @@ export default function ChauffeurServiceTypesLondonPage() {
                 <Link href="/featured/trouv" className="font-medium text-ink underline underline-offset-2">
                   Trouv Chauffeurs
                 </Link>
-                , on our editorial programme) tend to sell relationship, planning, and presentation as
-                part of the fee. The point is not “luxury language”. The point is that someone answers
-                the phone when the schedule breaks and the client is already in the terminal.
+                , on our editorial programme, or{' '}
+                <Link href="/companies/ichauffeur" className="font-medium text-ink underline underline-offset-2">
+                  iChauffeur
+                </Link>
+                , as market context) tend to sell relationship, planning, and presentation as part of
+                the fee. The point is not “luxury language”. The point is that someone answers the phone
+                when the schedule breaks and the client is already in the terminal.
               </p>
               <p className="mt-4">
                 <span className="font-medium text-ink">Trade-offs.</span> You may pay more per hour and
@@ -94,16 +102,19 @@ export default function ChauffeurServiceTypesLondonPage() {
             </section>
 
             <section>
-              <h2 className="font-display text-xl font-medium text-ink">US-led programme language</h2>
+              <h2 className="font-display text-xl font-medium text-ink">Parallel app economies (Bolt)</h2>
               <p className="mt-4">
-                Some readers meet{' '}
-                <Link href="/companies/savoya" className="font-medium text-ink underline underline-offset-2">
-                  Savoya
+                Where travel policy allows more than one ride-hail label,{' '}
+                <Link href="/companies/bolt" className="font-medium text-ink underline underline-offset-2">
+                  Bolt
                 </Link>{' '}
-                through American headquarters rather than London street context. The service class is
-                still “managed ground”, but the procurement vocabulary and coverage map may not mirror a
-                purely UK shortlist. Treat it as a bridge for cross-border policy, not as a substitute
-                for checking London execution yourself.
+                is the other major app-shaped choice many London travellers already know. It belongs in
+                the same procurement conversation as{' '}
+                <Link href="/companies/uber" className="font-medium text-ink underline underline-offset-2">
+                  Uber
+                </Link>
+                : on-demand matching, not a substitute for contracted chauffeur when name boards and
+                wait windows are fixed. The editorial point is category behaviour, not picking a winner.
               </p>
             </section>
 

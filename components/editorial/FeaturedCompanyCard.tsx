@@ -2,8 +2,6 @@ import Link from 'next/link';
 import type { FeaturedCompany } from '@/lib/featured-companies';
 
 export default function FeaturedCompanyCard({ company }: { company: FeaturedCompany }) {
-  const isSample = company.badges.some((b) => b.toLowerCase().includes('sample'));
-
   return (
     <article className="card-editorial relative flex flex-col overflow-hidden border border-line bg-surface p-8 lg:p-10">
       <div
@@ -28,20 +26,10 @@ export default function FeaturedCompanyCard({ company }: { company: FeaturedComp
       <p className="mt-6 border-t border-line pt-6 text-xs text-ink-subtle">
         {company.serviceFocus.join(' · ')}
       </p>
-      <div className="mt-8 flex flex-wrap gap-3">
+      <div className="mt-8">
         <Link href={`/featured/${company.slug}`} className="btn-secondary text-[0.65rem]">
           Read profile
         </Link>
-        {company.websiteUrl && !isSample && (
-          <a
-            href={company.websiteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary text-[0.65rem]"
-          >
-            Website
-          </a>
-        )}
       </div>
     </article>
   );

@@ -35,7 +35,6 @@ export default function CompanyProfilePage({ params }: Props) {
   const company = getCompanyBySlug(params.slug);
   if (!company) notFound();
 
-  const isSample = company.badges.some((b) => b.toLowerCase().includes('sample'));
   const recommended = getConversionRecommendations({
     omitTrouv: company.slug === TROUV_SLUG,
     seed: `featured-${company.slug}`,
@@ -155,12 +154,15 @@ export default function CompanyProfilePage({ params }: Props) {
                     ))}
                   </ul>
                 </div>
+                <div className="border border-line bg-paper-warm p-5">
+                  <p className="editorial-label">Editorial only</p>
+                  <p className="mt-2 text-xs leading-relaxed text-ink-subtle">
+                    This desk does not link to operator websites. When you are ready to engage or
+                    book, find the operator through search or your travel desk and confirm licensing
+                    and terms there.
+                  </p>
+                </div>
                 <div className="flex flex-col gap-3">
-                  {company.websiteUrl && !isSample && (
-                    <a href={company.websiteUrl} target="_blank" rel="noopener noreferrer" className="btn-primary text-center">
-                      Visit website
-                    </a>
-                  )}
                   <Link href="/get-featured" className="btn-secondary text-center">
                     Apply for a profile
                   </Link>

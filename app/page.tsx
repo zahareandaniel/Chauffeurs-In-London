@@ -145,7 +145,8 @@ export default async function HomePage() {
                 </h2>
                 <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink-muted">
                   Full editorial profiles: overview, airports, specialisms, and methodology. Identical
-                  structure for live partners and sample entries so the frame stays honest.
+                  structure for every operator we profile, without outbound website links, so the frame
+                  stays honest.
                 </p>
               </div>
               <Link href="/featured" className="btn-secondary shrink-0 self-start sm:self-auto">

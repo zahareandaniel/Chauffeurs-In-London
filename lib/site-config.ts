@@ -5,7 +5,7 @@ export const SITE = {
   /** Used in metadata & JSON-LD */
   legalName: 'Chauffeurs in London',
   contactEmail:
-    process.env.NEXT_PUBLIC_EDITORIAL_EMAIL || 'editorial@chauffeursinlondon.com',
+    process.env.NEXT_PUBLIC_EDITORIAL_EMAIL || 'email@chauffeursinlondon.co.uk',
 } as const;
 
 export function siteUrl(): string {

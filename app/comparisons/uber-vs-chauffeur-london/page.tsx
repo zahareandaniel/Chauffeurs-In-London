@@ -56,13 +56,22 @@ export default function UberVsChauffeurLondonPage() {
                   Uber
                 </Link>{' '}
                 stands in here as the familiar marketplace model: matching, tiers, and supply that
-                shifts with demand. Chauffeur, in the sense we use on this site, usually means a booked,
-                accountable car with norms around dress, meet-and-greet, and how long the driver will
-                hold. A concrete editorial example of that desk-led shape is{' '}
+                shifts with demand.{' '}
+                <Link href="/companies/bolt" className="font-medium text-ink underline underline-offset-2">
+                  Bolt
+                </Link>{' '}
+                behaves in the same broad class for many London legs. Chauffeur, in the sense we use on
+                this site, usually means a booked, accountable car with norms around dress,
+                meet-and-greet, and how long the driver will hold. A concrete editorial example of that
+                desk-led shape is{' '}
                 <Link href="/featured/trouv" className="font-medium text-ink underline underline-offset-2">
                   Trouv Chauffeurs
                 </Link>
-                ; other operators sit on the same spectrum with different coverage maps.
+                ; names such as{' '}
+                <Link href="/companies/ichauffeur" className="font-medium text-ink underline underline-offset-2">
+                  iChauffeur
+                </Link>{' '}
+                sit on the same spectrum with different coverage maps.
               </p>
               <p className="mt-4">
                 For platform-style chauffeur booking (different from open ride-hail) see context pages

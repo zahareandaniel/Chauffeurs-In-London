@@ -1,6 +1,6 @@
 /**
  * Recognised market operators: editorial context, not rankings or paid listings.
- * Inbound links stay on-platform via /companies/*; outbound links live on profile pages only.
+ * Inbound links stay on-platform via /companies/*; we do not link to third-party operator websites.
  */
 
 export type EditorialPerspective = {
@@ -25,7 +25,6 @@ export type MarketOperator = {
   /** Framed as trade-offs / fit, not attacks */
   tradeoffs: string[];
   editorialPerspective: EditorialPerspective;
-  websiteUrl: string;
 };
 
 const MARKET_OPERATORS: MarketOperator[] = [
@@ -73,7 +72,6 @@ const MARKET_OPERATORS: MarketOperator[] = [
       lessSuitedFor:
         'Occasions where you want a named dispatcher who reshapes the day in real time without platform guardrails.',
     },
-    websiteUrl: 'https://www.blacklane.com',
   },
   {
     slug: 'addison-lee',
@@ -119,53 +117,88 @@ const MARKET_OPERATORS: MarketOperator[] = [
       lessSuitedFor:
         'Briefs where the primary ask is bespoke white-glove choreography with minimal self-serve.',
     },
-    websiteUrl: 'https://www.addisonlee.com',
   },
   {
-    slug: 'savoya',
-    name: 'Savoya',
-    tagline: 'US-originated executive ground transport focused on corporate and aviation-adjacent moves.',
+    slug: 'bolt',
+    name: 'Bolt',
+    tagline: 'European mobility platform with ride-hail in London, positioned as an app-first alternative in the PHV marketplace.',
     cardLine:
-      'Corporate ground programme DNA from the US; useful reference for global mobility comparisons.',
+      'App-led on-demand trips: matching economics and product tiers familiar from other ride platforms.',
     overview:
-      'Savoya is best understood as part of the North American executive transport ecosystem, where managed ground, aviation timing, and corporate travel policies intersect. UK readers encounter it when US headquarters names a preferred ground partner or when comparing how American programmes think about “chauffeur” versus European norms. We list it to anchor that vocabulary, not to imply equivalent street-level coverage in every London postcode.',
+      'Bolt operates private hire matching in London alongside food and other mobility products in other markets. For London readers it sits in the same mental shelf as other large ride-hail apps: quick matching, upfront pricing habits that vary by demand, and a service class aimed at throughput more than bespoke chauffeur choreography. Procurement teams name it when comparing policy allowances, expensing rules, or traveller choice across competing apps.',
     serviceModel:
-      'Managed corporate ground transport with platform scheduling and supplier coordination; US-centric heritage with select global reach.',
+      'Technology platform matching riders with TfL-licensed private hire drivers; tiered product options by city.',
     locationsCovered: [
-      'Primary depth in major US metros',
-      'Select international routes via partner supply',
-      'London coverage should be confirmed case-by-case for specialised briefs',
+      'London and other UK cities under local licensing',
+      'European and other markets where the group operates ride services',
     ],
     typicalUseCases: [
-      'US–UK programmes where the travelling firm already standardises on Savoya domestically',
-      'Executive moves where private-aviation timing discipline is part of the brief',
-      'Mobility teams building cross-border RFP language',
+      'Ad-hoc urban trips when policy allows non-exclusive apps',
+      'Cost-sensitive legs next to a booked chauffeur day',
+      'Benchmarking “app A vs app B” for travel policy drafts',
     ],
     editorialNotes:
-      'Useful for readers translating American RFP language into London procurement discussions. Always confirm current London fulfilment and insurance framing directly with the provider.',
+      'Useful structural context next to Uber: similar job-to-be-done for many personal and informal legs, different brand ownership and regional footprint. Not a substitute for contract chauffeur when presentation and wait rules are fixed.',
     tradeoffs: [
-      'International trips may route through partner networks; briefing detail matters',
-      'Product language from the US does not always map one-to-one to TfL categories',
+      'Meet-and-greet and white-glove norms are not the core product design',
+      'Peak demand behaviour should be read in the app before client-critical work',
     ],
     editorialPerspective: {
       strengths: [
-        'Shared vocabulary for US-led mobility and aviation-adjacent programmes',
-        'Useful anchor when headquarters names a standard ground brand',
+        'Widely available in London for spontaneous movement inside policy',
+        'Gives buyers a second major app label when negotiating vendor diversity or spend caps',
       ],
       limitations: [
-        'London depth may not mirror US density; confirm supply before relying on it for critical arrivals',
-        'Cross-border trips often need explicit handover notes between networks',
+        'Variance between drivers and vehicles remains a marketplace trait',
+        'High-stakes arrivals often need a dedicated desk regardless of app choice',
       ],
       bestSuitedFor:
-        'Organisations standardising ground policy across the Atlantic and needing a common label.',
-      commonlyUsedFor: [
-        'RFP alignment discussions',
-        'Traveller journeys that start in US-managed programmes and continue in London',
-      ],
+        'Informal and personal-adjacent legs where app speed matters and dress-code choreography does not.',
+      commonlyUsedFor: ['Short hops', 'Policy comparisons with other ride-hail tools'],
       lessSuitedFor:
-        'Readers who only need a purely local London operator map with no US policy overlay.',
+        'Fixed-programme chauffeur with named contacts and contractual wait windows.',
     },
-    websiteUrl: 'https://www.savoya.com',
+  },
+  {
+    slug: 'ichauffeur',
+    name: 'iChauffeur',
+    tagline: 'London chauffeur and executive private hire brand with public vehicle-class positioning and airport-led messaging.',
+    cardLine:
+      'Named London desk: website-led booking and premium PHV framing rather than open ride-hail pooling.',
+    overview:
+      'iChauffeur is part of the London landscape as a branded chauffeur operator: it sells classed vehicles, airport transfers, and occasion work with clearer executive norms than anonymous app matching. Readers encounter it when moving from generic “get a ride” search into booked chauffeur territory. It illustrates how a single operator brand behaves relative to platforms such as Blacklane and large-scale desks such as Addison Lee.',
+    serviceModel:
+      'Operator-led private hire with direct booking channels and stated fleet positioning; relationship and repeat business matter more than pure marketplace throughput.',
+    locationsCovered: [
+      'Greater London and main London airports as core messaging',
+      'UK coverage where publicly described',
+    ],
+    typicalUseCases: [
+      'Airport and intercity runs where a named vehicle grade matters',
+      'Retail executive buyers who want a chauffeur proposition without a global programme contract',
+      'Comparing boutique operator tone with app and volume PHV options',
+    ],
+    editorialNotes:
+      'Also profiled on our featured programme for readers who want full editorial depth; this market context page stays structural. We do not audit individual journeys.',
+    tradeoffs: [
+      'Capacity on peak days is still an operator question, not a commodity',
+      'Bespoke detail depends on what you confirm at booking',
+    ],
+    editorialPerspective: {
+      strengths: [
+        'Legible “chauffeur company” reference for London buyers shortlisting named desks',
+        'Useful midpoint between mass apps and global programme-only brands',
+      ],
+      limitations: [
+        'Not interchangeable with every multi-city managed-ground RFP without checking scope',
+        'Readers should still match TfL expectations and insurance to their own risk appetite',
+      ],
+      bestSuitedFor:
+        'Buyers who want a recognisable London chauffeur brand in the comparison set.',
+      commonlyUsedFor: ['Airport-led research', 'Wedding and event adjacent planning'],
+      lessSuitedFor:
+        'Pure policy discussions that only permit marketplace apps and exclude booked chauffeur.',
+    },
   },
   {
     slug: 'wheely',
@@ -210,7 +243,6 @@ const MARKET_OPERATORS: MarketOperator[] = [
       lessSuitedFor:
         'Large programmes that need central invoicing nuance and dedicated account governance.',
     },
-    websiteUrl: 'https://wheely.com',
   },
   {
     slug: 'uber',
@@ -252,7 +284,6 @@ const MARKET_OPERATORS: MarketOperator[] = [
       lessSuitedFor:
         'Client-facing arrivals where name boards, attire, and wait policies are contractually fixed.',
     },
-    websiteUrl: 'https://www.uber.com',
   },
 ];
 
@@ -270,7 +301,7 @@ export function getMarketOperatorBySlug(slug: string): MarketOperator | undefine
   return MARKET_OPERATORS.find((o) => o.slug === slug);
 }
 
-/** Alphabetical: five recognised market names + Trouv (editorial programme). Equal weight in UI. */
+/** Alphabetical: recognised market names + Trouv (editorial programme). Equal weight in UI. */
 export type RecommendedServiceRow = {
   name: string;
   href: string;

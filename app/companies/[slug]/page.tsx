@@ -46,7 +46,11 @@ export default function MarketOperatorPage({ params }: Props) {
     headline: `${op.name}, editorial market context`,
     description: op.overview.slice(0, 300),
     author: { '@type': 'Organization', name: 'Chauffeurs in London', url: base },
-    about: { '@type': 'Organization', name: op.name, url: op.websiteUrl },
+    about: {
+      '@type': 'Organization',
+      name: op.name,
+      url: `${base}/companies/${op.slug}`,
+    },
   };
 
   return (
@@ -189,18 +193,11 @@ export default function MarketOperatorPage({ params }: Props) {
             <aside className="lg:col-span-4 lg:border-l lg:border-line lg:pl-10">
               <div className="sticky top-24 space-y-8">
                 <div className="border border-line bg-surface p-6">
-                  <p className="editorial-label">Official site</p>
-                  <a
-                    href={op.websiteUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-flex break-all text-sm font-medium text-ink underline underline-offset-4"
-                  >
-                    {op.websiteUrl.replace(/^https?:\/\/(www\.)?/, '')} ↗
-                  </a>
-                  <p className="mt-4 text-xs leading-relaxed text-ink-subtle">
-                    External link for your own due diligence. Terms, licensing, and insurance sit with
-                    the operator.
+                  <p className="editorial-label">No outbound link</p>
+                  <p className="mt-3 text-xs leading-relaxed text-ink-subtle">
+                    We keep market context on-platform on purpose. When you need terms, licensing, or
+                    booking paths, use search or your procurement desk to reach the operator directly.
+                    That keeps this site editorial rather than referral-shaped.
                   </p>
                 </div>
 

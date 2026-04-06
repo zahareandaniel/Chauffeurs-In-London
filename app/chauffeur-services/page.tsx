@@ -46,12 +46,12 @@ export default function ChauffeurServicesPage() {
               .
             </p>
             <p>
-              To{' '}
-              <Link href={`/featured/${TROUV_SLUG}`} className="link-underline font-medium text-ink">
-                book a chauffeur
+              To move from reading to action, contact operators directly after you have read their{' '}
+              <Link href="/featured" className="link-underline font-medium text-ink">
+                on-platform profiles
               </Link>
-              , use the website links on live operator profiles. This desk does not take booking
-              commission.
+              . We do not link to their websites here, so this publication stays editorial rather than
+              referral-led. This desk does not take booking commission.
             </p>
           </div>
 
