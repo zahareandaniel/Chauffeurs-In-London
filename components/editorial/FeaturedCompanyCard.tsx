@@ -26,10 +26,20 @@ export default function FeaturedCompanyCard({ company }: { company: FeaturedComp
       <p className="mt-6 border-t border-line pt-6 text-xs text-ink-subtle">
         {company.serviceFocus.join(' · ')}
       </p>
-      <div className="mt-8">
+      <div className="mt-8 flex flex-wrap gap-3">
         <Link href={`/featured/${company.slug}`} className="btn-secondary text-[0.65rem]">
           Read profile
         </Link>
+        {company.websiteUrl && (
+          <a
+            href={company.websiteUrl}
+            target="_blank"
+            rel="noopener"
+            className="btn-primary text-[0.65rem]"
+          >
+            Official site
+          </a>
+        )}
       </div>
     </article>
   );

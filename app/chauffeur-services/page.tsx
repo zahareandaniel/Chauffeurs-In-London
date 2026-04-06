@@ -50,8 +50,8 @@ export default function ChauffeurServicesPage() {
               <Link href="/featured" className="link-underline font-medium text-ink">
                 on-platform profiles
               </Link>
-              . We do not link to their websites here, so this publication stays editorial rather than
-              referral-led. This desk does not take booking commission.
+              . We omit outbound operator sites except Trouv Chauffeurs, which includes an official-site link
+              on its profile. This desk does not take booking commission.
             </p>
           </div>
 

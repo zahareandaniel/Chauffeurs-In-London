@@ -46,6 +46,15 @@ export default function CompanyProfilePage({ params }: Props) {
     headline: `${company.name}, featured chauffeur operator (editorial)`,
     description: company.editorialSummary,
     author: { '@type': 'Organization', name: 'Chauffeurs in London' },
+    ...(company.websiteUrl
+      ? {
+          about: {
+            '@type': 'Organization',
+            name: company.name,
+            url: company.websiteUrl,
+          },
+        }
+      : {}),
   };
 
   return (
@@ -154,14 +163,32 @@ export default function CompanyProfilePage({ params }: Props) {
                     ))}
                   </ul>
                 </div>
-                <div className="border border-line bg-paper-warm p-5">
-                  <p className="editorial-label">Editorial only</p>
-                  <p className="mt-2 text-xs leading-relaxed text-ink-subtle">
-                    This desk does not link to operator websites. When you are ready to engage or
-                    book, find the operator through search or your travel desk and confirm licensing
-                    and terms there.
-                  </p>
-                </div>
+                {company.websiteUrl ? (
+                  <div className="border border-line bg-surface p-6">
+                    <p className="editorial-label">Official site</p>
+                    <a
+                      href={company.websiteUrl}
+                      target="_blank"
+                      rel="noopener"
+                      className="mt-3 inline-flex text-sm font-medium text-ink underline underline-offset-4"
+                    >
+                      {company.websiteUrl.replace(/^https?:\/\/(www\.)?/, '')} ↗
+                    </a>
+                    <p className="mt-4 text-xs leading-relaxed text-ink-subtle">
+                      Partner link to the operator’s official site. Booking, terms, and licensing remain
+                      with the operator.
+                    </p>
+                  </div>
+                ) : (
+                  <div className="border border-line bg-paper-warm p-5">
+                    <p className="editorial-label">Editorial only</p>
+                    <p className="mt-2 text-xs leading-relaxed text-ink-subtle">
+                      This desk does not link to this operator’s website. When you are ready to engage or
+                      book, find the operator through search or your travel desk and confirm licensing
+                      and terms there.
+                    </p>
+                  </div>
+                )}
                 <div className="flex flex-col gap-3">
                   <Link href="/get-featured" className="btn-secondary text-center">
                     Apply for a profile

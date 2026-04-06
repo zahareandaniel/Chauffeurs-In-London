@@ -25,8 +25,9 @@ export default function FeaturedPage() {
           </h1>
           <p className="mt-8 max-w-measure text-lg leading-relaxed text-ink-muted">
             Each profile is researched for readers evaluating real London-area operators under the same
-            template. We deliberately omit outbound website links so the desk reads as journalism, not a
-            directory with referral buttons. Nothing here is pay-to-list placement.
+            template. We omit outbound website links for every operator except Trouv Chauffeurs, which
+            includes its official site on the profile, so the desk reads as journalism, not a directory
+            of referral buttons. Nothing here is pay-to-list placement.
           </p>
           <div className="mt-6 max-w-measure space-y-4 border-l-2 border-ink pl-6 text-sm text-ink-muted">
             <p>

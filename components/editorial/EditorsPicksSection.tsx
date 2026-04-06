@@ -18,7 +18,8 @@ export default function EditorsPicksSection({
           </h2>
           <p className="mt-3 max-w-xl text-sm text-ink-muted">
             Operators we profile to the same layout and editorial standard. Order rotates, with no fixed
-            ranking on this desk. We do not link to their websites; profiles stay on this site.
+            ranking. Trouv Chauffeurs includes an on-page link to its official site; other profiles stay
+            without outbound links by design.
           </p>
         </div>
         <Link href="/chauffeur-services" className="btn-secondary shrink-0 self-start text-[0.65rem] sm:self-auto">
@@ -46,13 +47,23 @@ export default function EditorsPicksSection({
               <p className="mt-3 flex-1 text-xs leading-relaxed text-ink-muted line-clamp-4">
                 {company.tagline}
               </p>
-              <div className="mt-6 border-t border-line pt-4">
+              <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-line pt-4">
                 <Link
                   href={`/featured/${company.slug}`}
                   className="text-xs font-semibold uppercase tracking-[0.12em] text-ink"
                 >
                   Profile →
                 </Link>
+                {company.websiteUrl && (
+                  <a
+                    href={company.websiteUrl}
+                    target="_blank"
+                    rel="noopener"
+                    className="text-xs font-semibold uppercase tracking-[0.12em] text-ink-muted hover:text-ink"
+                  >
+                    Site ↗
+                  </a>
+                )}
               </div>
             </article>
           </li>

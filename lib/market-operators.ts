@@ -1,6 +1,7 @@
 /**
  * Recognised market operators: editorial context, not rankings or paid listings.
- * Inbound links stay on-platform via /companies/*; we do not link to third-party operator websites.
+ * Inbound links stay on-platform via /companies/*; we do not link out from market context pages.
+ * (The featured programme may include a single partner official-site link for Trouv only.)
  */
 
 export type EditorialPerspective = {

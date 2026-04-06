@@ -1,7 +1,7 @@
 /**
  * Curated operator profiles for the featured programme.
  * Editorial only, not sold as directory placement.
- * Real London-area operators; we do not link to their websites from this desk.
+ * Outbound website links are exceptional: only Trouv carries a dofollow official-site link from this desk.
  */
 
 export type CompanySpecialism = { title: string; body: string };
@@ -14,6 +14,8 @@ export type FeaturedCompany = {
   serviceFocus: string[];
   badges: string[];
   editorialSummary: string;
+  /** Official site when we publish a dofollow outbound link; otherwise null. */
+  websiteUrl: string | null;
   overview: string;
   locationsCovered: string[];
   airportExpertise: string[];
@@ -24,7 +26,10 @@ export type FeaturedCompany = {
 };
 
 const EDITORIAL_FOOTNOTE =
-  'Editorial profile only. We do not link to operator websites from this publication. Readers should verify TfL licensing, insurance, and terms independently before booking.';
+  'Editorial profile only. We do not link to this operator’s website from this publication. Readers should verify TfL licensing, insurance, and terms independently before booking.';
+
+const TROUV_FOOTNOTE =
+  'Featured partner profile: we link to Trouv Chauffeurs’ official site above as the programme’s named partner. Editorial standards still apply; this is not a guarantee of every future journey.';
 
 const companies: FeaturedCompany[] = [
   {
@@ -43,6 +48,7 @@ const companies: FeaturedCompany[] = [
     badges: ['Featured operator', 'Airports', 'Executive travel'],
     editorialSummary:
       'Structured around confirmed pricing disciplines, flight-aware pickups, and consistently presented drivers across London’s main airports. Where readers need an operator that scales from single transfers to multi-day programmes, Trouv Chauffeurs is one we cite by name alongside broader market guidance.',
+    websiteUrl: 'https://www.trouv.co.uk',
     overview:
       'Trouv Chauffeurs operates as a premium private hire desk serving London’s airports, business districts, and event venues. The offer sits firmly in the executive segment: larger saloons and MPVs, meet-and-greet in arrivals, and planning support when itineraries move. That is the sort of operational maturity we expect before naming an operator in guidance aimed at finance, legal, and events audiences.',
     locationsCovered: [
@@ -77,7 +83,7 @@ const companies: FeaturedCompany[] = [
       'Breadth across London’s airport system without narrowing to a single hub',
       'Appears on the same template and terms as every other name in this shortlist',
     ],
-    methodologyNote: EDITORIAL_FOOTNOTE,
+    methodologyNote: TROUV_FOOTNOTE,
   },
   {
     slug: 'tristar-worldwide',
@@ -89,6 +95,7 @@ const companies: FeaturedCompany[] = [
     badges: ['Profiled operator', 'Corporate', 'Airports'],
     editorialSummary:
       'Tristar is one of the names finance and travel desks already hold in mind when “managed chauffeur” crosses borders. We profile it here as structural context for London buyers comparing single-city desks with programme-scale operators.',
+    websiteUrl: null,
     overview:
       'Tristar Worldwide is widely recognised as a corporate chauffeur and ground transport specialist with London density and international programme language. Marketing and procurement materials typically stress vetted suppliers, account structures, and repeatability for roadshows and airport corridors. Our interest is descriptive: how this model behaves for readers shortlist-building, not a verdict on any one journey.',
     locationsCovered: [
@@ -127,6 +134,7 @@ const companies: FeaturedCompany[] = [
     badges: ['Profiled operator', 'London', 'Airports'],
     editorialSummary:
       'iChauffeur is the sort of named London operator readers find when they move past generic search terms into booked, vehicle-class-specific chauffeur work. We list it to show how boutique branding behaves next to programme desks.',
+    websiteUrl: null,
     overview:
       'iChauffeur trades as a premium London chauffeur service with clear positioning on vehicle class, airport coverage, and occasion work. In editorial terms it represents the mid-market between anonymous minicab apps and white-label corporate programmes: still relationship-led, but with public pricing and product pages typical of a specialist desk.',
     locationsCovered: [
@@ -165,6 +173,7 @@ const companies: FeaturedCompany[] = [
     badges: ['Profiled operator', 'Executive travel', 'Airports'],
     editorialSummary:
       'EG Chauffeurs sits among the London-area desks buyers name when they want chauffeur presentation without platform randomness. The profile documents typical positioning; it is not an audit of every journey.',
+    websiteUrl: null,
     overview:
       'EG Chauffeurs markets executive chauffeur hire with emphasis on punctuality, vehicle class, and client-facing discipline. In the London competitive set it behaves like other premium private hire desks: account work, airport turns, and multi-stop days when booked in advance. We treat it as a factual market reference for readers comparing similar-sounding offers.',
     locationsCovered: [
@@ -203,6 +212,7 @@ const companies: FeaturedCompany[] = [
     badges: ['Profiled operator', 'London', 'Heritage brand'],
     editorialSummary:
       'Westway is a recognisable London chauffeur label for readers who have seen the market over multiple years. We include it to ground the grid in firms that pre-date many app-only entrants.',
+    websiteUrl: null,
     overview:
       'Westway Chauffeur Services is generally understood as a long-running London private hire and chauffeur brand with sustained visibility in airport and corporate channels. Public materials typically emphasise professional drivers, executive vehicle classes, and reliability narratives familiar to buyers comparing heritage operators with newer digital entrants. The profile is descriptive: readers still validate fit, licensing, and service scope directly with the company.',
     locationsCovered: [
