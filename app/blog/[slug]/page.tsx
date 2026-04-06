@@ -194,7 +194,7 @@ export default async function ArticlePage({ params }: PageProps) {
               <ArticleRenderer content={article.content} />
             </div>
 
-            <div className="mt-12 max-w-readable">
+            <div className="mt-12 min-w-0">
               <RecognisedProvidersArticle />
             </div>
 

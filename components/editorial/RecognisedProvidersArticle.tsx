@@ -27,7 +27,7 @@ export default function RecognisedProvidersArticle() {
         </Link>
         .
       </p>
-      <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {operators.map((op) => (
           <li key={op.slug} className="border border-line bg-surface p-5">
             <div className="flex items-start gap-3">
