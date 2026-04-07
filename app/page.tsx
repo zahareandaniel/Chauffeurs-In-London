@@ -36,8 +36,8 @@ export default function HomePage() {
               mobility.
             </p>
             <p className="mt-10">
-              <Link href="/guides" className="link-underline text-sm font-semibold text-ink">
-                Explore the market guides
+              <Link href="/insights" className="link-underline text-sm font-semibold text-ink">
+                Start with the insights hub
               </Link>
             </p>
           </div>

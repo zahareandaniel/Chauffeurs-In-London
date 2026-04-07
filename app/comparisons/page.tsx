@@ -29,6 +29,30 @@ export default function ComparisonsIndexPage() {
               <ComparisonCard key={c.slug} comparison={c} />
             ))}
           </div>
+          <section className="mt-14 border border-line bg-surface p-6 sm:p-8" aria-labelledby="comparison-cluster-heading">
+            <h2 id="comparison-cluster-heading" className="font-display text-xl font-semibold text-ink">
+              Cluster role: chauffeur vs alternatives
+            </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-muted">
+              This hub carries the comparison cluster. Each page should link back here, then out to
+              supporting guides and company context for procurement decisions.
+            </p>
+            <p className="mt-5 text-sm text-ink-muted">
+              Supporting hubs:{' '}
+              <Link href="/guides" className="font-medium text-ink underline underline-offset-2">
+                guides
+              </Link>
+              ,{' '}
+              <Link href="/insights" className="font-medium text-ink underline underline-offset-2">
+                insights
+              </Link>
+              , and{' '}
+              <Link href="/companies" className="font-medium text-ink underline underline-offset-2">
+                companies
+              </Link>
+              .
+            </p>
+          </section>
           <p className="mt-12 text-sm text-ink-muted">
             For market structure before you compare brands, start with{' '}
             <Link href="/guides/chauffeur-service-types-london" className="font-medium text-ink underline underline-offset-2">

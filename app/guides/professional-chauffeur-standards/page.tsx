@@ -4,6 +4,7 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import ArticleLayout from '@/components/editorial/ArticleLayout';
 import RelatedLinks from '@/components/editorial/RelatedLinks';
+import ClusterLinks from '@/components/editorial/ClusterLinks';
 import CategorySponsorBlock from '@/components/commercial/CategorySponsorBlock';
 
 export const metadata: Metadata = {
@@ -109,6 +110,7 @@ export default function ProfessionalChauffeurStandardsPage() {
                   { href: '/editorial-standards', label: 'Editorial standards' },
                 ]}
               />
+              <ClusterLinks type="guides" />
             </ArticleLayout>
           </div>
           <aside className="mt-12 lg:col-span-4 lg:mt-0">

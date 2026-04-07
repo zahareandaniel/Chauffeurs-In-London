@@ -20,6 +20,7 @@ export function GET() {
     '/',
     '/guides',
     '/comparisons',
+    '/insights',
     '/companies',
     '/featured',
     '/chauffeur-services',
@@ -43,9 +44,19 @@ export function GET() {
     new Set([...staticPaths, ...guidePaths, ...comparisonPaths, ...companyPaths, ...featuredPaths]),
   );
 
+  const HUB_PATHS = new Set(['/guides', '/comparisons', '/insights', '/companies']);
+  const CORNERSTONE_PATHS = new Set([
+    '/guides/chauffeur-services-london',
+    '/guides/chauffeur-service-types-london',
+    '/comparisons/uber-vs-chauffeur-london',
+    '/comparisons/ride-hailing-vs-executive-chauffeur',
+    '/methodology',
+    '/editorial-standards',
+  ]);
+
   const urlBlocks = allPaths.map((path) => {
-    const changefreq = path === '/' ? 'weekly' : 'monthly';
-    const priority = path === '/' ? '1.0' : '0.7';
+    const changefreq = path === '/' || HUB_PATHS.has(path) ? 'weekly' : 'monthly';
+    const priority = path === '/' ? '1.0' : HUB_PATHS.has(path) ? '0.9' : CORNERSTONE_PATHS.has(path) ? '0.8' : '0.7';
     const loc = escapeXml(`${base}${path}`);
     return (
       `  <url>\n` +

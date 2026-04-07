@@ -4,6 +4,7 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import ArticleLayout from '@/components/editorial/ArticleLayout';
 import RelatedLinks from '@/components/editorial/RelatedLinks';
+import ClusterLinks from '@/components/editorial/ClusterLinks';
 
 export const metadata: Metadata = {
   title: 'Blacklane vs private chauffeur',
@@ -108,6 +109,7 @@ export default function BlacklaneVsPrivateChauffeurPage() {
                 { href: '/guides/chauffeur-services-london', label: 'Chauffeur services in London' },
               ]}
             />
+            <ClusterLinks type="comparisons" />
           </ArticleLayout>
         </div>
       </main>

@@ -4,6 +4,7 @@ import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import ArticleLayout from '@/components/editorial/ArticleLayout';
 import RelatedLinks from '@/components/editorial/RelatedLinks';
+import ClusterLinks from '@/components/editorial/ClusterLinks';
 
 export const metadata: Metadata = {
   title: 'Wheely vs chauffeur in London',
@@ -122,6 +123,7 @@ export default function WheelyVsChauffeurLondonPage() {
                 { href: '/guides/professional-chauffeur-standards', label: 'Professional chauffeur standards' },
               ]}
             />
+            <ClusterLinks type="comparisons" />
           </ArticleLayout>
         </div>
       </main>

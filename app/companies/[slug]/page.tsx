@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import RecommendedChauffeurServices from '@/components/editorial/RecommendedChauffeurServices';
+import ClusterLinks from '@/components/editorial/ClusterLinks';
 import { getMarketOperatorBySlug, getMarketOperators, getConversionRecommendations } from '@/lib/market-operators';
 import { siteUrl } from '@/lib/site-config';
 
@@ -189,6 +190,7 @@ export default function MarketOperatorPage({ params }: Props) {
                   ))}
                 </ul>
               </section>
+              <ClusterLinks type="companies" />
             </div>
 
             <aside className="lg:col-span-4 lg:border-l lg:border-line lg:pl-10">

@@ -48,6 +48,31 @@ export default function GuidesIndexPage() {
             </p>
           </section>
 
+          <section className="mt-14 border border-line bg-surface p-6 sm:p-8" aria-labelledby="guides-cluster-heading">
+            <h2 id="guides-cluster-heading" className="font-display text-xl font-semibold text-ink">
+              Authority cluster map
+            </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-muted">
+              This hub anchors the market-knowledge cluster. It links outward to model comparisons, company
+              context, and editorial methodology so readers can move from fundamentals to decisions.
+            </p>
+            <p className="mt-5 text-sm text-ink-muted">
+              Continue to{' '}
+              <Link href="/comparisons" className="font-medium text-ink underline underline-offset-2">
+                comparisons
+              </Link>
+              ,{' '}
+              <Link href="/insights" className="font-medium text-ink underline underline-offset-2">
+                insights
+              </Link>
+              , and{' '}
+              <Link href="/companies" className="font-medium text-ink underline underline-offset-2">
+                company context
+              </Link>
+              .
+            </p>
+          </section>
+
           <div className="mt-20 space-y-16 border-t border-line pt-16">
             {GUIDE_HUBS.map((hub) => (
               <section key={hub.id} id={hub.id} className="scroll-mt-28 border-t border-line pt-16 first:border-0 first:pt-0">

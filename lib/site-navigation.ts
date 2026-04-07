@@ -4,6 +4,7 @@ import { SITE } from './site-config';
 export const PRIMARY_NAV = [
   { href: '/guides', label: 'Guides' },
   { href: '/comparisons', label: 'Comparisons' },
+  { href: '/insights', label: 'Insights' },
   { href: '/companies', label: 'Companies' },
   { href: '/editorial-standards', label: 'Editorial standards' },
 ] as const;
@@ -14,6 +15,7 @@ export const SECONDARY_NAV = [{ href: '/advertise', label: 'Advertise' }] as con
 export const FOOTER_PRIMARY = [
   { href: '/guides', label: 'Guides' },
   { href: '/comparisons', label: 'Comparisons' },
+  { href: '/insights', label: 'Insights' },
   { href: '/companies', label: 'Companies' },
   { href: '/editorial-standards', label: 'Editorial standards' },
   { href: '/advertise', label: 'Advertise' },

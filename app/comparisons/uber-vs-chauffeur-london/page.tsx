@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/shared/Header';
 import Footer from '@/components/shared/Footer';
 import RelatedLinks from '@/components/editorial/RelatedLinks';
+import ClusterLinks from '@/components/editorial/ClusterLinks';
 
 export const metadata: Metadata = {
   title: 'Uber vs chauffeur in London',
@@ -207,6 +208,7 @@ export default function UberVsChauffeurLondonPage() {
               },
             ]}
           />
+          <ClusterLinks type="comparisons" />
         </article>
       </main>
       <Footer />

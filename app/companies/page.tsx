@@ -84,6 +84,31 @@ export default function CompaniesIndexPage() {
             </p>
           </div>
 
+          <section className="mt-12 border border-line bg-surface p-6 sm:p-8" aria-labelledby="companies-cluster-heading">
+            <h2 id="companies-cluster-heading" className="font-display text-xl font-semibold text-ink">
+              Cluster role: company reference layer
+            </h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-muted">
+              This hub supports editorial authority by grounding guides and comparisons in real market
+              participants. It is deliberately neutral: context pages first, conversion second.
+            </p>
+            <p className="mt-5 text-sm text-ink-muted">
+              Read with{' '}
+              <Link href="/guides" className="font-medium text-ink underline underline-offset-2">
+                guides
+              </Link>
+              ,{' '}
+              <Link href="/comparisons" className="font-medium text-ink underline underline-offset-2">
+                comparisons
+              </Link>
+              , and the{' '}
+              <Link href="/insights" className="font-medium text-ink underline underline-offset-2">
+                insights hub
+              </Link>
+              .
+            </p>
+          </section>
+
           <ul className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {operators.map((op) => (
               <li key={op.slug}>
