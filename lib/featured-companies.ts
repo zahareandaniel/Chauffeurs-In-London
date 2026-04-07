@@ -86,41 +86,41 @@ const companies: FeaturedCompany[] = [
     methodologyNote: TROUV_FOOTNOTE,
   },
   {
-    slug: 'tristar-worldwide',
-    name: 'Tristar Worldwide',
-    location: 'London & international programme work',
+    slug: 'carey',
+    name: 'Carey',
+    location: 'London & global programme coverage',
     tagline:
-      'Long-established chauffeur and executive ground brand readers meet in corporate RFPs, airport programmes, and cross-border travel discussions.',
-    serviceFocus: ['Airport transfers', 'Corporate programmes', 'Multi-city itineraries', 'Event support'],
+      'Executive ground transport brand familiar to corporate travel programmes, with chauffeur-style service and account-led booking in London alongside other business cities.',
+    serviceFocus: ['Airport transfers', 'Corporate programmes', 'Multi-city itineraries', 'Executive road moves'],
     badges: ['Profiled operator', 'Corporate', 'Airports'],
     editorialSummary:
-      'Tristar is one of the names finance and travel desks already hold in mind when “managed chauffeur” crosses borders. We profile it here as structural context for London buyers comparing single-city desks with programme-scale operators.',
+      'Carey is a name many travel managers already recognise when headquarters standardises on a single executive ground supplier across regions. We profile it here so London readers can place programme-scale operators next to single-city chauffeur desks on the same editorial grid.',
     websiteUrl: null,
     overview:
-      'Tristar Worldwide is widely recognised as a corporate chauffeur and ground transport specialist with London density and international programme language. Marketing and procurement materials typically stress vetted suppliers, account structures, and repeatability for roadshows and airport corridors. Our interest is descriptive: how this model behaves for readers shortlist-building, not a verdict on any one journey.',
+      'Carey operates in the global executive transportation segment: advance-booked cars, stated service classes, and account structures aimed at finance and travel desks rather than one-off app trips. In London it competes for mindshare with other premium private hire and chauffeur providers, but the product story is often multi-city consistency and centralised booking rails. This page is descriptive market context only; it is not an audit of every journey or a substitute for your own contracting and TfL checks.',
     locationsCovered: [
-      'London and UK airports with programme-style routing',
-      'Coverage framed around account and event use as much as ad-hoc retail',
+      'London and UK airports within programme and retail booking channels as described publicly',
+      'International cities where the group maintains executive ground coverage',
     ],
     airportExpertise: [
-      'Heathrow, Gatwick, City and other hubs within corporate travel norms',
-      'Meet-and-greet and hold-time assumptions common in managed travel',
+      'Heathrow, Gatwick, London City and other hubs under typical corporate travel patterns',
+      'Meet-and-greet and hold-time norms aligned with managed travel expectations',
     ],
     specialisms: [
       {
-        title: 'Programme buyers',
-        body: 'Useful reference when your brief is account-led, invoice-standardised, and expects escalation paths rather than app-only booking.',
+        title: 'Programme and travel-desk buyers',
+        body: 'Relevant when your organisation wants one named ground standard across London and other markets, with invoicing and escalation paths built for repeat use.',
       },
       {
-        title: 'International continuity',
-        body: 'Where headquarters already names a preferred ground standard, Tristar is often part of that vocabulary outside pure London-only operators.',
+        title: 'Contrast with local-only desks',
+        body: 'Useful benchmark when you compare global programme language with boutique London chauffeur operators that focus on a single metro.',
       },
     ],
     editorialNotes:
-      'Named as a real market participant readers will encounter in the wild. Profile copy is based on how the segment is generally understood, not on paid placement.',
+      'Included as a recognised participant in the executive ground segment. Copy reflects how the category is generally positioned in procurement; confirm live coverage, terms, and licensing for your own brief.',
     whyTheyStandOut: [
-      'Familiar to procurement teams benchmarking “chauffeur desk” vs “volume PHV”',
-      'Useful contrast to app-led and single-garage London specialists on this grid',
+      'Gives readers a familiar programme-scale reference alongside London-centric names on this shortlist',
+      'Illustrates how global account narratives differ from single-garage chauffeur positioning',
     ],
     methodologyNote: EDITORIAL_FOOTNOTE,
   },
