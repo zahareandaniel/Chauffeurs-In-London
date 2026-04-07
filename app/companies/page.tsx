@@ -6,9 +6,10 @@ import { getMarketOperators } from '@/lib/market-operators';
 import { MarketOperatorHomeCard } from '@/components/editorial/MarketOperatorHomeCard';
 
 export const metadata: Metadata = {
-  title: 'Recognised market operators',
+  title: 'Recognised Chauffeur Operators in London',
   description:
     'Editorial context on major chauffeur and ground-transport brands referenced across our London guides. Not rankings, not paid listings.',
+  alternates: { canonical: '/companies' },
 };
 
 export default function CompaniesIndexPage() {

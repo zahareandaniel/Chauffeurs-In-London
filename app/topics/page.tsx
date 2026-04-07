@@ -6,9 +6,10 @@ import { JOURNAL_TOPICS } from '@/lib/journal-taxonomy';
 import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Topics',
+  title: 'Journal Topics: London Chauffeur Coverage',
   description:
     'Editorial topics covering London chauffeurs: airports, corporate travel, weddings, events, and industry analysis, curated by the Chauffeurs in London desk.',
+  alternates: { canonical: '/topics' },
 };
 
 export default function TopicsPage() {

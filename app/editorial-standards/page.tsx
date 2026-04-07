@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Editorial standards',
   description:
     'What this platform covers, how companies are assessed, and how editorial independence is maintained for London executive transport coverage.',
+  alternates: { canonical: '/editorial-standards' },
 };
 
 export default function EditorialStandardsPage() {

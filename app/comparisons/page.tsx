@@ -6,9 +6,10 @@ import ComparisonCard from '@/components/editorial/ComparisonCard';
 import { PILLAR_COMPARISONS } from '@/lib/pillar-content';
 
 export const metadata: Metadata = {
-  title: 'Comparisons',
+  title: 'Chauffeur and Ride-Hail Comparisons',
   description:
     'Editorial comparisons of chauffeur, ride-hail, and platform models in London, written for procurement and travel audiences.',
+  alternates: { canonical: '/comparisons' },
 };
 
 export default function ComparisonsIndexPage() {

@@ -12,9 +12,10 @@ import { getEditorsPicks } from '@/lib/editor-picks';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'Journal',
+  title: 'Journal: Chauffeur and Executive Travel Analysis',
   description:
     'Guides and analysis on London chauffeurs, airport transfers, executive travel, and events, edited as long-form journalism, not SEO filler.',
+  alternates: { canonical: '/blog' },
 };
 
 const PAGE_SIZE = 10;

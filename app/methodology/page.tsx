@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'How companies are selected',
   description:
     'How Chauffeurs in London selects featured operators and frames market context pages. Not an open directory, not pay-to-list.',
+  alternates: { canonical: '/methodology' },
 };
 
 const CRITERIA = [

@@ -4,9 +4,10 @@ import Footer from '@/components/shared/Footer';
 import { SITE } from '@/lib/site-config';
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'Contact the Editorial Desk',
   description:
     'Reach the editorial desk for Chauffeurs in London: reader notes, corrections, and operator inquiries.',
+  alternates: { canonical: '/contact' },
 };
 
 export default function ContactPage() {

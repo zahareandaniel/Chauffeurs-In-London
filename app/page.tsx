@@ -11,9 +11,10 @@ import { PILLAR_GUIDES, PILLAR_COMPARISONS } from '@/lib/pillar-content';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Executive Ground Transport in London',
   description:
     'Independent editorial coverage of London executive ground transport: guides, comparisons, and recognised operators without directory noise.',
+  alternates: { canonical: '/' },
 };
 
 export default function HomePage() {

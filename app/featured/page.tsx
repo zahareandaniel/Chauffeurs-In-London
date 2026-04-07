@@ -6,9 +6,10 @@ import Link from 'next/link';
 import { getFeaturedCompanies } from '@/lib/featured-companies';
 
 export const metadata: Metadata = {
-  title: 'Featured operators',
+  title: 'Featured Chauffeur Operator Profiles',
   description:
     'Editorial profiles of selected London chauffeur operators. Inclusion is curated against published standards, not sold as directory placement.',
+  alternates: { canonical: '/featured' },
 };
 
 export default function FeaturedPage() {

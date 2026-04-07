@@ -7,9 +7,10 @@ import GuideCard from '@/components/editorial/GuideCard';
 import { PILLAR_GUIDES } from '@/lib/pillar-content';
 
 export const metadata: Metadata = {
-  title: 'Guides index',
+  title: 'London Chauffeur Market Guides',
   description:
     'Pillar market guides plus editorial hubs for airports, corporate travel, weddings, and journal pieces on London executive transport.',
+  alternates: { canonical: '/guides' },
 };
 
 export default function GuidesIndexPage() {

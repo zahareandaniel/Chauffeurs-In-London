@@ -6,9 +6,10 @@ import FeaturedCompanyCard from '@/components/editorial/FeaturedCompanyCard';
 import { getEditorsPicks } from '@/lib/editor-picks';
 
 export const metadata: Metadata = {
-  title: 'Chauffeur services in London · featured shortlist',
+  title: 'Chauffeur Services in London: Editorial Shortlist',
   description:
     'Editorial shortlist of London chauffeur and private-hire operators. Compare profiles on equal terms, with no paid ranking.',
+  alternates: { canonical: '/chauffeur-services' },
 };
 
 export default function ChauffeurServicesPage() {

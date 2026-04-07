@@ -9,5 +9,5 @@ export const SITE = {
 } as const;
 
 export function siteUrl(): string {
-  return process.env.NEXT_PUBLIC_APP_URL || 'https://chauffeursinlondon.com';
+  return process.env.NEXT_PUBLIC_APP_URL || 'https://www.chauffeursinlondon.co.uk';
 }
