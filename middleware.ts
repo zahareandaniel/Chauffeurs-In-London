@@ -7,12 +7,14 @@ const CANONICAL_HOST = 'www.chauffeursinlondon.co.uk';
 /** Google Search Console HTML verification must be 200 on the exact host/path (no redirect). */
 const isGoogleSiteVerificationPath = (pathname: string) =>
   /^\/google[0-9a-z]+\.html$/i.test(pathname);
+const isSearchConsoleCrawlerPath = (pathname: string) =>
+  pathname === '/sitemap.xml' || pathname === '/robots.txt';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const host = request.headers.get('host')?.split(':')[0]?.toLowerCase();
 
-  if (host === APEX_HOST && !isGoogleSiteVerificationPath(pathname)) {
+  if (host === APEX_HOST && !isGoogleSiteVerificationPath(pathname) && !isSearchConsoleCrawlerPath(pathname)) {
     const url = request.nextUrl.clone();
     url.hostname = CANONICAL_HOST;
     url.protocol = 'https:';
