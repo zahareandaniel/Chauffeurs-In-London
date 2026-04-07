@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "chauffeursinlondon.co.uk" }],
+      "destination": "https://www.chauffeursinlondon.co.uk/:path*",
+      "permanent": true
+    }
+  ]
+}

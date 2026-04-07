@@ -65,7 +65,9 @@ export function GET() {
 
   return new Response(xml, {
     headers: {
-      'Content-Type': 'application/xml; charset=utf-8',
+      // text/xml + nosniff: Safari often renders application/xml as a text dump; crawlers accept both.
+      'Content-Type': 'text/xml; charset=utf-8',
+      'X-Content-Type-Options': 'nosniff',
       'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
     },
   });
