@@ -4,17 +4,21 @@ import type { NextRequest } from 'next/server';
 const APEX_HOST = 'chauffeursinlondon.co.uk';
 const CANONICAL_HOST = 'www.chauffeursinlondon.co.uk';
 
+/** Google Search Console HTML verification must be 200 on the exact host/path (no redirect). */
+const isGoogleSiteVerificationPath = (pathname: string) =>
+  /^\/google[0-9a-z]+\.html$/i.test(pathname);
+
 export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
   const host = request.headers.get('host')?.split(':')[0]?.toLowerCase();
-  if (host === APEX_HOST) {
+
+  if (host === APEX_HOST && !isGoogleSiteVerificationPath(pathname)) {
     const url = request.nextUrl.clone();
     url.hostname = CANONICAL_HOST;
     url.protocol = 'https:';
     url.port = '';
     return NextResponse.redirect(url, 308);
   }
-
-  const { pathname } = request.nextUrl;
 
   if (pathname.startsWith('/admin')) {
     const adminCookie = request.cookies.get('admin_auth');
