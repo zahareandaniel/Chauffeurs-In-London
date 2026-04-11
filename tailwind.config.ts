@@ -10,23 +10,23 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: '#0c1118',
-          muted: '#3e4756',
-          subtle: '#5c6575',
+          DEFAULT: '#1c1917',
+          muted: '#44403c',
+          subtle: '#57534e',
         },
         paper: {
-          DEFAULT: '#e4eaf2',
-          warm: '#d6dee8',
-          edge: '#c5cedc',
-          deep: '#cad3df',
+          DEFAULT: '#ebe6da',
+          warm: '#e0d9ca',
+          edge: '#cfc6b3',
+          deep: '#d4cbb8',
         },
-        surface: '#f0f3f8',
-        line: '#b8c2d4',
-        hairline: 'rgba(12, 17, 24, 0.08)',
+        surface: '#f7f4eb',
+        line: '#c9c0ad',
+        hairline: 'rgba(28, 25, 23, 0.08)',
         accent: {
-          DEFAULT: '#3730a3',
-          muted: '#4f46e5',
-          hover: '#312e81',
+          DEFAULT: '#0f766e',
+          muted: '#14b8a6',
+          hover: '#115e59',
         },
       },
       fontFamily: {
@@ -55,35 +55,35 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
-            color: '#3e4756',
+            color: '#44403c',
             fontFamily: 'var(--font-body), system-ui, sans-serif',
             maxWidth: '45rem',
             h1: {
               fontFamily: 'var(--font-display), Georgia, serif',
-              color: '#0c1118',
+              color: '#1c1917',
               fontWeight: '600',
             },
             h2: {
               fontFamily: 'var(--font-display), Georgia, serif',
-              color: '#0c1118',
+              color: '#1c1917',
               fontWeight: '600',
               marginTop: '2em',
             },
             h3: {
               fontFamily: 'var(--font-display), Georgia, serif',
-              color: '#0c1118',
+              color: '#1c1917',
               fontWeight: '600',
             },
             a: {
-              color: '#3730a3',
+              color: '#0f766e',
               textDecoration: 'underline',
               textDecorationThickness: '1px',
               textUnderlineOffset: '3px',
             },
-            strong: { color: '#0c1118', fontWeight: '600' },
+            strong: { color: '#1c1917', fontWeight: '600' },
             blockquote: {
-              borderLeftColor: '#3730a3',
-              color: '#3e4756',
+              borderLeftColor: '#0f766e',
+              color: '#44403c',
               fontStyle: 'normal',
             },
           },
