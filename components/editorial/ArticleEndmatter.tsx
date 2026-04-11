@@ -56,7 +56,7 @@ export default function ArticleEndmatter({ currentSlug }: Props) {
           Editorial independence
         </p>
         <p className="mt-3 text-sm leading-relaxed text-ink-muted">
-          Market context pages describe how brands are generally understood; they are not
+          Market context pages describe how brands are generally understood. They are not
           endorsements. Featured profiles follow the desk&apos;s{' '}
           <Link href="/methodology" className="font-medium text-ink underline underline-offset-2">
             selection methodology

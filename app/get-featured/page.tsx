@@ -22,7 +22,7 @@ const STEPS = [
   },
   {
     title: 'Decision',
-    body: 'If there is a fit, we may request a short call. Declines are private; we do not comment on why a name is absent.',
+    body: 'If there is a fit, we may request a short call. Declines are private. We do not comment on why a name is absent.',
   },
 ];
 
@@ -139,7 +139,7 @@ export default function GetFeaturedPage() {
               <h2 className="font-display mt-4 text-2xl font-medium text-ink">Submit your desk</h2>
               <p className="mt-6 text-sm leading-relaxed text-ink-muted">
                 The fields mirror what we need to triage quickly. If your story is credible, we will
-                read it carefully; if volume is high, silence may simply mean timing.
+                read it carefully. If volume is high, silence may simply mean timing.
               </p>
               <p className="mt-6 text-sm text-ink-muted">
                 Read{' '}

@@ -16,8 +16,8 @@ export default async function EditArticlePage({ params }: { params: { id: string
   if (error || !article) notFound();
 
   return (
-    <div className="min-h-screen bg-cream">
-      <div className="bg-navy px-6 py-4 flex items-center justify-between">
+    <div className="min-h-screen bg-paper">
+      <div className="flex items-center justify-between border-b border-line bg-ink px-6 py-4">
         <span className="font-display text-white text-lg font-semibold">
           Chauffeurs in London · Admin
         </span>
@@ -28,12 +28,12 @@ export default async function EditArticlePage({ params }: { params: { id: string
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex items-center justify-between mb-8">
-          <h1 className="font-display text-navy text-3xl font-semibold">Edit Article</h1>
+          <h1 className="font-display text-3xl font-semibold text-ink">Edit Article</h1>
           {article.status === 'published' && (
             <Link
               href={`/blog/${article.slug}`}
               target="_blank"
-              className="text-gold text-sm hover:underline"
+              className="text-sm text-accent hover:underline"
             >
               View live →
             </Link>

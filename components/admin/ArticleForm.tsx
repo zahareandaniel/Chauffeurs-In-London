@@ -136,26 +136,26 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
       {/* Title + Slug */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm font-semibold text-navy mb-1">Title *</label>
+          <label className="block text-sm font-semibold text-ink mb-1">Title *</label>
           <input
             type="text"
             name="title"
             value={form.title}
             onChange={handleTitleChange}
             required
-            className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm"
+            className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm"
             placeholder="Article title"
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-navy mb-1">Slug *</label>
+          <label className="block text-sm font-semibold text-ink mb-1">Slug *</label>
           <input
             type="text"
             name="slug"
             value={form.slug}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm font-mono"
+            className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm font-mono"
             placeholder="url-friendly-slug"
           />
         </div>
@@ -163,26 +163,26 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
 
       {/* Excerpt */}
       <div>
-        <label className="block text-sm font-semibold text-navy mb-1">Excerpt</label>
+        <label className="block text-sm font-semibold text-ink mb-1">Excerpt</label>
         <textarea
           name="excerpt"
           value={form.excerpt}
           onChange={handleChange}
           rows={2}
-          className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm"
+          className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm"
           placeholder="Short summary shown on blog cards"
         />
       </div>
 
       {/* Cover Image */}
       <div>
-        <label className="block text-sm font-semibold text-navy mb-1">Cover Image URL</label>
+        <label className="block text-sm font-semibold text-ink mb-1">Cover Image URL</label>
         <input
           type="url"
           name="cover_image_url"
           value={form.cover_image_url}
           onChange={handleChange}
-          className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm"
+          className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm"
           placeholder="https://..."
         />
       </div>
@@ -190,12 +190,12 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
       {/* Category + Keyword + Status */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <div>
-          <label className="block text-sm font-semibold text-navy mb-1">Category</label>
+          <label className="block text-sm font-semibold text-ink mb-1">Category</label>
           <select
             name="category"
             value={form.category}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm bg-white"
+            className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm bg-white"
           >
             <option value="">Select category</option>
             {CATEGORIES.map((c) => (
@@ -204,23 +204,23 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
           </select>
         </div>
         <div>
-          <label className="block text-sm font-semibold text-navy mb-1">Focus Keyword</label>
+          <label className="block text-sm font-semibold text-ink mb-1">Focus Keyword</label>
           <input
             type="text"
             name="focus_keyword"
             value={form.focus_keyword}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm"
+            className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm"
             placeholder="chauffeur services london"
           />
         </div>
         <div>
-          <label className="block text-sm font-semibold text-navy mb-1">Status</label>
+          <label className="block text-sm font-semibold text-ink mb-1">Status</label>
           <select
             name="status"
             value={form.status}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm bg-white"
+            className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm bg-white"
           >
             <option value="draft">Draft</option>
             <option value="published">Published</option>
@@ -230,38 +230,38 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
 
       {/* SEO */}
       <div className="border border-gray-200 p-5 space-y-4">
-        <h3 className="font-display text-navy text-lg font-semibold">SEO</h3>
+        <h3 className="font-display text-ink text-lg font-semibold">SEO</h3>
         <div>
-          <label className="block text-sm font-semibold text-navy mb-1">Meta Title</label>
+          <label className="block text-sm font-semibold text-ink mb-1">Meta Title</label>
           <input
             type="text"
             name="meta_title"
             value={form.meta_title}
             onChange={handleChange}
-            className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm"
+            className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm"
             placeholder="SEO title tag (60 chars recommended)"
             maxLength={70}
           />
-          <p className="text-xs text-navy/40 mt-1">{form.meta_title.length}/70 characters</p>
+          <p className="text-xs text-ink/40 mt-1">{form.meta_title.length}/70 characters</p>
         </div>
         <div>
-          <label className="block text-sm font-semibold text-navy mb-1">Meta Description</label>
+          <label className="block text-sm font-semibold text-ink mb-1">Meta Description</label>
           <textarea
             name="meta_description"
             value={form.meta_description}
             onChange={handleChange}
             rows={2}
-            className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm"
+            className="w-full border border-gray-300 px-3 py-2 text-ink focus:outline-none focus:border-accent text-sm"
             placeholder="SEO meta description (155 chars recommended)"
             maxLength={165}
           />
-          <p className="text-xs text-navy/40 mt-1">{form.meta_description.length}/165 characters</p>
+          <p className="text-xs text-ink/40 mt-1">{form.meta_description.length}/165 characters</p>
         </div>
       </div>
 
       {/* Markdown editor */}
       <div>
-        <label className="block text-sm font-semibold text-navy mb-2">Content (Markdown) *</label>
+        <label className="block text-sm font-semibold text-ink mb-2">Content (Markdown) *</label>
         <div data-color-mode="light">
           <MDEditor
             value={form.content}
@@ -274,7 +274,7 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
 
       {/* Actions */}
       <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
-        <button type="submit" disabled={saving} className="btn-gold">
+        <button type="submit" disabled={saving} className="btn-primary">
           {saving ? 'Saving…' : mode === 'create' ? 'Create Article' : 'Save Changes'}
         </button>
 
@@ -283,7 +283,7 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
             type="button"
             onClick={handlePublishToggle}
             disabled={saving}
-            className={article.status === 'published' ? 'btn-outline' : 'btn-navy'}
+            className={article.status === 'published' ? 'btn-outline' : 'btn-accent'}
           >
             {article.status === 'published' ? 'Unpublish' : 'Publish'}
           </button>
@@ -292,7 +292,7 @@ export default function ArticleForm({ article, mode }: ArticleFormProps) {
         <button
           type="button"
           onClick={() => router.back()}
-          className="text-navy/60 text-sm font-body hover:text-navy"
+          className="text-ink/60 text-sm font-body hover:text-ink"
         >
           Cancel
         </button>

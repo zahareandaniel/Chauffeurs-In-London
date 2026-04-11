@@ -82,7 +82,7 @@ export default function ExecutiveTransportLondonPage() {
                     company context pages
                   </Link>{' '}
                   to understand how a participant is positioned: platform, volume operator, private desk, or
-                  brokered programme. None of those labels is inherently superior; fit depends on route,
+                  brokered programme. None of those labels is inherently superior. Fit depends on route,
                   account governance, and how your organisation handles disruption.
                 </p>
               </section>

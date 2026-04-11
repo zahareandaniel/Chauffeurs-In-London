@@ -43,7 +43,7 @@ export default function UberVsChauffeurLondonPage() {
             This is not a verdict on a single company. It is a comparison between two recurring ways
             people move in the capital: app-led platforms with wide supply, and relationship-led
             chauffeur desks built around planned arrivals, waits, and presentation. Most frequent
-            travellers use both at different moments; the question is which one matches a given leg.
+            travellers use both at different moments. The question is which one matches a given leg.
           </p>
 
           <div className="mt-14 space-y-12 text-base leading-[1.85] text-ink-muted">
@@ -65,7 +65,7 @@ export default function UberVsChauffeurLondonPage() {
                 <Link href="/companies/trouv-chauffeurs" className="font-medium text-ink underline underline-offset-2">
                   Trouv Chauffeurs
                 </Link>
-                ; names such as{' '}
+                . Names such as{' '}
                 <Link href="/companies/ichauffeur" className="font-medium text-ink underline underline-offset-2">
                   iChauffeur
                 </Link>{' '}
@@ -90,7 +90,7 @@ export default function UberVsChauffeurLondonPage() {
               <h2 className="font-display text-xl font-medium text-ink">2. What each service is</h2>
               <p className="mt-4">
                 <span className="font-medium text-ink">Uber (and similar marketplaces).</span>{' '}
-                On-demand matching via an app; economics reflect availability and distance; the unit of
+                On-demand matching via an app. Economics reflect availability and distance. The unit of
                 service is typically a completed trip rather than a managed itinerary.
               </p>
               <p className="mt-4">
@@ -113,7 +113,7 @@ export default function UberVsChauffeurLondonPage() {
                 <li className="border-l-2 border-line pl-5">
                   <p className="font-medium text-ink">Reliability</p>
                   <p className="mt-1">
-                    Uber’s strength is broad supply; variance between drivers is inherent. Chauffeur’s
+                    Uber’s strength is broad supply. Variance between drivers is inherent. Chauffeur’s
                     strength is procedural: when something breaks, you call one desk, not a ticket queue.
                   </p>
                 </li>
@@ -137,7 +137,7 @@ export default function UberVsChauffeurLondonPage() {
                   <p className="mt-2">
                     Presentation, luggage handling, and client-facing choreography are design centres for
                     chauffeur. Throughput and coverage are design centres for mass-market apps. Neither is
-                    trivial; they aim at different jobs.
+                    trivial. They aim at different jobs.
                   </p>
                 </li>
               </ul>

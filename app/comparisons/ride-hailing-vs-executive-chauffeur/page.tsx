@@ -42,15 +42,15 @@ export default function RideHailingVsExecutiveChauffeurPage() {
             intro={
               <>
                 Ride-hailing is built for throughput and coverage. Executive chauffeur is built for plans
-                that do not survive variance. In London both coexist in almost every large organisation;
-                policy should describe the job before it names a vendor.
+                that do not survive variance. In London both coexist in almost every large organisation.
+                Policy should describe the job before it names a vendor.
               </>
             }
           >
             <section>
               <h2 className="font-display text-xl font-semibold text-ink">Throughput versus choreography</h2>
               <p className="mt-4">
-                Apps match trips; chauffeur contracts choreograph days. If your risk is “we might wait ten
+                Apps match trips. Chauffeur contracts choreograph days. If your risk is “we might wait ten
                 extra minutes”, ride-hail is often sufficient. If your risk is “the investor sees the
                 wrong car”, you are in a different category. See{' '}
                 <Link href="/companies/uber-executive" className="font-medium text-ink underline underline-offset-2">
@@ -67,7 +67,7 @@ export default function RideHailingVsExecutiveChauffeurPage() {
             <section>
               <h2 className="font-display text-xl font-semibold text-ink">Drivers, vehicles, and presentation</h2>
               <p className="mt-4">
-                Marketplaces tolerate variance by design; chauffeur desks narrow it with stated grades
+                Marketplaces tolerate variance by design. Chauffeur desks narrow it with stated grades
                 and behaviour norms. Neither replaces your obligation to verify licensing and insurance.
               </p>
             </section>
@@ -75,8 +75,8 @@ export default function RideHailingVsExecutiveChauffeurPage() {
             <section>
               <h2 className="font-display text-xl font-semibold text-ink">Booking and liability shapes</h2>
               <p className="mt-4">
-                Ride-hail pricing reacts to demand; chauffeur programmes often quote structured fees that
-                finance teams can budget against. The right choice is seldom “cheaper”; it is whether the
+                Ride-hail pricing reacts to demand. Chauffeur programmes often quote structured fees that
+                finance teams can budget against. The right choice is seldom “cheaper”. It is whether the
                 pricing shape matches the trip’s political cost.
               </p>
             </section>

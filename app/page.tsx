@@ -28,18 +28,20 @@ export default function HomePage() {
       <main>
         <section className="hero-rule border-b border-line bg-paper">
           <div className="max-w-content mx-auto px-4 py-section sm:px-6 lg:px-8">
-            <h1 className="font-display max-w-4xl text-display-2xl font-semibold tracking-tight text-ink">
-              The reference point for executive ground transport in London.
-            </h1>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
-              Independent editorial coverage of the chauffeur market, service standards, and premium
-              mobility.
-            </p>
-            <p className="mt-10">
-              <Link href="/insights" className="link-underline text-sm font-semibold text-ink">
-                Start with the insights hub
-              </Link>
-            </p>
+            <div className="max-w-4xl border-l-[3px] border-accent pl-6 sm:pl-8">
+              <h1 className="font-display text-display-2xl font-semibold tracking-tight text-ink">
+                The reference point for executive ground transport in London.
+              </h1>
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-ink-muted sm:text-xl">
+                Independent editorial coverage of the chauffeur market, service standards, and premium
+                mobility.
+              </p>
+              <p className="mt-10">
+                <Link href="/insights" className="link-underline text-sm font-semibold">
+                  Start with the insights hub
+                </Link>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -130,7 +132,7 @@ export default function HomePage() {
           <div className="max-w-editorial mx-auto">
             <h2 className="font-display text-display-lg font-semibold text-ink">Editorial discipline</h2>
             <p className="mt-4 text-sm leading-relaxed text-ink-muted">
-              Coverage is selective. Company pages describe market fit and trade-offs; they are not open
+              Coverage is selective. Company pages describe market fit and trade-offs. They are not open
               listings, and recognition is not sold as a directory product. Comparisons explain service
               classes rather than declaring winners. When commercial formats launch, they will carry
               clear labels.
@@ -149,7 +151,7 @@ export default function HomePage() {
               <h2 className="font-display text-xl font-semibold text-ink">Working with this platform</h2>
               <p className="mt-4 text-sm leading-relaxed text-ink-muted">
                 For brands and operators evaluating category presence, media adjacency, or partner
-                formats, we maintain a selective conversation. No self-serve rate card; fit and disclosure
+                formats, we maintain a selective conversation. No self-serve rate card. Fit and disclosure
                 come first.
               </p>
               <Link href="/advertise" className="btn-secondary mt-6 inline-flex text-[0.65rem]">
@@ -160,7 +162,7 @@ export default function HomePage() {
               <h2 className="font-display text-xl font-semibold text-ink">Editorial review</h2>
               <p className="mt-4 text-sm leading-relaxed text-ink-muted">
                 Companies seeking an editorial assessment of fit may request consideration. Inclusion is
-                not transactional; we publish only where the desk sees reader value.
+                not transactional. We publish only where the desk sees reader value.
               </p>
               <Link href="/get-featured" className="btn-secondary mt-6 inline-flex text-[0.65rem]">
                 Request editorial review

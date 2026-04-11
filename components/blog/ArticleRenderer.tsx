@@ -12,7 +12,7 @@ export default function ArticleRenderer({ content }: ArticleRendererProps) {
     <div
       className="prose prose-lg max-w-readable prose-headings:font-display prose-headings:font-medium
       prose-p:text-ink-muted prose-p:leading-[1.78]
-      prose-a:text-ink prose-a:font-medium
+      prose-a:text-accent prose-a:font-medium prose-a:no-underline hover:prose-a:underline
       prose-strong:text-ink prose-strong:font-semibold
       prose-li:text-ink-muted
       prose-blockquote:border-l-ink/25 prose-blockquote:bg-paper-warm prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic

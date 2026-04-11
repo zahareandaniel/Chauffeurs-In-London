@@ -39,7 +39,7 @@ export default function ProfessionalChauffeurStandardsPage() {
                   work. Executive marketing does not replace those checks. Buyers should confirm operator
                   credentials as they would for any high-stakes category: operator licence, driver licence,
                   vehicle suitability, and insurance appropriate to hire-and-reward. Our pages do not
-                  audit individual documents; they contextualise market participants editorially.
+                  audit individual documents. They contextualise market participants editorially.
                 </p>
               </section>
 
@@ -48,7 +48,7 @@ export default function ProfessionalChauffeurStandardsPage() {
                 <p className="mt-4">
                   Professional chauffeur service usually implies clean, well-presented vehicles matched to
                   the booked class, and drivers who understand meet-and-greet choreography, luggage
-                  handling, and discretion. Standards vary by house style; what matters is that the
+                  handling, and discretion. Standards vary by house style. What matters is that the
                   contract or confirmation states them. Vague promises are a poor substitute for written
                   scope on waits, substitutions, and dress expectations.
                 </p>

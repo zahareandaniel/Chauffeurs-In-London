@@ -41,7 +41,7 @@ export default function Footer() {
         <div className="divider-fine mt-12" />
 
         <p className="mt-8 text-xs text-ink-subtle">
-          © {year} {SITE.legalName}. Editorial content only; not legal or operational advice.
+          © {year} {SITE.legalName}. Editorial content only. It is not legal or operational advice.
         </p>
       </div>
     </footer>

@@ -29,7 +29,7 @@ const EDITORIAL_FOOTNOTE =
   'Editorial profile only. We do not link to this operator’s website from this publication. Readers should verify TfL licensing, insurance, and terms independently before booking.';
 
 const TROUV_FOOTNOTE =
-  'Featured partner profile: we link to Trouv Chauffeurs’ official site above as the programme’s named partner. Editorial standards still apply; this is not a guarantee of every future journey.';
+  'Featured partner profile: we link to Trouv Chauffeurs’ official site above as the programme’s named partner. Editorial standards still apply. This is not a guarantee of every future journey.';
 
 const companies: FeaturedCompany[] = [
   {
@@ -97,7 +97,7 @@ const companies: FeaturedCompany[] = [
       'Carey is a name many travel managers already recognise when headquarters standardises on a single executive ground supplier across regions. We profile it here so London readers can place programme-scale operators next to single-city chauffeur desks on the same editorial grid.',
     websiteUrl: null,
     overview:
-      'Carey operates in the global executive transportation segment: advance-booked cars, stated service classes, and account structures aimed at finance and travel desks rather than one-off app trips. In London it competes for mindshare with other premium private hire and chauffeur providers, but the product story is often multi-city consistency and centralised booking rails. This page is descriptive market context only; it is not an audit of every journey or a substitute for your own contracting and TfL checks.',
+      'Carey operates in the global executive transportation segment: advance-booked cars, stated service classes, and account structures aimed at finance and travel desks rather than one-off app trips. In London it competes for mindshare with other premium private hire and chauffeur providers, but the product story is often multi-city consistency and centralised booking rails. This page is descriptive market context only. It is not an audit of every journey or a substitute for your own contracting and TfL checks.',
     locationsCovered: [
       'London and UK airports within programme and retail booking channels as described publicly',
       'International cities where the group maintains executive ground coverage',
@@ -117,7 +117,7 @@ const companies: FeaturedCompany[] = [
       },
     ],
     editorialNotes:
-      'Included as a recognised participant in the executive ground segment. Copy reflects how the category is generally positioned in procurement; confirm live coverage, terms, and licensing for your own brief.',
+      'Included as a recognised participant in the executive ground segment. Copy reflects how the category is generally positioned in procurement. Confirm live coverage, terms, and licensing for your own brief.',
     whyTheyStandOut: [
       'Gives readers a familiar programme-scale reference alongside London-centric names on this shortlist',
       'Illustrates how global account narratives differ from single-garage chauffeur positioning',
@@ -172,7 +172,7 @@ const companies: FeaturedCompany[] = [
     serviceFocus: ['Executive travel', 'Airports', 'Roadshows', 'MPV & group where offered'],
     badges: ['Profiled operator', 'Executive travel', 'Airports'],
     editorialSummary:
-      'EG Chauffeurs sits among the London-area desks buyers name when they want chauffeur presentation without platform randomness. The profile documents typical positioning; it is not an audit of every journey.',
+      'EG Chauffeurs sits among the London-area desks buyers name when they want chauffeur presentation without platform randomness. The profile documents typical positioning. It is not an audit of every journey.',
     websiteUrl: null,
     overview:
       'EG Chauffeurs markets executive chauffeur hire with emphasis on punctuality, vehicle class, and client-facing discipline. In the London competitive set it behaves like other premium private hire desks: account work, airport turns, and multi-stop days when booked in advance. We treat it as a factual market reference for readers comparing similar-sounding offers.',

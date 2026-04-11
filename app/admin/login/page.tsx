@@ -29,23 +29,23 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-navy flex items-center justify-center px-4">
-      <div className="bg-white w-full max-w-sm p-8">
-        <h1 className="font-display text-navy text-2xl font-semibold mb-6">Admin Login</h1>
+    <div className="min-h-screen bg-paper flex items-center justify-center px-4">
+      <div className="w-full max-w-sm border border-line bg-surface p-8">
+        <h1 className="font-display text-2xl font-semibold text-ink mb-6">Admin Login</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-semibold text-navy mb-1">Password</label>
+            <label className="block text-sm font-semibold text-ink mb-1">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full border border-gray-300 px-3 py-2 text-navy focus:outline-none focus:border-gold text-sm"
+              className="w-full border border-line bg-white px-3 py-2 text-sm text-ink focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent"
               autoFocus
             />
           </div>
           {error && <p className="text-red-600 text-sm">{error}</p>}
-          <button type="submit" disabled={loading} className="btn-gold w-full">
+          <button type="submit" disabled={loading} className="btn-primary w-full">
             {loading ? 'Logging in…' : 'Log In'}
           </button>
         </form>

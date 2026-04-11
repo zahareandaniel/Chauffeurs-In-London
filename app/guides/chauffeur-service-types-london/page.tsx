@@ -138,7 +138,7 @@ export default function ChauffeurServiceTypesLondonPage() {
                 <Link href="/methodology" className="font-medium text-ink underline underline-offset-2">
                   methodology
                 </Link>
-                ; editorial rules on{' '}
+                , and editorial rules on{' '}
                 <Link href="/editorial-standards" className="font-medium text-ink underline underline-offset-2">
                   editorial standards
                 </Link>

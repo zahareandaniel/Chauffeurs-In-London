@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
-  --font-dm-sans: 'DM Sans', system-ui, sans-serif;
+  --font-display: 'Spectral', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
 }
 
 html {
@@ -14,9 +14,9 @@ html {
 }
 
 body {
-  background-color: #f3f1eb;
-  color: #0f1419;
-  font-family: var(--font-dm-sans);
+  background-color: #dde4ee;
+  color: #0c1118;
+  font-family: var(--font-body);
 }
 
 h1,
@@ -35,6 +35,9 @@ h6 {
   .btn-secondary {
     @apply inline-flex items-center justify-center border border-line bg-surface px-6 py-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-ink transition-colors hover:border-accent hover:bg-paper-warm;
   }
+  .btn-accent {
+    @apply inline-flex items-center justify-center border border-accent bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-accent-hover;
+  }
   .editorial-label {
     @apply text-[0.65rem] font-semibold uppercase tracking-[0.22em] text-ink-subtle;
   }
@@ -42,7 +45,7 @@ h6 {
     @apply h-px w-full bg-line;
   }
   .link-underline {
-    @apply text-ink underline decoration-line underline-offset-[5px] decoration-1 transition-colors hover:decoration-ink-muted;
+    @apply text-ink underline decoration-line underline-offset-[5px] decoration-1 transition-colors hover:decoration-accent hover:text-accent;
   }
   .card-editorial {
     @apply border border-line bg-surface transition-colors duration-200 hover:border-ink/20;
@@ -51,21 +54,15 @@ h6 {
     @apply inline-block border border-line bg-paper-warm px-2.5 py-1 text-[0.65rem] font-medium uppercase tracking-wider text-ink-muted;
   }
   .focus-ring {
-    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-ink focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper;
   }
   .hero-rule {
     @apply border-b border-line;
   }
   .prose-article {
-    @apply prose prose-lg max-w-readable prose-headings:font-display prose-headings:font-medium;
-  }
-  .btn-gold {
-    @apply bg-gold px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-gold-dark;
-  }
-  .btn-navy {
-    @apply bg-navy px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-navy-light;
+    @apply prose prose-lg max-w-readable prose-headings:font-display prose-headings:font-medium prose-a:text-accent;
   }
   .btn-outline {
-    @apply border border-gold px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-gold transition-colors duration-200 hover:bg-gold hover:text-white;
+    @apply border border-accent px-6 py-3 font-body text-sm font-semibold uppercase tracking-wide text-accent transition-colors duration-200 hover:bg-accent hover:text-white;
   }
 }

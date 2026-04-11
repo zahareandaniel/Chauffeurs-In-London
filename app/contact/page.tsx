@@ -20,7 +20,7 @@ export default function ContactPage() {
           <h1 className="font-display mt-6 text-display-lg font-medium text-ink">Contact</h1>
           <p className="mt-8 text-base leading-relaxed text-ink-muted">
             For corrections, reader feedback, media, or commercial context unrelated to driver
-            recruitment, use the email below. We aim to read everything; response time varies.
+            recruitment, use the email below. We aim to read everything. Response time varies.
           </p>
           <div className="mt-12 border border-line bg-white p-8">
             <p className="text-xs font-semibold uppercase tracking-[0.16em] text-ink-subtle">

@@ -24,9 +24,9 @@ export default async function AdminArticlesPage({
   const { data: articles, error } = await query;
 
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-paper">
       {/* Admin header */}
-      <div className="bg-navy px-6 py-4 flex items-center justify-between">
+      <div className="flex items-center justify-between border-b border-line bg-ink px-6 py-4">
         <span className="font-display text-white text-lg font-semibold">
           Chauffeurs in London · Admin
         </span>
@@ -37,8 +37,8 @@ export default async function AdminArticlesPage({
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex items-center justify-between mb-8">
-          <h1 className="font-display text-navy text-3xl font-semibold">Articles</h1>
-          <Link href="/admin/articles/new" className="btn-gold">
+          <h1 className="font-display text-3xl font-semibold text-ink">Articles</h1>
+          <Link href="/admin/articles/new" className="btn-primary">
             + New Article
           </Link>
         </div>
@@ -51,8 +51,8 @@ export default async function AdminArticlesPage({
               href={`/admin/articles?status=${tab}`}
               className={`px-4 py-2 text-sm font-semibold capitalize transition-colors ${
                 statusFilter === tab
-                  ? 'border-b-2 border-gold text-gold'
-                  : 'text-navy/50 hover:text-navy'
+                  ? 'border-b-2 border-accent text-accent'
+                  : 'text-ink/50 hover:text-ink'
               }`}
             >
               {tab}
@@ -73,10 +73,10 @@ export default async function AdminArticlesPage({
             ))}
           </div>
         ) : (
-          <div className="text-center py-16 text-navy/40">
+          <div className="py-16 text-center text-ink/40">
             <p className="font-display text-2xl mb-2">No articles yet</p>
             <p className="text-sm">
-              <Link href="/admin/articles/new" className="text-gold hover:underline">
+              <Link href="/admin/articles/new" className="text-accent hover:underline">
                 Create your first article →
               </Link>
             </p>

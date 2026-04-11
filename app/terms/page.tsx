@@ -20,7 +20,7 @@ export default function TermsPage() {
           </p>
           <p className="text-ink-muted">
             You agree not to misuse the site or attempt to interfere with its operation. We may
-            update these terms; continued use constitutes acceptance of the current version. Replace
+            update these terms. Continued use constitutes acceptance of the current version. Replace
             with your jurisdiction-specific legal draft as needed.
           </p>
         </div>

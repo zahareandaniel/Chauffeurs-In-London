@@ -45,7 +45,7 @@ export default function WheelyVsChauffeurLondonPage() {
                 <Link href="/companies/wheely" className="font-medium text-ink underline underline-offset-2">
                   Wheely
                 </Link>{' '}
-                productises premium PHV through an app; a London chauffeur desk productises planning and
+                productises premium PHV through an app. A London chauffeur desk productises planning and
                 named accountability. Both can be correct on different legs of the same week.
               </>
             }
@@ -72,7 +72,7 @@ export default function WheelyVsChauffeurLondonPage() {
             <section>
               <h2 className="font-display text-xl font-semibold text-ink">Booking and reliability</h2>
               <p className="mt-4">
-                Apps excel at speed; desks excel at procedural safety nets. Dynamic supply versus
+                Apps excel at speed. Desks excel at procedural safety nets. Dynamic supply versus
                 dispatcher-led planning is the trade-off in plain terms, not a moral story about brands.
               </p>
             </section>
@@ -89,7 +89,7 @@ export default function WheelyVsChauffeurLondonPage() {
             <section>
               <h2 className="font-display text-xl font-semibold text-ink">Editorial perspective</h2>
               <p className="mt-4">
-                Wheely is a recognised participant in the premium app tier; chauffeur desks remain the
+                Wheely is a recognised participant in the premium app tier. Chauffeur desks remain the
                 structural answer when choreography is non-negotiable. Read{' '}
                 <Link href="/companies/wheely" className="font-medium text-ink underline underline-offset-2">
                   Wheely market context

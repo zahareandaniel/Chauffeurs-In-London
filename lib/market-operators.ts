@@ -42,7 +42,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
     overview:
       'Blacklane sits in the segment between ad-hoc ride-hail and bespoke local chauffeur desks. It aggregates professional-driver services through a central booking layer, which appeals to travel managers who need repeatability across airports and time zones rather than negotiating each market separately. In London it operates in the same competitive set as premium PHV and chauffeur operators but with productised pricing and route structures familiar to global programmes.',
     serviceModel:
-      'Technology platform connecting passengers with licensed partner fleets; advance booking and account features are central to the model.',
+      'Technology platform connecting passengers with licensed partner fleets. Advance booking and account features are central to the model.',
     locationsCovered: [
       'Global network city coverage',
       'Strong presence in major European & US business centres',
@@ -54,7 +54,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
       'Guests where consistency matters more than hyper-local tailoring',
     ],
     editorialNotes:
-      'We reference Blacklane when readers need vocabulary for “platform chauffeur” as distinct from single-city private hire. The desk does not audit their London supply daily; treat availability and vehicle class as questions to confirm at booking.',
+      'We reference Blacklane when readers need vocabulary for “platform chauffeur” as distinct from single-city private hire. The desk does not audit their London supply daily. Treat availability and vehicle class as questions to confirm at booking.',
     tradeoffs: [
       'Centralised product rules can simplify procurement but reduce room for truly bespoke routing',
       'Peak anomalies (closures, diversions) still depend on local partner execution',
@@ -87,7 +87,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
     overview:
       'Addison Lee has operated at meaningful scale in London for decades, enough history that many finance and events teams already hold an account. Its offer spans executive saloons through to larger people-movers, which makes it a useful reference when explaining how volume operators route airport work and corporate programmes differently from boutique chauffeur desks. It is not interchangeable with every premium chauffeur promise, but it is a serious structural presence in the market.',
     serviceModel:
-      'Private hire operator at scale with app, account, and dispatcher-led fulfilment; strong UK density.',
+      'Private hire operator at scale with app, account, and dispatcher-led fulfilment, with strong UK density.',
     locationsCovered: [
       'London & surrounding areas (primary strength)',
       'UK airports and intercity where network extends',
@@ -132,7 +132,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
     overview:
       'Bolt operates private hire matching in London alongside food and other mobility products in other markets. For London readers it sits in the same mental shelf as other large ride-hail apps: quick matching, upfront pricing habits that vary by demand, and a service class aimed at throughput more than bespoke chauffeur choreography. Procurement teams name it when comparing policy allowances, expensing rules, or traveller choice across competing apps.',
     serviceModel:
-      'Technology platform matching riders with TfL-licensed private hire drivers; tiered product options by city.',
+      'Technology platform matching riders with TfL-licensed private hire drivers, with tiered product options by city.',
     locationsCovered: [
       'London and other UK cities under local licensing',
       'European and other markets where the group operates ride services',
@@ -173,7 +173,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
     overview:
       'iChauffeur is part of the London landscape as a branded chauffeur operator: it sells classed vehicles, airport transfers, and occasion work with clearer executive norms than anonymous app matching. Readers encounter it when moving from generic “get a ride” search into booked chauffeur territory. It illustrates how a single operator brand behaves relative to platforms such as Blacklane and large-scale desks such as Addison Lee.',
     serviceModel:
-      'Operator-led private hire with direct booking channels and stated fleet positioning; relationship and repeat business matter more than pure marketplace throughput.',
+      'Operator-led private hire with direct booking channels and stated fleet positioning. Relationship and repeat business matter more than pure marketplace throughput.',
     locationsCovered: [
       'Greater London and main London airports as core messaging',
       'UK coverage where publicly described',
@@ -184,7 +184,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
       'Comparing boutique operator tone with app and volume PHV options',
     ],
     editorialNotes:
-      'Also profiled on our featured programme for readers who want full editorial depth; this market context page stays structural. We do not audit individual journeys.',
+      'Also profiled on our featured programme for readers who want full editorial depth. This market context page stays structural. We do not audit individual journeys.',
     tradeoffs: [
       'Capacity on peak days is still an operator question, not a commodity',
       'Bespoke detail depends on what you confirm at booking',
@@ -212,12 +212,12 @@ const MARKET_OPERATORS: MarketOperator[] = [
     cardLine:
       'Premium app-led proposition: quality tiers and experience design closer to executive expectations.',
     overview:
-      'Wheely markets itself as a step up in presentation and vehicle norms compared with general ride-hail, priced and productised accordingly. In London conversations it often appears when buyers want app convenience but resist the randomness of open-pool matching. The model still depends on supply availability and surge-like economics at busy moments; understanding those mechanics is part of using it responsibly for client-facing work.',
+      'Wheely markets itself as a step up in presentation and vehicle norms compared with general ride-hail, priced and productised accordingly. In London conversations it often appears when buyers want app convenience but resist the randomness of open-pool matching. The model still depends on supply availability and surge-like economics at busy moments. Understanding those mechanics is part of using it responsibly for client-facing work.',
     serviceModel:
-      'Mobile app booking with graded vehicle classes and partner-driver supply; technology-led UX.',
+      'Mobile app booking with graded vehicle classes and partner-driver supply, with technology-led UX.',
     locationsCovered: [
       'London (primary European city context for this profile)',
-      'Selected cities internationally; check live coverage for each itinerary',
+      'Selected cities internationally. Check live coverage for each itinerary',
     ],
     typicalUseCases: [
       'Same-day London moves where app speed matters but vehicle class must be controlled',
@@ -259,7 +259,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
     overview:
       'Savoya is often encountered when US-based travel managers export their preferred ground model into London itineraries. It functions closer to a managed category than to a single London PHV brand: relationships, stated vehicle classes, and billing rails matter as much as any one driver on a given day. In London it competes for mindshare with global platforms and with named local desks depending on how your programme sources supply.',
     serviceModel:
-      'Membership or account-led booking with central coordination; supply is fulfilled through partner operators rather than a single owned fleet label in every city.',
+      'Membership or account-led booking with central coordination. Supply is fulfilled through partner operators rather than a single owned fleet label in every city.',
     locationsCovered: [
       'London and other global business centres as described in programme materials',
       'Airport and intercity legs when booked through the same account structure',
@@ -281,7 +281,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
         'Useful when procurement wants a single contracted category for premium ground',
       ],
       limitations: [
-        'London execution still depends on partners; do not assume identical norms to every other city',
+        'London execution still depends on partners. Do not assume identical norms to every other city',
         'Retail buyers without an existing relationship may find direct operators simpler to compare',
       ],
       bestSuitedFor:
@@ -301,7 +301,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
     overview:
       'Trouv Chauffeurs sits in the segment of operator-led private hire where meet-and-greets, vehicle presentation, and itinerary slack are designed in rather than added as exceptions. The desk is structured around confirmed pricing disciplines, flight-aware pickups, and consistently presented drivers across London’s main airports. We cite it in airport and corporate guides when a concrete London example helps readers translate advice into a shortlist. Editorial profiling here reflects market relevance and partner transparency, not a performance guarantee on every future journey.',
     serviceModel:
-      'Direct booking with dispatcher-led planning; owned or contracted supply managed under one London-facing brand with stated vehicle classes and wait policies.',
+      'Direct booking with dispatcher-led planning. Owned or contracted supply is managed under one London-facing brand with stated vehicle classes and wait policies.',
     locationsCovered: [
       'Greater London and main capital airports',
       'Home Counties access and scheduled intercity by arrangement',
@@ -312,7 +312,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
       'Events and fixed-time venues where presentation and patience matter',
     ],
     editorialNotes:
-      'This profile sits on our editorial programme with a disclosed official-site link. Strengths and limits here are observational; your contract and TfL checks remain decisive.',
+      'This profile sits on our editorial programme with a disclosed official-site link. Strengths and limits here are observational. Your contract and TfL checks remain decisive.',
     tradeoffs: [
       'Capacity on peak days is still an operator question requiring early confirmation',
       'Bespoke choreography depends on what you book in writing, not generic marketing claims',
@@ -321,7 +321,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
       strengths: [
         'Clear executive-segment framing aligned with how finance and EA desks actually buy',
         'Breadth across London’s airport system without narrowing to a single hub',
-        'Appears alongside other market participants on the same analytical template',
+        'Appears alongside other market participants on the same editorial format',
       ],
       limitations: [
         'Not a substitute for your own licensing and insurance verification',
@@ -340,9 +340,9 @@ const MARKET_OPERATORS: MarketOperator[] = [
     cardLine:
       'Ubiquitous app-led transport: convenience and availability as the primary design goal.',
     overview:
-      'Uber is the default mental model for on-demand rides in most global cities. In chauffeur-industry writing it matters as contrast, not contempt: many executive buyers still use Uber for certain legs while commissioning dedicated chauffeur for others. Its strength is shallow wait times and predictable app economics at personal-trip scale; its fit weakens when name-board meet-and-greets, dress codes, or multi-hour holds are non-negotiable.',
+      'Uber is the default mental model for on-demand rides in most global cities. In chauffeur-industry writing it matters as contrast, not contempt: many executive buyers still use Uber for certain legs while commissioning dedicated chauffeur for others. Its strength is shallow wait times and predictable app economics at personal-trip scale. Its fit weakens when name-board meet-and-greets, dress codes, or multi-hour holds are non-negotiable.',
     serviceModel:
-      'Platform marketplace matching riders with independent drivers; product tiers (e.g. UberXL, premium options) vary by market.',
+      'Platform marketplace matching riders with independent drivers. Product tiers (e.g. UberXL, premium options) vary by market.',
     locationsCovered: ['Extensive London & UK coverage', 'Global cities with local regulatory frameworks'],
     typicalUseCases: [
       'Informal or personal travel where schedule flexibility is high',
@@ -350,7 +350,7 @@ const MARKET_OPERATORS: MarketOperator[] = [
       'Benchmark discussions when comparing “app” vs “chauffeur desk” economics',
     ],
     editorialNotes:
-      'Referenced so readers can place Uber in the same landscape as dedicated chauffeur: different job-to-be-done, often coexisting in one traveller’s week. Not framed as inferior; framed as a different service class.',
+      'Referenced so readers can place Uber in the same landscape as dedicated chauffeur: different job-to-be-done, often coexisting in one traveller’s week. Not framed as inferior. It is framed as a different service class.',
     tradeoffs: [
       'Airport meet-and-greet choreography is not the platform’s native design centre',
       'High-stakes client collections usually warrant a specialist contract and single point of contact',

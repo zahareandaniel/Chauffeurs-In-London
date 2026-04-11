@@ -9,7 +9,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-line border-t-[3px] border-t-accent bg-surface/95 backdrop-blur-sm">
       <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-[3.75rem] items-center justify-between gap-4">
           <Link href="/" className="group focus-ring shrink-0 rounded-sm" aria-label={`${SITE.name} home`}>

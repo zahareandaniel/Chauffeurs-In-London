@@ -22,8 +22,8 @@ export default function GuidesIndexPage() {
           <p className="editorial-label">Guides</p>
           <h1 className="font-display mt-6 text-display-xl font-semibold text-ink">Market guides</h1>
           <p className="mt-8 max-w-editorial text-lg text-ink-muted">
-            Pillar explainers interpret how London executive ground transport is bought and structured;
-            hubs below group related journal entries for airport and events readers.
+            Pillar explainers interpret how London executive ground transport is bought and structured.
+            Hubs below group related journal entries for airport and events readers.
           </p>
 
           <section className="mt-14" aria-labelledby="pillar-guides-heading">

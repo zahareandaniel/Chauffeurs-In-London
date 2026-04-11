@@ -55,6 +55,191 @@ export default function MarketOperatorPage({ params }: Props) {
     },
   };
 
+  if (op.slug === 'trouv-chauffeurs') {
+    return (
+      <>
+        <Header />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <main className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <article className="max-w-content mx-auto">
+            <nav className="text-xs text-ink-subtle" aria-label="Breadcrumb">
+              <ol className="flex flex-wrap gap-x-2 gap-y-1">
+                <li>
+                  <Link href="/" className="hover:text-ink">
+                    Home
+                  </Link>
+                </li>
+                <li aria-hidden>/</li>
+                <li>
+                  <Link href="/companies" className="hover:text-ink">
+                    Recognised operators
+                  </Link>
+                </li>
+                <li aria-hidden>/</li>
+                <li className="text-ink">Trouv Chauffeurs</li>
+              </ol>
+            </nav>
+
+            <header className="mt-10 max-w-readable">
+              <h1 className="font-display mt-2 text-display-lg font-medium text-ink">Trouv Chauffeurs</h1>
+              <p className="mt-4 text-lg leading-relaxed text-ink-muted">
+                London-based chauffeur service focused on airport transfers, corporate travel, and event
+                logistics with flight-aware planning.
+              </p>
+            </header>
+
+            <div className="mt-12 max-w-3xl space-y-10 text-base leading-[1.85] text-ink-muted">
+              <section>
+                <h2 className="editorial-label">Overview</h2>
+                <p className="mt-4">
+                  Trouv Chauffeurs operates within London&apos;s executive chauffeur segment, where
+                  services are structured around consistency, presentation, and operational clarity rather
+                  than on-demand availability.
+                </p>
+                <p className="mt-4">
+                  The model is built around confirmed pricing, flight-aware pickups, and standardised
+                  service delivery across London&apos;s main airports and corporate routes. It is positioned
+                  for clients who prioritise reliability and planning over marketplace-style flexibility.
+                </p>
+                <p className="mt-4">
+                  The service is typically used in airport and corporate travel contexts where timing,
+                  coordination, and driver presentation are expected as part of the booking.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">How the service works</h2>
+                <p className="mt-4">
+                  Bookings are handled directly through a dispatcher, with journeys planned in advance and
+                  adjusted in real time when required.
+                </p>
+                <p className="mt-4">
+                  Vehicles are either owned or contracted under a single operating standard, with clearly
+                  defined vehicle classes, wait times, and service expectations.
+                </p>
+                <p className="mt-4">
+                  This structure supports consistency across airport pickups, corporate schedules, and
+                  multi-stop itineraries.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">Coverage</h2>
+                <ul className="mt-4 list-disc space-y-2 pl-5">
+                  <li>
+                    Greater London and all major airports (Heathrow, Gatwick, Stansted, Luton, London
+                    City)
+                  </li>
+                  <li>Home Counties and longer-distance journeys by arrangement</li>
+                  <li>Corporate and event travel across central London and key venues</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">When it is used</h2>
+                <ul className="mt-4 list-disc space-y-2 pl-5">
+                  <li>Airport transfers with meet and greet and flight tracking</li>
+                  <li>Corporate travel including executive schedules and roadshows</li>
+                  <li>Events and fixed-time journeys where coordination and presentation matter</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">Editorial note</h2>
+                <p className="mt-4">
+                  This profile is part of an independent editorial programme. It reflects observed service
+                  structure, positioning, and typical use cases.
+                </p>
+                <p className="mt-4">
+                  It is not a ranking or endorsement and should be considered alongside direct
+                  verification of licensing, insurance, and contractual terms.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">What works well</h2>
+                <ul className="mt-4 list-disc space-y-2 pl-5">
+                  <li>Clear positioning within London&apos;s executive chauffeur segment</li>
+                  <li>Consistent airport coverage across multiple hubs</li>
+                  <li>Structured booking process suited to corporate and pre-planned travel</li>
+                  <li>Standardised service expectations across vehicles and drivers</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">What to consider</h2>
+                <ul className="mt-4 list-disc space-y-2 pl-5">
+                  <li>Not a substitute for verifying licensing, insurance, and operator credentials</li>
+                  <li>Less suited to purely on-demand or app-based booking expectations</li>
+                  <li>Complex or highly customised itineraries may require direct coordination</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">Best suited for</h2>
+                <p className="mt-4">
+                  Clients who require a London chauffeur service with a structured, relationship-led
+                  approach, particularly for airport-heavy and corporate travel.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">Common uses</h2>
+                <ul className="mt-4 list-disc space-y-2 pl-5">
+                  <li>Corporate arrivals and departures</li>
+                  <li>Multi-day roadshows</li>
+                  <li>Event transport and scheduled collections</li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">Less suited for</h2>
+                <p className="mt-4">
+                  Situations that rely purely on instant booking apps without pre-arranged chauffeur
+                  service or planning.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">Context</h2>
+                <p className="mt-4">
+                  This profile sits within broader editorial coverage on this site of chauffeur services,
+                  airport transfers, and executive ground transport in London.
+                </p>
+                <p className="mt-4">
+                  Related guides and comparisons provide additional context on pricing, service models, and
+                  operator differences across the market.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="editorial-label">Official website</h2>
+                <p className="mt-4">
+                  <a
+                    href="https://trouv.co.uk"
+                    target="_blank"
+                    rel="noopener"
+                    className="font-medium text-ink underline underline-offset-4"
+                  >
+                    https://trouv.co.uk
+                  </a>
+                </p>
+              </section>
+            </div>
+          </article>
+
+          <div className="max-w-content mx-auto">
+            <RecommendedChauffeurServices rows={recommended} />
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
   return (
     <>
       <Header />

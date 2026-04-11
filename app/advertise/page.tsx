@@ -34,7 +34,7 @@ export default function AdvertisePage() {
                 <h2 className="font-display text-xl font-semibold text-ink">Why this audience matters</h2>
                 <p className="mt-4">
                   Ground transport decisions sit at the intersection of compliance, guest experience,
-                  and brand risk. Readers here are not browsing for coupons; they are calibrating
+                  and brand risk. Readers here are not browsing for coupons. They are calibrating
                   suppliers, policies, and service tiers. That makes the context relevant for automotive,
                   mobility, insurance, hospitality, and premium service brands, provided partnerships are
                   transparent and consistent with editorial tone.
@@ -46,7 +46,7 @@ export default function AdvertisePage() {
                 <p className="mt-4">
                   The platform is structured for category sponsorships, clearly labelled partner
                   placements, sponsored editorial with byline discipline, and selective brand
-                  integrations. Nothing in this list is active as a self-serve product; conversations
+                  integrations. Nothing in this list is active as a self-serve product. Conversations
                   start with fit and disclosure standards, not rate cards.
                 </p>
               </section>
@@ -64,7 +64,7 @@ export default function AdvertisePage() {
                 <h2 className="font-display text-xl font-semibold text-ink">Send an enquiry</h2>
                 <p className="mt-4 text-sm">
                   For a private discussion of audience, guidelines, and timing, write via our contact
-                  route. Include your organisation, market, and what you are trying to achieve; we reply
+                  route. Include your organisation, market, and what you are trying to achieve. We reply
                   selectively.
                 </p>
                 <Link href="/contact" className="btn-secondary mt-6 inline-flex text-[0.65rem]">

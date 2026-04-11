@@ -18,7 +18,7 @@ export default function EditorsPicksSection({
           </h2>
           <p className="mt-3 max-w-xl text-sm text-ink-muted">
             Operators we profile to the same layout and editorial standard. Order rotates, with no fixed
-            ranking. Trouv Chauffeurs includes an on-page link to its official site; other profiles stay
+            ranking. Trouv Chauffeurs includes an on-page link to its official site. Other profiles stay
             without outbound links by design.
           </p>
         </div>

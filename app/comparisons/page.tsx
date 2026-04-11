@@ -22,7 +22,7 @@ export default function ComparisonsIndexPage() {
           <h1 className="font-display mt-6 text-display-xl font-semibold text-ink">Comparisons</h1>
           <p className="mt-6 max-w-editorial text-lg text-ink-muted">
             Model-level framing for London executive ground transport. Each piece links onward to guides
-            and company context; none carries booking or affiliate calls to action.
+            and company context. None carries booking or affiliate calls to action.
           </p>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
             {PILLAR_COMPARISONS.map((c) => (

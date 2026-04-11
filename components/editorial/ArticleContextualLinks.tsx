@@ -12,7 +12,7 @@ type Props = { category: string | null };
 
 /**
  * Contextual internal links for SEO, always alongside medium-neutral shortlist links.
- * Trouv profile is one destination among many on /chauffeur-services; copy stays non-exclusive.
+ * Trouv profile is one destination among many on /chauffeur-services. Copy stays non-exclusive.
  */
 export default function ArticleContextualLinks({ category }: Props) {
   const cat = category?.toLowerCase() ?? '';
@@ -38,7 +38,7 @@ export default function ArticleContextualLinks({ category }: Props) {
         <p>
           Corporate buyers shortlisting {profile(<>chauffeur service London</>)} operators should read
           full profiles on coverage, escalation, and presentation, not landing blurbs alone. For an
-          airport-heavy reference desk, see {profile(<>Trouv Chauffeurs</>)}; then{' '}
+          airport-heavy reference desk, see {profile(<>Trouv Chauffeurs</>)}. Then{' '}
           <Link href="/chauffeur-services" className="link-underline font-medium text-ink">
             view available chauffeur companies
           </Link>{' '}

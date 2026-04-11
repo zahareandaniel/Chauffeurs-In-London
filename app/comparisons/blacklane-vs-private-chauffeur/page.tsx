@@ -62,8 +62,8 @@ export default function BlacklaneVsPrivateChauffeurPage() {
             <section>
               <h2 className="font-display text-xl font-semibold text-ink">Routing and execution</h2>
               <p className="mt-4">
-                Product rules simplify forecasting; local dispatch can bend routes when roads or schedules
-                shift. Neither removes partner execution at the kerb: the platform routes it; the desk
+                Product rules simplify forecasting. Local dispatch can bend routes when roads or schedules
+                shift. Neither removes partner execution at the kerb: the platform routes it, and the desk
                 negotiates it.
               </p>
             </section>
@@ -79,7 +79,7 @@ export default function BlacklaneVsPrivateChauffeurPage() {
             <section>
               <h2 className="font-display text-xl font-semibold text-ink">Editorial perspective</h2>
               <p className="mt-4">
-                Blacklane is a useful reference for “platform chauffeur”; private operators remain the right
+                Blacklane is a useful reference for “platform chauffeur”. Private operators remain the right
                 mental model when the itinerary is London-specific and high-touch. Compare alongside{' '}
                 <Link href="/companies/addison-lee" className="font-medium text-ink underline underline-offset-2">
                   Addison Lee

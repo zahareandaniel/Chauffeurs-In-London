@@ -105,7 +105,7 @@ export default function GetFeaturedForm() {
       </div>
       {sent && (
         <p className="text-sm text-ink-muted" role="status">
-          If your mail client opened, send the message when you are satisfied with the detail. We read every serious inquiry; volume may delay a reply.
+          If your mail client opened, send the message when you are satisfied with the detail. We read every serious inquiry. Volume may delay a reply.
         </p>
       )}
     </form>

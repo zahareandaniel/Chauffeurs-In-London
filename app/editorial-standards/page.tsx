@@ -62,7 +62,7 @@ export default function EditorialStandardsPage() {
                 Comparisons frame service classes and procurement trade-offs. Company pages describe
                 how a participant is positioned in the market, with strengths and limitations stated
                 in plain editorial language. Where an official website link appears, it is disclosed as
-                reader convenience; the platform does not take booking commission.
+                reader convenience. The platform does not take booking commission.
               </p>
             </section>
 
